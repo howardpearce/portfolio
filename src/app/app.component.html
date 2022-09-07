@@ -34,6 +34,14 @@
   .warning {
     position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; width: 50%; z-index: -1;
   }
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 4em;
+    }
+    .warning {
+      width: 75%;
+    }
+  }
 </style>
 <div class="content" role="main">
   <img class="warning" src="./assets/warning-svgrepo-com.svg" alt="Warning"/>
