@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1](https://github.com/strigiforme/portfolio/compare/v0.0.0...v0.0.1) (2022-09-16)
+
+
+### Features
+
+* Add github CI ([31ec8a9](https://github.com/strigiforme/portfolio/commit/31ec8a984d614dec7fca94d7fc65926af74bd794))
+* Add standard version ([3a35f04](https://github.com/strigiforme/portfolio/commit/3a35f04c3b61934a2868b8b9dabead6fe5b3058a))
+* **test:** Update test suite to pass ([f48e4dd](https://github.com/strigiforme/portfolio/commit/f48e4dd0f9d6da80bae75f5a164c5101f6f85223))
+* Update CI to not timeout ([ecef0be](https://github.com/strigiforme/portfolio/commit/ecef0be993f2490d0e190938a1cc447f6b089279))
+
 ## 0.0.0 (2022-09-16)
 
 
