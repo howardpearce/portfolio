@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.grid-container {
+  display: grid;
+  grid-template-columns: 180px auto 180px;
+  grid-template-rows: 100px auto 100px;
+}
