@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { AboutSectionComponent } from './about-section/about-section.component';
 import { ExperienceSectionComponent } from './experience-section/experience-section.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroSectionComponent,
     AboutSectionComponent,
-    ExperienceSectionComponent
+    ExperienceSectionComponent,
+    ContactSectionComponent
   ],
   imports: [
     BrowserModule,
