@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare function switchColorsToLight():any;
 
 @Component({
   selector: 'app-hero-section',
