@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { AboutSectionComponent } from './about-section/about-section.component';
+import { ExperienceSectionComponent } from './experience-section/experience-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroSectionComponent,
-    AboutSectionComponent
+    AboutSectionComponent,
+    ExperienceSectionComponent
   ],
   imports: [
     BrowserModule,
