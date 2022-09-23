@@ -1,3 +1,19 @@
+/* Special fonts go here */
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue"), url("./assets/fonts/Bebas-Neue/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: local("Aileron"), url("./assets/fonts/Aileron/Aileron-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Aileron Semibold";
+  src: local("Aileron Semibold"), url("./assets/fonts/Aileron/Aileron-SemiBold.otf") format("opentype");
+}
+
 /* You can add global styles to this file, and also import other style files */
 .grid-container {
   display: grid;
@@ -22,4 +38,5 @@
 p, a, h1, h2, h3{
   color: var(--primary-color);
   font-family: "Aileron", sans-serif;
+  margin: 0px;
 }
