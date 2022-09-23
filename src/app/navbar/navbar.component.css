@@ -1,5 +1,5 @@
 .navbar-container {
-  position:absolute;
+  position: absolute;
   height: 100px;
   background-color: var(--navbar-color);
   display: flex;
@@ -24,6 +24,11 @@
   font-weight: 500;
 }
 
+.right i {
+  padding-left: 20px;
+  color: var(--primary-color);
+}
+
 .navbar-text {
   font-size: 28px;
   margin: 0px;
@@ -31,4 +36,30 @@
 
 #logotype {
   font-family: "Aileron Semibold";
+}
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1350px) {
+  .expanded {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .left {
+    margin-left: 20px;
+  }
+  .right {
+    margin-right: 20px;
+  }
+  #logotype {
+    font-size: 20px;
+  }
 }
