@@ -1,6 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { AboutSectionComponent } from './about-section/about-section.component';
 import { AppComponent } from './app.component';
+import { ColorSwitcherComponent } from './color-switcher/color-switcher.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { ExperienceSectionComponent } from './experience-section/experience-section.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 describe('AppComponent', () => {
@@ -11,7 +16,12 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        ColorSwitcherComponent,
+        HeroSectionComponent,
+        ContactSectionComponent,
+        AboutSectionComponent,
+        ExperienceSectionComponent
       ],
     }).compileComponents();
   });
