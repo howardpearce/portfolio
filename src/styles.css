@@ -18,3 +18,8 @@
 .highlight-text {
   color: var(--accent-color) !important;
 }
+
+p, a, h1, h2, h3{
+  color: var(--primary-color);
+  font-family: "Aileron", sans-serif;
+}

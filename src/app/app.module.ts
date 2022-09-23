@@ -8,6 +8,7 @@ import { AboutSectionComponent } from './about-section/about-section.component';
 import { ExperienceSectionComponent } from './experience-section/experience-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ColorSwitcherComponent } from './color-switcher/color-switcher.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AboutSectionComponent,
     ExperienceSectionComponent,
     ContactSectionComponent,
-    NavbarComponent
+    NavbarComponent,
+    ColorSwitcherComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+#switcher-container {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+
+.switch-item-container {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.switch-item-container p {
+  font-weight: 400;
+  margin: 0px 10px 0px;
+  font-size: 16px;
+}
+
+.switch-square {
+  border: 2px solid var(--primary-color);
+  height: 12px;
+  width: 12px;
+}
+
+.selected {
+  background-color: var(--primary-color);
+}
