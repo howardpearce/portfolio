@@ -1,0 +1,36 @@
+.navbar-container {
+  position:absolute;
+  height: 100px;
+  background-color: var(--navbar-color);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.left {
+  margin-left: 80px;
+}
+
+.right {
+  margin-right: 80px;
+  display: flex;
+}
+
+.right a {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-text {
+  font-family: "Aileron";
+  font-size: 28px;
+  color: var(--primary-color);
+  margin: 0px;
+}
+
+#logotype {
+  font-weight: bold;
+}
