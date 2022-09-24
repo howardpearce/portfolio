@@ -40,3 +40,9 @@ p, a, h1, h2, h3{
   font-family: "Aileron", sans-serif;
   margin: 0px;
 }
+
+@media only screen and (max-width: 770px) {
+  .grid-container {
+    grid-template-columns: 60px auto 60px;
+  }
+}

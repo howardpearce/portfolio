@@ -31,6 +31,73 @@
 .hero-text {
  font-family: 'Bebas Neue';
  font-size: 128px;
- font-weight: 100px;
  margin: 0px;
+}
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1255px) {
+  .hero-text {
+    font-size: 100px;
+  }
+  .hero-section-container {
+    grid-template-columns: auto 180px;
+  }
+  .hero-section-container {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .hero-text {
+    font-size: 80px;
+  }
+  .hero-subtext {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .hero-text {
+    font-size: 70px;
+  }
+  .hero-subtext {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .hero-subtext {
+    font-size: 24px;
+  }
+  .hero-text {
+    font-size: 72px;
+  }
+  .hero-section-container {
+    grid-template-columns: auto 60px;
+  }
+  #above {
+    bottom: -10px;
+  }
+  #hero-typography {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  #hero-typography {
+    max-width: 400px;
+  }
+  .hero-text {
+    font-size: 65px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #hero-typography {
+    max-width: 400px;
+  }
+  .hero-text {
+    font-size: 60px;
+  }
 }
