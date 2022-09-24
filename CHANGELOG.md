@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/strigiforme/portfolio/compare/v0.0.0...v0.0.2) (2022-09-24)
+
+
+### Features
+
+* Add color switcher component ([53b819c](https://github.com/strigiforme/portfolio/commit/53b819cae72444a92950ebbbd8c513919b095df3))
+* Add CSS variables for colorscheme ([2ae4650](https://github.com/strigiforme/portfolio/commit/2ae46509af6f18359616ff0b68688fa77bdf6aeb))
+* add empty about-section component ([809c4d7](https://github.com/strigiforme/portfolio/commit/809c4d70b5956caf25066ce3d9f17d64d40ebf88))
+* Add empty experience-section component ([673ba0c](https://github.com/strigiforme/portfolio/commit/673ba0ca59fdaf6bc15eb257a340386bc6e5fcc2))
+* Add empty experience-section component ([8639dd5](https://github.com/strigiforme/portfolio/commit/8639dd5899a78ccb7583bf42f6e9976610fcddbc))
+* Add github CI ([a4b90db](https://github.com/strigiforme/portfolio/commit/a4b90db4b3e0ee4f9466c413d75d61573472807a))
+* Add global grid style ([7961077](https://github.com/strigiforme/portfolio/commit/79610774055f6e37562755d3cbb7aa6cdbd3fed9))
+* Add navbar to UI ([969032f](https://github.com/strigiforme/portfolio/commit/969032f0e7d34902d4557369e5ab8d99fe91ee26))
+* Add new hero-section component ([b003aaf](https://github.com/strigiforme/portfolio/commit/b003aafebf4c051452f901ad4aab7c2465108c2d))
+* Add scroll arrow ([dc3e210](https://github.com/strigiforme/portfolio/commit/dc3e2101164b72bb44a6f32a9707e1f36dba0b72))
+* Add standard version ([3a35f04](https://github.com/strigiforme/portfolio/commit/3a35f04c3b61934a2868b8b9dabead6fe5b3058a))
+* Complete hero section ([a157601](https://github.com/strigiforme/portfolio/commit/a157601cc8026ebd69861009f82056e946a40f6a))
+* Make hero section responsive for mobile displays ([7f89373](https://github.com/strigiforme/portfolio/commit/7f89373412c496edda4744385b0218c8fd1189de))
+* Make navbar responsive for phone displays ([32a90d8](https://github.com/strigiforme/portfolio/commit/32a90d855f8b06552b9fc33413aa1028f7b55f44))
+* Update CI to not timeout ([2a4cfcf](https://github.com/strigiforme/portfolio/commit/2a4cfcfa2728991acc698abfb77a5f240532f7e6))
+* Use font files instead of google fonts ([f7698ee](https://github.com/strigiforme/portfolio/commit/f7698ee309862cac5fa30b98c45d806eab7b0584))
+
+
+### Bug Fixes
+
+* **CI:** Add CI to develop branch ([5995a23](https://github.com/strigiforme/portfolio/commit/5995a23abaa68914d55a3d836e83ccaadff22d92))
+* **test:** Fix errors in main test suite ([94cdfed](https://github.com/strigiforme/portfolio/commit/94cdfed8a7e22ddf8915eb4e9c0a631998440bbd))
+
 ### [0.0.1](https://github.com/strigiforme/portfolio/compare/v0.0.0...v0.0.1) (2022-09-16)
 
 

@@ -7,6 +7,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { AboutSectionComponent } from './about-section/about-section.component';
 import { ExperienceSectionComponent } from './experience-section/experience-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ColorSwitcherComponent } from './color-switcher/color-switcher.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
     HeroSectionComponent,
     AboutSectionComponent,
     ExperienceSectionComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
+    NavbarComponent,
+    ColorSwitcherComponent
   ],
   imports: [
     BrowserModule,
