@@ -19,6 +19,9 @@
   display: grid;
   grid-template-columns: 180px auto 180px;
   grid-template-rows: 100px auto 100px;
+}
+
+body {
   background-color: var(--bg-color);
 }
 
