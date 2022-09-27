@@ -66,6 +66,10 @@
   align-items: center;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  background-color: var(--navbar-color);
+  padding: 10px 10px 10px 10px;
+  justify-content: center;
+  border-radius: 2px;
 }
 
 #scroll-text {
