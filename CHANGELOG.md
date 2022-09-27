@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/strigiforme/portfolio/compare/v0.0.2...v0.0.3) (2022-09-27)
+
+
+### Features
+
+* Add CSS variables for colorscheme ([a6f5017](https://github.com/strigiforme/portfolio/commit/a6f501733d8b4805afbd72a17ebfc3eec6596eb0))
+* Add ThreeJS hero section animation ([132d4ac](https://github.com/strigiforme/portfolio/commit/132d4ac6dc0be4c11fe7c70a7a95de89f8dc4ae2))
+
+
+### Bug Fixes
+
+* **CI:** Add CI to develop branch ([257203a](https://github.com/strigiforme/portfolio/commit/257203ae5f3e67bd690d16bdebc4df6be9a7a21d))
+
+### [0.0.1](https://github.com/strigiforme/portfolio/compare/v0.0.0...v0.0.1) (2022-09-16)
+
+
+### Features
+
+* Add github CI ([31ec8a9](https://github.com/strigiforme/portfolio/commit/31ec8a984d614dec7fca94d7fc65926af74bd794))
+* **test:** Update test suite to pass ([f48e4dd](https://github.com/strigiforme/portfolio/commit/f48e4dd0f9d6da80bae75f5a164c5101f6f85223))
+* Update CI to not timeout ([ecef0be](https://github.com/strigiforme/portfolio/commit/ecef0be993f2490d0e190938a1cc447f6b089279))
+
 ### [0.0.2](https://github.com/strigiforme/portfolio/compare/v0.0.0...v0.0.2) (2022-09-24)
 
 
