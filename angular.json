@@ -28,9 +28,6 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "scripts": [
-              "src/scripts.js"
             ]
           },
           "configurations": {
@@ -97,9 +94,6 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "scripts": [
-              "src/scripts.js"
             ]
           }
         },
