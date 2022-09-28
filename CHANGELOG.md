@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/strigiforme/portfolio/compare/v0.0.3...v0.0.4) (2022-09-28)
+
+
+### Features
+
+* add background color to scrollbar for contrast ([ec76463](https://github.com/strigiforme/portfolio/commit/ec76463c05755a8cf1e236659f8f7c4415abca2e))
+
+
+### Bug Fixes
+
+* Switch color switcher to have fixed position ([3b63c40](https://github.com/strigiforme/portfolio/commit/3b63c408e3e138ed3d22cd60ed02b449c9c27cae))
+* Update hero animation to scale on viewport height ([0ac2de4](https://github.com/strigiforme/portfolio/commit/0ac2de4903cf8a3883d50ce496d5ad2d00192e15))
+
 ### [0.0.3](https://github.com/strigiforme/portfolio/compare/v0.0.2...v0.0.3) (2022-09-27)
 
 
