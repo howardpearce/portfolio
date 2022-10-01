@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/strigiforme/portfolio/compare/v0.0.4...v0.1.0) (2022-10-01)
+
+
+### Bug Fixes
+
+* Adjust position of hero typography ([bf855ca](https://github.com/strigiforme/portfolio/commit/bf855cadf35bd077a16f8ab09d32d626d1d161b1))
+
 ### [0.0.4](https://github.com/strigiforme/portfolio/compare/v0.0.3...v0.0.4) (2022-09-28)
 
 
