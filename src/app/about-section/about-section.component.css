@@ -27,3 +27,8 @@ ul {
 li img {
   padding-right: 5px;
 }
+
+.ul-arrow {
+  fill: var(--accent-color);
+  margin-right: 5px;
+}
