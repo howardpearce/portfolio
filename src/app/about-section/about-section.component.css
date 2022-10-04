@@ -1,0 +1,20 @@
+
+
+#technology-list {
+  display: flex;
+  flex-direction: row;
+}
+
+#technology-list ul {
+  padding-right: 80px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li img {
+  padding-right: 5px;
+}
