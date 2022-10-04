@@ -32,3 +32,41 @@ li img {
   fill: var(--accent-color);
   margin-right: 5px;
 }
+
+.button-container {
+  width: 100%;
+  grid-column-start:2;
+  grid-column-start:2;
+  grid-column-end: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-button {
+  display: flex;
+  align-items: center;
+  font-family: 'Aileron';
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: solid 2px var(--primary-color);
+  border-radius: 2px;
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+}
+
+.secondary-button svg {
+  margin-left: 15px;
+}
+
+.secondary-button svg path {
+  stroke: var(--accent-color);
+}
+
+.secondary-button svg line {
+  stroke: var(--accent-color);
+}
