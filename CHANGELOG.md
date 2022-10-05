@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/strigiforme/portfolio/compare/v0.1.0...v0.2.0) (2022-10-05)
+
+
+### Features
+
+* Add About Me Section image ([011c952](https://github.com/strigiforme/portfolio/commit/011c95285d4e9a34a77a1af62a970931bcbca91a))
+* Add About Me Section Typography ([73845c8](https://github.com/strigiforme/portfolio/commit/73845c809d32dde6c1935f81d476f58becfae735))
+* add read more button to about me section ([f71d7e6](https://github.com/strigiforme/portfolio/commit/f71d7e605ddce6afef1c917fdbe5df5a47fb4948))
+
 ## [0.1.0](https://github.com/strigiforme/portfolio/compare/v0.0.4...v0.1.0) (2022-10-01)
 
 
