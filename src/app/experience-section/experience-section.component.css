@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.experience:hover {
+  cursor: pointer;
+
+}
+
 .experience span {
   font-size: 64px !important;
   font-family: 'Bebas Neue';
