@@ -24,9 +24,7 @@ export class ExperienceSectionComponent implements OnInit {
       "Java",
       "Python",
       "Docker",
-      "Jenkins",
-      "Robot Framework",
-      "ZMQ"
+      "Jenkins"
     ]
   };
 
@@ -70,7 +68,7 @@ export class ExperienceSectionComponent implements OnInit {
         break;
       }
       default: {
-        this.experience.title = "Software Developer @ Ultra Maritime";
+        this.experience.title = "Graduate Software Developer @ Ultra Maritime";
         this.experience.date = "January 2020 - Present";
         this.experience.description = "I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consists of application software development and design within Agile Methodology.";
         this.experience.bullets = [
@@ -80,7 +78,7 @@ export class ExperienceSectionComponent implements OnInit {
             "Write technical documentation and perform requirements derivation.",
             "Certified SCRUM Master."
         ];
-        this.experience.tags = ["C++", "Java", "Python", "Docker", "Jenkins", "Robot Framework", "ZMQ"]
+        this.experience.tags = ["C++", "Java", "Python", "Docker", "Jenkins"]
         this.prattActive = false;
         this.dalActive = false;
         this.ultraActive = true;
