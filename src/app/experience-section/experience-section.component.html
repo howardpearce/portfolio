@@ -1,3 +1,35 @@
 <div class = "grid-container">
-
+  <div class = "content-container">
+    <div class = "plus-container">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="21.5" width="11" height="54" fill="#D9D9D9"/>
+        <rect y="32.5" width="11" height="54" transform="rotate(-90 0 32.5)" fill="#D9D9D9"/>
+      </svg>
+    </div>
+    <div class = "title-container">
+      <h1 id = "experience-title" class = "title"> PROFESSIONAL EXPERIENCE </h1>
+    </div>
+    <div class = "content">
+      <div class = "experience-list">
+        <div class = "experience" (click)="switchActiveExperience(1)"><span [ngClass]="ultraActive == true ? 'highlight-text':''">01</span><p>Ultra Electronics Maritime Systems</p></div>
+        <div class = "experience" (click)="switchActiveExperience(2)"><span [ngClass]="prattActive == true ? 'highlight-text':''" >02</span><p>Pratt & Whitney Canada</p></div>
+        <div class = "experience" (click)="switchActiveExperience(3)"><span [ngClass]="dalActive == true ? 'highlight-text':''">03</span><p>Dalhousie University</p></div>
+      </div>
+      <div class = "experience-detail">
+        <h2 id = "experience-content-title" class = "experience-title"> {{experience.title}} </h2>
+        <p class = "experience-subtitle"> {{experience.date}} </p>
+        <div class = "experience-description">
+          <p> {{experience.description}} </p>
+          <ul>
+            <li *ngFor="let bullet of experience.bullets">{{bullet}}</li>
+          </ul>
+        </div>
+        <div class = "technology-tag-list">
+          <div class = "tag" *ngFor="let tag of experience.tags;">
+            <p>{{tag}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

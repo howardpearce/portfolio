@@ -1,0 +1,64 @@
+.experience {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  background-color: var(--bg-card-color);
+  margin-bottom: 20px;
+  max-width: 300px;
+  align-items: center;
+}
+
+.experience:hover {
+  cursor: pointer;
+
+}
+
+.experience span {
+  font-size: 64px !important;
+  font-family: 'Bebas Neue';
+  color: var(--primary-color);
+  padding-right: 25px;
+  font-weight: bold;
+}
+
+.experience p {
+  width: 200px;
+}
+
+.experience-detail {
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-title {
+  font-family: 'Aileron';
+  font-size: 36px;
+}
+
+.experience-subtitle {
+  font-size: 16px;
+  color: var(--neutral-grey);
+  font-weight: bold;
+}
+
+.experience-description {
+  margin-top: 15px;
+}
+
+.technology-tag-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  margin: 5px;
+  padding: 7px 10px;
+  background-color: var(--bg-card-color);
+  border-radius: 3px;
+}
+
+.tag p {
+  font-size: 16px;
+  color: var(--accent-color);
+}

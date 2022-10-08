@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/strigiforme/portfolio/compare/v0.2.3...v0.3.0) (2022-10-08)
+
+### [0.2.3](https://github.com/strigiforme/portfolio/compare/v0.2.2...v0.2.3) (2022-10-08)
+
+
+### Bug Fixes
+
+* **Navbar:** Now follows scrollbar, changed color ([6e47554](https://github.com/strigiforme/portfolio/commit/6e475548f9ef0df9f29091dfca9f497c1a01fb8c))
+
+### [0.2.2](https://github.com/strigiforme/portfolio/compare/v0.2.1...v0.2.2) (2022-10-08)
+
+
+### Bug Fixes
+
+* Change website title ([2088283](https://github.com/strigiforme/portfolio/commit/208828396eec4895865793c44aeaad584d6b274a))
+* Remove angular favicon ([500e874](https://github.com/strigiforme/portfolio/commit/500e874bc8a2482bfbc6c9d16be49a3cb9c20c6b))
+
+### [0.2.1](https://github.com/strigiforme/portfolio/compare/v0.2.0...v0.2.1) (2022-10-08)
+
+
+### Features
+
+* Add experience section ([41cbf29](https://github.com/strigiforme/portfolio/commit/41cbf2953014d7a14ed104beab351a09e76f9045))
+* Add professional experience switching ([c74bf19](https://github.com/strigiforme/portfolio/commit/c74bf199f8f0ecbe7b7c64eb6ca572b461bcdb3b))
+* **test:** Add unit tests for high-level content ([644c147](https://github.com/strigiforme/portfolio/commit/644c147c647ebfdd92df4c9a3b5d587d9651191f))
+
 ## [0.2.0](https://github.com/strigiforme/portfolio/compare/v0.1.0...v0.2.0) (2022-10-05)
 
 
