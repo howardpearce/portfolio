@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/strigiforme/portfolio/compare/v0.2.0...v0.2.1) (2022-10-08)
+
+
+### Features
+
+* Add experience section ([41cbf29](https://github.com/strigiforme/portfolio/commit/41cbf2953014d7a14ed104beab351a09e76f9045))
+* Add professional experience switching ([c74bf19](https://github.com/strigiforme/portfolio/commit/c74bf199f8f0ecbe7b7c64eb6ca572b461bcdb3b))
+* **test:** Add unit tests for high-level content ([644c147](https://github.com/strigiforme/portfolio/commit/644c147c647ebfdd92df4c9a3b5d587d9651191f))
+
 ## [0.2.0](https://github.com/strigiforme/portfolio/compare/v0.1.0...v0.2.0) (2022-10-05)
 
 
