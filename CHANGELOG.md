@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/strigiforme/portfolio/compare/v0.2.2...v0.2.3) (2022-10-08)
+
+
+### Bug Fixes
+
+* **Navbar:** Now follows scrollbar, changed color ([6e47554](https://github.com/strigiforme/portfolio/commit/6e475548f9ef0df9f29091dfca9f497c1a01fb8c))
+
 ### [0.2.2](https://github.com/strigiforme/portfolio/compare/v0.2.1...v0.2.2) (2022-10-08)
 
 
