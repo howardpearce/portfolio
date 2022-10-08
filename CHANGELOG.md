@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/strigiforme/portfolio/compare/v0.2.1...v0.2.2) (2022-10-08)
+
+
+### Bug Fixes
+
+* Change website title ([2088283](https://github.com/strigiforme/portfolio/commit/208828396eec4895865793c44aeaad584d6b274a))
+* Remove angular favicon ([500e874](https://github.com/strigiforme/portfolio/commit/500e874bc8a2482bfbc6c9d16be49a3cb9c20c6b))
+
 ### [0.2.1](https://github.com/strigiforme/portfolio/compare/v0.2.0...v0.2.1) (2022-10-08)
 
 
