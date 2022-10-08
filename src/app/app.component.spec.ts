@@ -35,13 +35,31 @@ describe('AppComponent', () => {
   it(`should have as title 'portfolio'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('portfolio');
+    expect(app.title).toEqual('Howard Pearce');
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+    const compiled = getCompiledDOM();
     expect(compiled.querySelector('#logotype')?.textContent).toContain('HOWARDPEARCE.CA');
   });
+
+  it('has an about section', () => {
+    const compiled = getCompiledDOM();
+    const aboutTitle = compiled.querySelector('#about-title')
+    expect(aboutTitle?.textContent).toContain('ABOUT ME');
+  });
+
+  it('has an experience section', () => {
+    const compiled = getCompiledDOM();
+    const experienceTitle = compiled.querySelector('#experience-title')
+    const experienceContentTitle = compiled.querySelector('#experience-content-title')
+    expect(experienceTitle?.textContent).toContain('PROFESSIONAL EXPERIENCE');
+    expect(experienceContentTitle?.textContent).toContain('Graduate Software Developer @ Ultra Maritime');
+  });
+
+  function getCompiledDOM() {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    return (fixture.nativeElement as HTMLElement);
+  }
 });

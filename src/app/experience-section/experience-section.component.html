@@ -7,7 +7,7 @@
       </svg>
     </div>
     <div class = "title-container">
-      <h1 class = "title"> PROFESSIONAL EXPERIENCE </h1>
+      <h1 id = "experience-title" class = "title"> PROFESSIONAL EXPERIENCE </h1>
     </div>
     <div class = "content">
       <div class = "experience-list">
@@ -16,7 +16,7 @@
         <div class = "experience" (click)="switchActiveExperience(3)"><span [ngClass]="dalActive == true ? 'highlight-text':''">03</span><p>Dalhousie University</p></div>
       </div>
       <div class = "experience-detail">
-        <h2 class = "experience-title"> {{experience.title}} </h2>
+        <h2 id = "experience-content-title" class = "experience-title"> {{experience.title}} </h2>
         <p class = "experience-subtitle"> {{experience.date}} </p>
         <div class = "experience-description">
           <p> {{experience.description}} </p>
