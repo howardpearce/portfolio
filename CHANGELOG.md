@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/strigiforme/portfolio/compare/v0.3.0...v0.3.1) (2022-10-10)
+
+
+### Bug Fixes
+
+* Compress headshot image ([7f13146](https://github.com/strigiforme/portfolio/commit/7f131469f9aaa7a8b52e6247021f765e738cb69e))
+* Delete unused SVG assets ([a4f006a](https://github.com/strigiforme/portfolio/commit/a4f006a27564b5f61cf1512204c8a0b2564d029d))
+* Up component budget from 2kb to 3kb ([b9b3d68](https://github.com/strigiforme/portfolio/commit/b9b3d6834c436bc2e848b18aaa48991855d3afa7))
+
 ## [0.3.0](https://github.com/strigiforme/portfolio/compare/v0.2.3...v0.3.0) (2022-10-08)
 
 ### [0.2.3](https://github.com/strigiforme/portfolio/compare/v0.2.2...v0.2.3) (2022-10-08)
