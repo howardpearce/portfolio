@@ -32,7 +32,8 @@
   display: grid;
   grid-template-columns: 120px auto 120px;
   grid-template-rows: 70px auto;
-  max-width: 1420px;
+  max-width: 1366px;
+  width: 100%;
   margin: auto;
 }
 
@@ -44,6 +45,8 @@
   display: flex;
   flex-direction: row;
   margin-top: 30px;
+  max-width: 1366px;
+  width: 100%;
 }
 
 .plus-container {
