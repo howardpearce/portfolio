@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/strigiforme/portfolio/compare/v0.3.2...v0.3.3) (2022-10-14)
+
+
+### Features
+
+* implement ticking clock in contact section ([ce950cc](https://github.com/strigiforme/portfolio/commit/ce950cc00b210297c4c513d77bc6020c45186e69))
+
 ### [0.3.2](https://github.com/strigiforme/portfolio/compare/v0.3.1...v0.3.2) (2022-10-14)
 
 
