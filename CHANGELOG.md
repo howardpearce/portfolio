@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/strigiforme/portfolio/compare/v0.3.1...v0.3.2) (2022-10-14)
+
+
+### Features
+
+* Implement static text for Contact Section ([ac232c3](https://github.com/strigiforme/portfolio/commit/ac232c369cde51b1892d6ef5b1c8643df44c57c0))
+
 ### [0.3.1](https://github.com/strigiforme/portfolio/compare/v0.3.0...v0.3.1) (2022-10-10)
 
 
