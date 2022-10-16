@@ -1,3 +1,19 @@
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+  padding: 50px 130px 55px 130px;
+}
+
+.footer p {
+  font-size: 20px;
+}
+
 .left {
   width: 100%;
 }
