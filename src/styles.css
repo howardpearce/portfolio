@@ -73,6 +73,7 @@ body {
 
 :root {
   --bg-color: #1E1E1E;
+  --bg-color-translucent: rgba(30,30,30,0.85);
   --navbar-color: rgba(26,26,26,0.85);
   --bg-card-color: #252525;
   --primary-color: #D9D9D9;
