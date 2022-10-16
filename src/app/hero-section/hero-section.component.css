@@ -68,7 +68,7 @@
   align-items: center;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  background-color: var(--navbar-color);
+  background-color: var(--bg-color-translucent);
   padding: 10px 10px 10px 10px;
   justify-content: center;
   border-radius: 2px;
