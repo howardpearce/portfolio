@@ -2,6 +2,9 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
+  padding: 10px;
+  background-color: var(--bg-color-translucent);
+  margin-bottom: 15px;
 }
 
 .switch-item-container {

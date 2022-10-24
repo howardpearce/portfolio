@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/strigiforme/portfolio/compare/v0.3.5...v0.4.0) (2022-10-16)
+
+### [0.3.5](https://github.com/strigiforme/portfolio/compare/v0.3.4...v0.3.5) (2022-10-16)
+
+
+### Bug Fixes
+
+* Change background color for scroll indicator ([6df45e1](https://github.com/strigiforme/portfolio/commit/6df45e1106b6702d50d32735188864baefdddc29))
+
+### [0.3.4](https://github.com/strigiforme/portfolio/compare/v0.3.3...v0.3.4) (2022-10-16)
+
+
+### Features
+
+* Add footer section ([8aefe0b](https://github.com/strigiforme/portfolio/commit/8aefe0b030ffcfda3c8e2e19655211adc2f75a0c))
+
+### [0.3.3](https://github.com/strigiforme/portfolio/compare/v0.3.2...v0.3.3) (2022-10-14)
+
+
+### Features
+
+* implement ticking clock in contact section ([ce950cc](https://github.com/strigiforme/portfolio/commit/ce950cc00b210297c4c513d77bc6020c45186e69))
+
+### [0.3.2](https://github.com/strigiforme/portfolio/compare/v0.3.1...v0.3.2) (2022-10-14)
+
+
+### Features
+
+* Implement static text for Contact Section ([ac232c3](https://github.com/strigiforme/portfolio/commit/ac232c369cde51b1892d6ef5b1c8643df44c57c0))
+
+### [0.3.1](https://github.com/strigiforme/portfolio/compare/v0.3.0...v0.3.1) (2022-10-10)
+
+
+### Bug Fixes
+
+* Compress headshot image ([7f13146](https://github.com/strigiforme/portfolio/commit/7f131469f9aaa7a8b52e6247021f765e738cb69e))
+* Delete unused SVG assets ([a4f006a](https://github.com/strigiforme/portfolio/commit/a4f006a27564b5f61cf1512204c8a0b2564d029d))
+* Up component budget from 2kb to 3kb ([b9b3d68](https://github.com/strigiforme/portfolio/commit/b9b3d6834c436bc2e848b18aaa48991855d3afa7))
+
 ## [0.3.0](https://github.com/strigiforme/portfolio/compare/v0.2.3...v0.3.0) (2022-10-08)
 
 ### [0.2.3](https://github.com/strigiforme/portfolio/compare/v0.2.2...v0.2.3) (2022-10-08)
