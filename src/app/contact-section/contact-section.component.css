@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 150px;
-  padding: 50px 130px 55px 130px;
+  padding: 50px 80px 55px 130px;
 }
 
 .footer p {
@@ -80,4 +80,27 @@ svg circle {
 
 .highlight svg path, .highlight svg line {
   stroke: var(--accent-color) !important;
+}
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1024px) {
+  #decorator {
+    display: none;
+  }
+  p {
+    font-size: 20px;
+  }
+  .left {
+    max-width: 400px;
+  }
+  .contact-resource a {
+    font-size: 28px;
+  }
+  #time-text {
+    font-size: 52px;
+  }
+  .footer p {
+    font-size: 20px;
+  }
 }

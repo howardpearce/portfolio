@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExperienceSectionComponent implements OnInit {
 
   experience = {
-    title: "Graduate Software Developer @ Ultra Maritime",
+    title: "Software Developer @ Ultra Maritime",
     date: "January 2020 - Present",
     description: "I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consists of application software development and design within Agile Methodology.",
     bullets: [
@@ -68,7 +68,7 @@ export class ExperienceSectionComponent implements OnInit {
         break;
       }
       default: {
-        this.experience.title = "Graduate Software Developer @ Ultra Maritime";
+        this.experience.title = "Software Developer @ Ultra Maritime";
         this.experience.date = "January 2020 - Present";
         this.experience.description = "I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consists of application software development and design within Agile Methodology.";
         this.experience.bullets = [

@@ -23,7 +23,7 @@ describe('ExperienceSectionComponent', () => {
 
   it('has correct default data', () => {
     // check all the default data is corrected
-    expect(component.experience.title).toBe("Graduate Software Developer @ Ultra Maritime");
+    expect(component.experience.title).toBe("Software Developer @ Ultra Maritime");
     expect(component.experience.date).toBe("January 2020 - Present");
     expect(component.experience.description).toBe("I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consists of application software development and design within Agile Methodology.");
     expect(component.experience.bullets[0]).toBe("Designed and developed micro-service for Serial Communication.");
@@ -41,7 +41,7 @@ describe('ExperienceSectionComponent', () => {
   it('can switch data', () => {
     // Just need to test that switching causes a change in the elements, do not need to look at the contents too hard.
     component.switchActiveExperience(1);
-    expect(component.experience.title).toBe("Graduate Software Developer @ Ultra Maritime");
+    expect(component.experience.title).toBe("Software Developer @ Ultra Maritime");
     expect(component.experience.date).toBe("January 2020 - Present");
     expect(component.experience.description).toBe("I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consists of application software development and design within Agile Methodology.");
     component.switchActiveExperience(2);

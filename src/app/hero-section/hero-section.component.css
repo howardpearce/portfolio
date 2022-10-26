@@ -10,21 +10,22 @@
 #gradient {
   background: linear-gradient(rgba(255,255,255,0) 0%, var(--bg-color) 100%);
   position: absolute;
-  bottom: -18vh;
-  /* Reference grid-hero-container for this width (it is the addtion of the last two columns) */
-  width: 830px;
+  bottom: 0px;
+  /* Reference grid-hero-container for this width (it is the addition of the last two columns) */
+  width: 45%;
   height: 30vh;
 }
 
 .grid-hero-container {
   display: grid;
-  grid-template-columns: 180px auto 650px 180px;
+  grid-template-columns: 180px auto 35% 10%;
   grid-template-rows: 100px auto 100px;
   background-color: var(--bg-color);
 }
 
 #hero-container {
   height: 100vh;
+  overflow: hidden;
 }
 
 .hero-section-container {
@@ -32,6 +33,7 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 2;
+  display: flex;
 }
 
 #hero-typography {
@@ -42,6 +44,15 @@
   height: 100%;
   position: relative;
   top: -60px;
+  background-color: var(--bg-color);
+}
+
+#spacer {
+  display: none;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 #above {
@@ -102,68 +113,38 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1255px) {
-  .hero-text {
-    font-size: 100px;
+@media only screen and (max-width: 1024px) {
+  #spacer {
+    display: block;
+    width: 100%;
   }
-  .hero-section-container {
-    grid-template-columns: auto 180px;
+
+  #hero-typography {
+    margin: auto;
+    height: auto;
+    padding-bottom: 30px;
+    padding-left: 30px;
   }
+
   .hero-section-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
     justify-content: center;
+    align-items: center;
+  }
+
+  .grid-hero-container {
+    display: grid;
+    grid-template-columns: 180px auto 30% 10%;
+    grid-template-rows: 100px auto 100px;
+    background-color: var(--bg-color);
+  }
+
+  #gradient {
+    width: 40%;
+    bottom: 0px;
   }
 }
 
-@media only screen and (max-width: 1050px) {
-  .hero-text {
-    font-size: 80px;
-  }
-  .hero-subtext {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  .hero-text {
-    font-size: 70px;
-  }
-  .hero-subtext {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  .hero-subtext {
-    font-size: 24px;
-  }
-  .hero-text {
-    font-size: 72px;
-  }
-  .hero-section-container {
-    grid-template-columns: auto 60px;
-  }
-  #above {
-    bottom: -10px;
-  }
-  #hero-typography {
-    max-width: 400px;
-  }
-}
-
-@media only screen and (max-width: 630px) {
-  #hero-typography {
-    max-width: 400px;
-  }
-  .hero-text {
-    font-size: 65px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  #hero-typography {
-    max-width: 400px;
-  }
-  .hero-text {
-    font-size: 60px;
-  }
-}
