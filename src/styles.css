@@ -74,7 +74,7 @@ body {
 :root {
   --bg-color: #1E1E1E;
   --bg-color-translucent: rgba(30,30,30,0.85);
-  --navbar-color: rgba(26,26,26,0.85);
+  --navbar-color: rgba(26,26,26,0.95);
   --bg-card-color: #252525;
   --primary-color: #D9D9D9;
   --hero-text-color: #FFFFFF;
@@ -107,8 +107,26 @@ p, a, li {
   font-size: 24px;
 }
 
+/* html {
+  overflow:scroll;
+} */
+
 
 /* Responsive styling */
+
+@media only screen and (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-rows: 100px auto 100px;
+    background-color: var(--bg-color);
+  }
+
+  .content-container {
+    grid-template-columns: 100px auto 50px;
+  }
+
+}
 
 @media only screen and (max-width: 770px) {
   .grid-container {

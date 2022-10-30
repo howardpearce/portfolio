@@ -18,7 +18,7 @@
   display: flex;
 }
 
-.right a {
+.navbar-text {
   padding-left: 30px;
   padding-right: 30px;
   text-decoration: none;
@@ -39,17 +39,27 @@
   font-family: "Aileron Semibold";
 }
 
-/* MEDIA QUERIES AND RESPONSIVE STYLING */
-
-@media only screen and (max-width: 1350px) {
-  .expanded {
-    display: none;
-  }
+.hamburger {
+  display: none;
 }
 
-@media only screen and (min-width: 1350px) {
-  .hamburger {
-    display: none;
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1024px) {
+  #logotype {
+    font-size: 24px;
+  }
+  .navbar-text {
+    font-size: 24px;
+  }
+  .navbar-text {
+    padding: 0px 10px;
+  }
+  .left {
+    margin-left: 45px;
+  }
+  .right {
+    margin-right: 45px;
   }
 }
 

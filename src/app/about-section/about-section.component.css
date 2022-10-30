@@ -70,3 +70,21 @@ li img {
 .secondary-button svg line {
   stroke: var(--accent-color);
 }
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1024px) {
+  .typography p{
+    font-size: 20px;
+  }
+  li {
+    font-size: 20px;
+  }
+  #headshot img, #headshot{
+    width: 290px;
+    height: 256px;
+  }
+  #headshot {
+    margin-left: 40px;
+  }
+}

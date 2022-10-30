@@ -6,15 +6,15 @@
   margin-bottom: 20px;
   max-width: 300px;
   align-items: center;
+  border-radius: 5px;
 }
 
 .experience:hover {
   cursor: pointer;
-
 }
 
 .experience span {
-  font-size: 64px !important;
+  font-size: 64px;
   font-family: 'Bebas Neue';
   color: var(--primary-color);
   padding-right: 25px;
@@ -61,4 +61,29 @@
 .tag p {
   font-size: 16px;
   color: var(--accent-color);
+}
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1024px) {
+  .experience {
+    max-width: 180px;
+  }
+  .experience p {
+    font-size: 16px;
+    font-family: "Aileron Semibold";
+  }
+  .experience span {
+    font-size: 40px;
+    padding-right: 15px;
+  }
+  .experience-title {
+    font-size: 28px;
+  }
+  p {
+    font-size: 20px;
+  }
+  li {
+    font-size: 20px;
+  }
 }
