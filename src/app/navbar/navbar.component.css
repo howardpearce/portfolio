@@ -63,14 +63,29 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   .left {
     margin-left: 20px;
+  }
+  .left p {
+    padding: 0px;
   }
   .right {
     margin-right: 20px;
   }
   #logotype {
     font-size: 20px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .expanded {
+    display: none;
+  }
+  .hamburger i {
+    padding-left: 13px;
+  }
+  .navbar-container {
+    height: 80px;
   }
 }

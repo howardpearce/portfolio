@@ -82,9 +82,14 @@ svg circle {
   stroke: var(--accent-color) !important;
 }
 
+.mobile-link-arrow {
+  display: none;
+  padding-bottom: 3px;
+}
+
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 400px) {
   #decorator {
     display: none;
   }
@@ -102,5 +107,32 @@ svg circle {
   }
   .footer p {
     font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #decorator {
+    display: none;
+  }
+  p {
+    font-size: 16px;
+  }
+  .contact-resource a {
+    font-size: 20px;
+  }
+  .time {
+    display: none;
+  }
+  .mobile-link-arrow {
+    display: block
+  }
+  .link-arrow {
+    display: none;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+  .footer {
+    padding: 20px;
   }
 }
