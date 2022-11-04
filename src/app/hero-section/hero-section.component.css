@@ -113,7 +113,7 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 400px) {
   #spacer {
     display: block;
     width: 100%;
@@ -148,3 +148,40 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .hero-text {
+    font-size: 52px !important;
+  }
+  #above, #below {
+    font-size: 20px !important;
+    padding-bottom: 15px;
+    padding-top: 2px;
+  }
+  #hero-graphic {
+    display: none;
+  }
+  .grid-hero-container {
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: 100px auto 100px;
+    background-color: var(--bg-color);
+  }
+  #scroll-text, #upper-arrow {
+    display: none;
+  }
+  .arrow-container {
+    position: absolute;
+    padding: 20px;
+    bottom: 0px;
+    right: 0px;
+    margin: 0px;
+    top: auto;
+    justify-content: initial;
+  }
+  #lower-arrow {
+    height: 50px;
+  }
+  #hero-typography{
+    top: 0px;
+  }
+}
