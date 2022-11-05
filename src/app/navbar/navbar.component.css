@@ -63,15 +63,33 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 900px) {
+  #logotype {
+    font-size: 20px;
+  }
+  .navbar-text {
+    font-size: 20px;
+  }
+  .navbar-text {
+    padding: 0px 7px;
+  }
   .left {
-    margin-left: 20px;
+    margin-left: 45px;
+  }
+  .right {
+    margin-right: 45px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .left {
+    margin-left: 40px;
   }
   .left p {
     padding: 0px;
   }
   .right {
-    margin-right: 20px;
+    margin-right: 40px;
   }
   #logotype {
     font-size: 20px;
@@ -83,9 +101,51 @@
     display: none;
   }
   .hamburger i {
-    padding-left: 13px;
+    padding-left: 30px;
   }
   .navbar-container {
     height: 80px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hamburger i {
+    padding-left: 20px;
+  }
+  .right {
+    margin-right: 30px;
+  }
+  .left {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hamburger i {
+    padding-left: 20px;
+  }
+  .right {
+    margin-right: 30px;
+  }
+  .left {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hamburger i {
+    padding-left: 10px;
+  }
+  .right {
+    margin-right: 30px;
+  }
+  .left {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .hamburger {
+    display: none;
   }
 }

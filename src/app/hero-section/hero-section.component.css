@@ -116,7 +116,7 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) and (min-width: 400px) {
+@media only screen and (max-width: 1024px) and (min-width: 700px) {
   #spacer {
     display: block;
     width: 100%;
@@ -151,14 +151,25 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 860px) and (min-width: 700px) {
+  .hero-text {
+    font-size: 100px;
+  }
+  .hero-subtext {
+    font-size: 28px;
+    max-width: 530px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
   .hero-text {
     font-size: 52px !important;
   }
   #above, #below {
-    font-size: 20px !important;
+    font-size: 18px !important;
     padding-bottom: 15px;
     padding-top: 2px;
+    max-width: 275px;
   }
   #hero-graphic {
     display: none;
@@ -186,5 +197,6 @@
   }
   #hero-typography{
     top: 0px;
+    margin: auto;
   }
 }
