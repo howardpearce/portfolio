@@ -15,7 +15,7 @@
 }
 
 #technology-list ul {
-  padding-right: 80px;
+  padding-right: 40px;
 }
 
 ul {
@@ -73,7 +73,7 @@ li img {
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) and (min-width: 400px) {
+@media only screen and (max-width: 1024px) and (min-width: 700px) {
   .typography p{
     font-size: 20px;
   }
@@ -89,7 +89,22 @@ li img {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 950px) and (min-width: 700px) {
+  #technology-list ul {
+    padding-right: 30px;
+  }
+  #headshot img, #headshot{
+    width: 200px;
+    height: 176px;
+  }
+  #headshot {
+    margin: 0px 0px 0px 20px;
+    -webkit-box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+
+@media only screen and (max-width: 700px) {
   .typography p, li{
     font-size: 16px;
   }
@@ -110,3 +125,4 @@ li img {
     padding-right: 40px;
   }
 }
+

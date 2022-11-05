@@ -66,7 +66,7 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) and (min-width: 400px) {
+@media only screen and (max-width: 1024px) and (min-width: 700px) {
   .experience {
     max-width: 180px;
   }
@@ -89,8 +89,44 @@
   }
 }
 
+@media only screen and (max-width: 900px) and (min-width: 700px) {
+  .content {
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .experience-detail {
+    margin: auto;
+  }
+  .experience span {
+    padding-right: 10px;
+  }
+  .experience p {
+    max-width: 130px;
+  }
+  .experience {
+    max-width: 200px;
+  }
+  .experience {
+    padding: 5px 10px;
+    width: fit-content !important;
+    margin: 0px 10px 0px 0px;
+  }
+  .experience-list {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    margin-bottom: 20px;
+  }
+  .tag p {
+    font-size: 12px;
+  }
+  .experience-detail {
+    margin: 0px;
+  }
+}
 
-@media only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 700px) {
   p {
     font-size: 16px;
   }
@@ -105,6 +141,7 @@
   }
   .content {
     flex-direction: column;
+    overflow: scroll;
   }
   .experience-detail {
     margin: auto;
