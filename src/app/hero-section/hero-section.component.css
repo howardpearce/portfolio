@@ -10,10 +10,10 @@
 #gradient {
   background: linear-gradient(rgba(255,255,255,0) 0%, var(--bg-color) 100%);
   position: absolute;
-  bottom: 0px;
+  top: 889px;
   /* Reference grid-hero-container for this width (it is the addition of the last two columns) */
   width: 45%;
-  height: 30vh;
+  height: 200px;
 }
 
 .grid-hero-container {
@@ -21,11 +21,11 @@
   grid-template-columns: 180px auto 35% 10%;
   grid-template-rows: 100px auto 100px;
   background-color: var(--bg-color);
+  overflow: visible;
 }
 
 #hero-container {
   height: 100vh;
-  overflow: hidden;
 }
 
 .hero-section-container {
@@ -72,7 +72,7 @@
 
 .arrow-container {
   position: relative;
-  top: -250px;
+  top: -400px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -83,6 +83,9 @@
   padding: 10px 10px 10px 10px;
   justify-content: center;
   border-radius: 2px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  z-index: 5;
 }
 
 #scroll-text {
