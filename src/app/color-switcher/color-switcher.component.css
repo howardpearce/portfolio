@@ -3,8 +3,8 @@
   bottom: 20px;
   left: 20px;
   padding: 10px;
+  max-height: 75px;
   background-color: var(--bg-color-translucent);
-  margin-bottom: 15px;
 }
 
 .switch-item-container {
@@ -30,4 +30,33 @@
 
 .selected {
   background-color: var(--primary-color);
+}
+
+#touch-tab {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  left: 0px;
+  padding: 10px;
+  padding-left: 3px;
+  width: 12px;
+  height: 65px;
+  margin-bottom: 15px;
+  background-color: var(--bg-card-color);
+  border-radius: 0px 4px 4px 0px;
+  align-items: center;
+  transition: all 0.25s;
+}
+
+@media only screen and (max-width: 400px) {
+ #switcher-container {
+  left: -100px;
+  background-color: var(--bg-card-color);
+  padding-right: 20px;
+  bottom: 55px;
+  transition: all 0.25s;
+ }
+ #touch-tab {
+  display: flex;
+ }
 }

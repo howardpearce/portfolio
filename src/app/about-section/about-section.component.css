@@ -73,7 +73,7 @@ li img {
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 400px) {
   .typography p{
     font-size: 20px;
   }
@@ -86,5 +86,27 @@ li img {
   }
   #headshot {
     margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .typography p, li{
+    font-size: 16px;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #headshot img, #headshot{
+    width: 230px;
+    height: 196px;
+  }
+  #headshot {
+    -webkit-box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+    margin: 30px 20px 20px 0px;
+  }
+  #technology-list ul {
+    padding-right: 40px;
   }
 }
