@@ -5,6 +5,7 @@
   padding: 10px;
   max-height: 75px;
   background-color: var(--bg-color-translucent);
+  z-index: 100;
 }
 
 .switch-item-container {
@@ -46,6 +47,7 @@
   border-radius: 0px 4px 4px 0px;
   align-items: center;
   transition: all 0.25s;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 700px) {

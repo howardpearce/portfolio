@@ -45,7 +45,14 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1400px) {
+  .navbar-text {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 1224px) {
   #logotype {
     font-size: 24px;
   }
