@@ -57,15 +57,14 @@
 
 #above {
   position: relative;
-  bottom: -15px;
+  bottom: -10px;
 }
 
 .hero-subtext {
  font-size: 32px;
 }
 
-.hero-text {
- font-family: 'Bebas Neue';
+#hero-text {
  font-size: 128px;
  margin: 0px;
 }
@@ -85,7 +84,7 @@
   border-radius: 2px;
   grid-column-start: 1;
   grid-column-end: 5;
-  z-index: 5;
+  z-index: 2;
 }
 
 #scroll-text {
@@ -127,9 +126,10 @@
 }
 
 @media only screen and (max-width: 1500px) and (min-width: 1200px) {
-  .hero-text {
+  #hero-text {
     font-size: 90px;
   }
+
   .hero-subtext {
     font-size: 28px;
     max-width: 530px;
@@ -146,6 +146,11 @@
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 700px) {
+
+  #hero-text {
+    font-size: 90px;
+  }
+
   #spacer {
     display: block;
     width: 100%;
@@ -167,6 +172,11 @@
     align-items: center;
   }
 
+  .hero-subtext {
+    font-size: 28px;
+    max-width: 530px;
+  }
+
   .grid-hero-container {
     display: grid;
     grid-template-columns: 180px auto 30% 10%;
@@ -178,12 +188,13 @@
     width: 40%;
     bottom: 0px;
   }
+
+  #above {
+    bottom: 0px;
+  }
 }
 
 @media only screen and (max-width: 860px) and (min-width: 700px) {
-  .hero-text {
-    font-size: 100px;
-  }
   .hero-subtext {
     font-size: 28px;
     max-width: 530px;
@@ -191,7 +202,7 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .hero-text {
+  #hero-text {
     font-size: 52px !important;
   }
   #above, #below {

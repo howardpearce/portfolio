@@ -10,15 +10,11 @@
   padding: 50px 80px 55px 130px;
 }
 
-.footer p {
-  font-size: 20px;
-}
-
-.left {
+#left {
   width: 100%;
 }
 
-.left p {
+#left p {
   padding-bottom: 20px;
   max-width: 600px;
 }
@@ -29,7 +25,7 @@
   font-weight: bold;
 }
 
-.time, .right {
+.time, #right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -56,9 +52,7 @@ svg circle {
 
 .contact-resource a {
   margin: 10px 10px 10px 0px;
-  font-family: 'Aileron';
   font-weight: bold;
-  font-size: 32px;
   text-decoration: none;
 }
 
@@ -93,32 +87,17 @@ svg circle {
   #decorator {
     display: none;
   }
-  p {
-    font-size: 20px;
-  }
-  .left {
+  #left {
     max-width: 400px;
-  }
-  .contact-resource a {
-    font-size: 28px;
   }
   #time-text {
     font-size: 52px;
-  }
-  .footer p {
-    font-size: 20px;
   }
 }
 
 @media only screen and (max-width: 700px) {
   #decorator {
     display: none;
-  }
-  p {
-    font-size: 16px;
-  }
-  .contact-resource a {
-    font-size: 20px;
   }
   .time {
     display: none;
@@ -129,10 +108,17 @@ svg circle {
   .link-arrow {
     display: none;
   }
-  .footer p {
-    font-size: 12px;
-  }
   .footer {
     padding: 20px;
+  }
+  #left p {
+    max-width: 80%;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .subtext {
+    font-size: 10px !important;
   }
 }

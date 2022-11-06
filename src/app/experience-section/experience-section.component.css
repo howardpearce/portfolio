@@ -23,6 +23,7 @@
 
 .experience p {
   width: 200px;
+  font-family: "Aileron Semibold";
 }
 
 .experience-detail {
@@ -31,15 +32,8 @@
   flex-direction: column;
 }
 
-.experience-title {
-  font-family: 'Aileron';
-  font-size: 36px;
-}
-
 .experience-subtitle {
-  font-size: 16px;
   color: var(--neutral-grey);
-  font-weight: bold;
 }
 
 .experience-description {
@@ -60,7 +54,6 @@
 }
 
 .tag p {
-  font-size: 16px;
   color: var(--accent-color);
 }
 
@@ -88,7 +81,7 @@ i {
   overflow: visible;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: fit-content;
 }
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
@@ -99,22 +92,11 @@ i {
   }
   .experience p {
     font-size: 16px;
-    font-family: "Aileron Semibold";
   }
   .experience span {
     font-size: 40px;
     padding-right: 15px;
   }
-  .experience-title {
-    font-size: 28px;
-  }
-  p {
-    font-size: 20px;
-  }
-  li {
-    font-size: 20px;
-  }
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -137,51 +119,15 @@ i {
   }
   #experience-list-container {
     align-items: center;
+    max-width: 400px;
   }
   .experience {
     padding: 5px 10px;
     width: fit-content;
     margin: 0px 10px 0px 0px;
   }
-}
-
-@media only screen and (max-width: 900px) and (min-width: 700px) {
-  .experience span {
-    padding-right: 15px;
-  }
-  .experience p {
-    max-width: 300px;
-  }
-  .experience {
-    max-width: 300px;
-  }
-  .tag p {
-    font-size: 12px;
-  }
-  .content {
-    max-width: 550px;
-  }
-}
-
-
-@media only screen and (max-width: 700px) {
-  .experience-list {
-    padding-top: 0px;
-  }
-  p {
-    font-size: 16px;
-  }
-  li {
-    font-size: 16px;
-  }
-  .experience-title {
-    font-size: 18px;
-  }
-  .experience-subtitle {
-    font-size: 14px;
-  }
   .experience-detail {
-    margin: auto;
+    margin-left: 0px;
     margin-top: 5px;
   }
   .experience span {
@@ -192,9 +138,19 @@ i {
     font-size: 14px;
     max-width: 130px;
   }
-
-  .tag p {
-    font-size: 12px;
+  .experience-name {
+    font-size: 14px;
   }
+}
 
+@media only screen and (max-width: 500px) {
+  #experience-list-container {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #experience-list-container {
+    max-width: 300px;
+  }
 }
