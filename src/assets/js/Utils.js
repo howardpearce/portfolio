@@ -17,7 +17,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var annoyingContainer = document.querySelector("#experience-list-container");
   var newWidth = document.querySelector(".experience-detail").clientWidth;
-  if (screen.width > 700 && screen.width < 900) {
+  if (screen.width < 900) {
     annoyingContainer.style.maxWidth = newWidth + "px";
 
     var pixelValue = annoyingContainer.style.maxWidth.slice(0, -2);
