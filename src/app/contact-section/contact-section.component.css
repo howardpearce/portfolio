@@ -115,3 +115,10 @@ svg circle {
     max-width: 80%;
   }
 }
+
+
+@media only screen and (max-width: 400px) {
+  .subtext {
+    font-size: 10px !important;
+  }
+}
