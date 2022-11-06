@@ -89,7 +89,7 @@ svg circle {
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) and (min-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
   #decorator {
     display: none;
   }

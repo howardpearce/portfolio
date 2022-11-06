@@ -1,12 +1,17 @@
 #headshot {
   margin-left: 80px;
-  width: 374px;
-  height: 331px;
+  width: 320px;
+  height: 283px;
   -webkit-box-shadow: 40px 40px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
   box-shadow: 40px 40px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
   /* makes sure shadow does not overflow beyond headshot container */
   margin-right: 40px;
   margin-bottom: 40px;
+}
+
+#headshot img {
+  width: 320px;
+  height: 283px;
 }
 
 #technology-list {
@@ -73,7 +78,18 @@ li img {
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1024px) and (min-width: 700px) {
+@media only screen and (max-width: 1700px) and (min-width: 1024px) {
+  #headshot img, #headshot{
+    width: 282px;
+    height: 250px;
+  }
+
+  #headshot {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 950px) {
   .typography p{
     font-size: 20px;
   }
