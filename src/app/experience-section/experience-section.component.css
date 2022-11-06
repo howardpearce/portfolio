@@ -64,6 +64,33 @@
   color: var(--accent-color);
 }
 
+.end {
+  margin-right: 0px;
+}
+
+i {
+  display: none;
+  position: absolute;
+  color: var(--neutral-grey);
+  font-size: 20px;
+}
+
+#right-arrow {
+  right: -20px;
+}
+
+#left-arrow {
+  left: -20px;
+}
+
+#experience-list-container {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
 @media only screen and (max-width: 1200px) and (min-width: 900px) {
@@ -87,46 +114,60 @@
   li {
     font-size: 20px;
   }
+
 }
 
-@media only screen and (max-width: 900px) and (min-width: 700px) {
+@media only screen and (max-width: 900px) {
   .content {
     flex-direction: column;
-    overflow: scroll;
-  }
-  .experience-detail {
-    margin: auto;
-  }
-  .experience span {
-    padding-right: 10px;
-  }
-  .experience p {
-    max-width: 130px;
-  }
-  .experience {
-    max-width: 200px;
-  }
-  .experience {
-    padding: 5px 10px;
-    width: fit-content !important;
-    margin: 0px 10px 0px 0px;
+    margin-top: 10px;
   }
   .experience-list {
     display: flex;
     flex-direction: row;
     overflow: scroll;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .content {
+    margin: 0px;
+  }
+  i {
+    display: block;
+  }
+  #experience-list-container {
+    align-items: center;
+  }
+  .experience {
+    padding: 5px 10px;
+    width: fit-content;
+    margin: 0px 10px 0px 0px;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 700px) {
+  .experience span {
+    padding-right: 15px;
+  }
+  .experience p {
+    max-width: 300px;
+  }
+  .experience {
+    max-width: 300px;
   }
   .tag p {
     font-size: 12px;
   }
-  .experience-detail {
-    margin: 0px;
+  .content {
+    max-width: 550px;
   }
 }
 
 
 @media only screen and (max-width: 700px) {
+  .experience-list {
+    padding-top: 0px;
+  }
   p {
     font-size: 16px;
   }
@@ -139,12 +180,9 @@
   .experience-subtitle {
     font-size: 14px;
   }
-  .content {
-    flex-direction: column;
-    overflow: scroll;
-  }
   .experience-detail {
     margin: auto;
+    margin-top: 5px;
   }
   .experience span {
     font-size: 36px;
@@ -154,22 +192,9 @@
     font-size: 14px;
     max-width: 130px;
   }
-  .experience {
-    max-width: 200px;
-  }
-  .experience {
-    padding: 5px 10px;
-    width: fit-content !important;
-    margin: 0px 10px 0px 0px;
-  }
-  .experience-list {
-    display: flex;
-    flex-direction: row;
-    overflow: scroll;
-    max-width: 80vw;
-    margin-bottom: 20px;
-  }
+
   .tag p {
     font-size: 12px;
   }
+
 }
