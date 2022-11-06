@@ -85,29 +85,6 @@ body {
 
 /* General Text Styles */
 
-h1 {
-  font-size: 64px;
-  font-weight: bold;
-}
-
-.highlight-text {
-  color: var(--accent-color) !important;
-}
-
-p, a, li, h1, h2, h3{
-  color: var(--primary-color);
-  margin: 0px;
-}
-
-h1, h2, h3 {
-  font-family: 'Bebas Neue';
-}
-
-p, a, li {
-  font-family: "Aileron", sans-serif;
-  font-size: 24px;
-}
-
 
 /* Responsive styling */
 
@@ -134,13 +111,6 @@ p, a, li {
 
   .content-container {
     grid-template-columns: 100px auto 50px;
-  }
-}
-
-@media only screen and (max-width: 900px) and (min-width: 700px) {
-  h1 {
-    font-size: 56px;
-    font-weight: bold;
   }
 }
 
@@ -174,3 +144,67 @@ p, a, li {
   }
 }
 
+
+/* Styling to manage the size of text throughout the portfolio */
+
+.heading {
+  font-family: "Aileron Semibold";
+  font-size: 32px;
+}
+
+.subtext {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.highlight-text {
+  color: var(--accent-color) !important;
+}
+
+p, a, li, h1, h2, h3{
+  color: var(--primary-color);
+  margin: 0px;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue';
+}
+
+p, a, li {
+  font-family: "Aileron", sans-serif;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px ){
+  .title {
+    font-size: 50px;
+  }
+  p, li, a {
+    font-size: 20px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+  .subtext {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .title {
+    font-size: 48px;
+  }
+  p, li, a {
+    font-size: 16px;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .subtext {
+    font-size: 12px;
+  }
+}

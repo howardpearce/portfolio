@@ -45,14 +45,14 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) and (min-width: 1224px) {
   .navbar-text {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
 }
 
-@media only screen and (max-width: 1224px) {
+@media only screen and (max-width: 1224px) and (min-width: 900px) {
   #logotype {
     font-size: 24px;
   }
@@ -70,7 +70,7 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) and (min-width: 750px) {
   #logotype {
     font-size: 20px;
   }
@@ -78,7 +78,7 @@
     font-size: 20px;
   }
   .navbar-text {
-    padding: 0px 7px;
+    padding: 0px 5px;
   }
   .left {
     margin-left: 45px;
@@ -127,27 +127,9 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .hamburger i {
-    padding-left: 20px;
-  }
-  .right {
-    margin-right: 30px;
-  }
-  .left {
-    margin-left: 30px;
-  }
-}
-
 @media only screen and (max-width: 400px) {
   .hamburger i {
     padding-left: 10px;
-  }
-  .right {
-    margin-right: 30px;
-  }
-  .left {
-    margin-left: 30px;
   }
 }
 
