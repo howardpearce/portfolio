@@ -26,7 +26,7 @@
 /* Structure styles used in every section */
 .grid-container {
   display: grid;
-  grid-template-columns: 180px auto 180px;
+  grid-template-columns: auto 1220px auto;
   grid-template-rows: 100px auto 100px;
   background-color: var(--bg-color);
 }
@@ -37,7 +37,7 @@
   grid-row-start: 2;
   grid-row-end: 2;
   display: grid;
-  grid-template-columns: 120px auto 120px;
+  grid-template-columns: 120px 980px 120px;
   grid-template-rows: 70px auto;
   max-width: 1366px;
   width: 100%;
@@ -98,8 +98,8 @@ body {
 @media only screen and (max-width: 1400px) and (min-width: 1024px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 120px auto 120px;
-    grid-template-rows: 100px auto 100px;
+    grid-template-columns: auto 1000px auto;
+    grid-template-rows: 100px 800px 100px;
     background-color: var(--bg-color);
   }
 
@@ -111,29 +111,30 @@ body {
 @media only screen and (max-width: 1024px) and (min-width: 700px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 30px auto 30px;
+    grid-template-columns: auto 650px auto;
+    overflow: hidden;
     grid-template-rows: 100px auto 100px;
-    background-color: var(--bg-color);
   }
 
   .content-container {
-    grid-template-columns: 100px auto 50px;
+    grid-template-columns: 100px 500px 50px;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .grid-container {
-    grid-template-columns: 0px auto 0px;
+    display: grid;
+    grid-template-columns: auto 400px auto;
+    overflow: hidden;
   }
   .grid-container, .content-container, .content {
-    max-width: 400px;
     margin: auto;
   }
   .plus-container {
     display: none;
   }
   .content-container {
-    grid-template-columns: 0px auto 0px;
+    grid-template-columns: 0px 400px 0px;
   }
   .title-container {
     display: flex;
@@ -152,9 +153,13 @@ body {
 }
 
 @media only screen and (max-width: 450px) {
-  .grid-container, .content-container, .content {
-    max-width: 320px;
-    margin: auto;
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 320px auto;
+    overflow: hidden;
+  }
+  .content-container {
+    grid-template-columns: 0px 320px 0px;
   }
 }
 

@@ -12,21 +12,3 @@
     timeText.innerHTML = (hour + ":" + minute + ":" + second);
   }, 1000);
  });
-
-// Cannot start until HTML has been rendered
-document.addEventListener("DOMContentLoaded", function () {
-  var annoyingContainer = document.querySelector("#experience-list-container");
-  var newWidth = document.querySelector(".experience-detail").clientWidth;
-  if (screen.width < 900) {
-    annoyingContainer.style.maxWidth = newWidth + "px";
-
-    var pixelValue = annoyingContainer.style.maxWidth.slice(0, -2);
-    console.log(pixelValue);
-    console.log(annoyingContainer.clientWidth)
-
-    if (annoyingContainer.clientWidth != parseInt(pixelValue)) {
-      document.querySelector("#right-arrow").style.display = "none";
-      document.querySelector("#left-arrow").style.display = "none";
-    }
-  }
-});

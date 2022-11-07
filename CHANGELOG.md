@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/strigiforme/portfolio/compare/v0.4.1...v0.4.2) (2022-11-07)
+
+
+### Features
+
+* **UI:** Add responsiveness for phone layout ([83a1494](https://github.com/strigiforme/portfolio/commit/83a1494aefa36348bc757fddcdf721ad749f12af))
+* **UI:** Add scroll arrow to experience scroller ([d9a1795](https://github.com/strigiforme/portfolio/commit/d9a17959b074ca7e8246aa9d24d359516bf149cd))
+* **UI:** Adjust styles to flow seamlessly between phone & tablet ([ece2c45](https://github.com/strigiforme/portfolio/commit/ece2c45c05d4aad071b28649eced7f814fb3f939))
+* **UI:** responsive between tablet and desktop width ([11c557e](https://github.com/strigiforme/portfolio/commit/11c557e684323bac7c597cfafddf544bba0cd399))
+* **UI:** responsive between tablet and desktop width ([df2d7e5](https://github.com/strigiforme/portfolio/commit/df2d7e52ed7038e158b1c1bc719798d205c13c97))
+
+
+### Bug Fixes
+
+* Experience scroller on mobile overflows ([bf0f175](https://github.com/strigiforme/portfolio/commit/bf0f1755e2c10f3880cd85faec90d356ea766776))
+* Experience scroller on mobile overflows ([8f4550c](https://github.com/strigiforme/portfolio/commit/8f4550c47c60d8317eb481c60b41dc39efb493ea))
+* Scroll arrow misplaced in desktop view ([4b0c58e](https://github.com/strigiforme/portfolio/commit/4b0c58e5faf02b9d0350dc01cfc99e6e63e3b031))
+* **test:** Update test to look for different text ([de984f0](https://github.com/strigiforme/portfolio/commit/de984f0a15becd7554e1491c70688b5e2917a716))
+* **UI:** fix old experience-switcher bug ([096d73e](https://github.com/strigiforme/portfolio/commit/096d73ea8677b30e6314419650fc8f2f22fa84af))
+* **UI:** Make hero animation more stable at different screen heights ([aeaa309](https://github.com/strigiforme/portfolio/commit/aeaa309b49a5dd27b9e10b257818ec301787692d))
+
 ### [0.4.1](https://github.com/strigiforme/portfolio/compare/v0.4.0...v0.4.1) (2022-10-30)
 
 
