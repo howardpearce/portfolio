@@ -81,7 +81,6 @@ i {
   overflow: visible;
   display: flex;
   flex-direction: row;
-  width: fit-content;
 }
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
@@ -99,7 +98,7 @@ i {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   .content {
     flex-direction: column;
     margin-top: 10px;
@@ -107,19 +106,18 @@ i {
   .experience-list {
     display: flex;
     flex-direction: row;
-    overflow: scroll;
     padding-bottom: 10px;
     padding-top: 10px;
+    overflow: scroll;
+  }
+  #experience-list-container {
+    align-items: center;
   }
   .content {
     margin: 0px;
   }
   i {
     display: block;
-  }
-  #experience-list-container {
-    align-items: center;
-    max-width: 400px;
   }
   .experience {
     padding: 5px 10px;
@@ -140,17 +138,5 @@ i {
   }
   .experience-name {
     font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #experience-list-container {
-    max-width: 400px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  #experience-list-container {
-    max-width: 300px;
   }
 }

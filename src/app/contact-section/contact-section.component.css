@@ -6,8 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 150px;
-  padding: 50px 80px 55px 130px;
+  margin-top: 0px;
+  padding: 85px 80px 55px 130px;
 }
 
 #left {
