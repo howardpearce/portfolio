@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/strigiforme/portfolio/compare/v0.4.2...v0.4.3) (2022-11-08)
+
+
+### Features
+
+* Add new Footer component ([33bf39c](https://github.com/strigiforme/portfolio/commit/33bf39c8f6ac3232bfc24920db6d9bd4bc1d7103))
+
 ### [0.4.2](https://github.com/strigiforme/portfolio/compare/v0.4.1...v0.4.2) (2022-11-07)
 
 

@@ -1,0 +1,19 @@
+#footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.grid-container {
+  grid-template-rows: 100px auto;
+}
+
+@media only screen and (max-width: 450px) {
+  .subtext {
+    font-size: 10px !important;
+  }
+}
+
