@@ -9,6 +9,7 @@ import { ExperienceSectionComponent } from './experience-section/experience-sect
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ColorSwitcherComponent } from './color-switcher/color-switcher.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ColorSwitcherComponent } from './color-switcher/color-switcher.componen
     ExperienceSectionComponent,
     ContactSectionComponent,
     NavbarComponent,
-    ColorSwitcherComponent
+    ColorSwitcherComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
