@@ -2,6 +2,13 @@
 @font-face {
   font-family: "Bebas Neue";
   src: local("Bebas Neue"), url("./assets/fonts/Bebas-Neue/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue"), url("./assets/fonts/Bebas-Neue/BebasNeue-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
 
 @font-face {
@@ -19,7 +26,7 @@
 /* Structure styles used in every section */
 .grid-container {
   display: grid;
-  grid-template-columns: 180px auto 180px;
+  grid-template-columns: auto 1220px auto;
   grid-template-rows: 100px auto 100px;
   background-color: var(--bg-color);
 }
@@ -30,7 +37,7 @@
   grid-row-start: 2;
   grid-row-end: 2;
   display: grid;
-  grid-template-columns: 120px auto 120px;
+  grid-template-columns: 120px 980px 120px;
   grid-template-rows: 70px auto;
   max-width: 1366px;
   width: 100%;
@@ -61,6 +68,7 @@
 .title-container {
   display: flex;
   align-items: center;
+  grid-column-start: 2;
 }
 
 .title {
@@ -74,7 +82,7 @@ body {
 :root {
   --bg-color: #1E1E1E;
   --bg-color-translucent: rgba(30,30,30,0.85);
-  --navbar-color: rgba(26,26,26,0.85);
+  --navbar-color: rgba(26,26,26,0.95);
   --bg-card-color: #252525;
   --primary-color: #D9D9D9;
   --hero-text-color: #FFFFFF;
@@ -83,6 +91,89 @@ body {
 }
 
 /* General Text Styles */
+
+
+/* Responsive styling */
+
+@media only screen and (max-width: 1400px) and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 1000px auto;
+    grid-template-rows: 100px 800px 100px;
+    background-color: var(--bg-color);
+  }
+
+  .content-container {
+    grid-template-columns: 100px auto 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 700px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 650px auto;
+    overflow: hidden;
+    grid-template-rows: 100px auto 100px;
+  }
+
+  .content-container {
+    grid-template-columns: 100px 500px 50px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 400px auto;
+    overflow: hidden;
+  }
+  .grid-container, .content-container, .content {
+    margin: auto;
+  }
+  .plus-container {
+    display: none;
+  }
+  .content-container {
+    grid-template-columns: 0px 400px 0px;
+  }
+  .title-container {
+    display: flex;
+    align-items: center;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .title {
+    border-bottom: 4px solid var(--primary-color);
+  }
+  .content {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 320px auto;
+    overflow: hidden;
+  }
+  .content-container {
+    grid-template-columns: 0px 320px 0px;
+  }
+}
+
+
+/* Styling to manage the size of text throughout the portfolio */
+
+.heading {
+  font-family: "Aileron Semibold";
+  font-size: 32px;
+}
+
+.subtext {
+  font-size: 16px;
+}
 
 h1 {
   font-size: 64px;
@@ -107,11 +198,38 @@ p, a, li {
   font-size: 24px;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 700px ){
+  .title {
+    font-size: 50px;
+  }
+  p, li, a {
+    font-size: 20px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+  .subtext {
+    font-size: 16px;
+  }
+}
 
-/* Responsive styling */
+@media only screen and (max-width: 700px) {
+  .title {
+    font-size: 48px;
+  }
+  p, li, a {
+    font-size: 16px;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .subtext {
+    font-size: 12px;
+  }
+}
 
-@media only screen and (max-width: 770px) {
-  .grid-container {
-    grid-template-columns: 60px auto 60px;
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 38px;
   }
 }

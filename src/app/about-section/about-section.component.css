@@ -1,12 +1,17 @@
 #headshot {
   margin-left: 80px;
-  width: 374px;
-  height: 331px;
+  width: 320px;
+  height: 283px;
   -webkit-box-shadow: 40px 40px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
   box-shadow: 40px 40px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
   /* makes sure shadow does not overflow beyond headshot container */
   margin-right: 40px;
   margin-bottom: 40px;
+}
+
+#headshot img {
+  width: 320px;
+  height: 283px;
 }
 
 #technology-list {
@@ -15,7 +20,7 @@
 }
 
 #technology-list ul {
-  padding-right: 80px;
+  padding-right: 40px;
 }
 
 ul {
@@ -70,3 +75,61 @@ li img {
 .secondary-button svg line {
   stroke: var(--accent-color);
 }
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1700px) and (min-width: 1024px) {
+  #headshot img, #headshot{
+    width: 282px;
+    height: 250px;
+  }
+
+  #headshot {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 950px) {
+  #headshot img, #headshot{
+    width: 290px;
+    height: 256px;
+  }
+  #headshot {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 700px) {
+  #technology-list ul {
+    padding-right: 30px;
+  }
+  #headshot img, #headshot{
+    width: 200px;
+    height: 176px;
+  }
+  #headshot {
+    margin: 0px 0px 0px 20px;
+    -webkit-box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #headshot img, #headshot{
+    width: 230px;
+    height: 196px;
+  }
+  #headshot {
+    -webkit-box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
+    margin: 30px 20px 20px 0px;
+  }
+  #technology-list ul {
+    padding-right: 40px;
+  }
+}
+

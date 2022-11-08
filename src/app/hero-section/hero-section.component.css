@@ -3,24 +3,25 @@
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 4;
-  height: 115vh;
+  height: 100vh;
   width: 100%;
 }
 
 #gradient {
   background: linear-gradient(rgba(255,255,255,0) 0%, var(--bg-color) 100%);
   position: absolute;
-  bottom: -18vh;
-  /* Reference grid-hero-container for this width (it is the addtion of the last two columns) */
-  width: 830px;
-  height: 30vh;
+  bottom: 0px;
+  /* Reference grid-hero-container for this width (it is the addition of the last two columns) */
+  width: 45%;
+  height: 200px;
 }
 
 .grid-hero-container {
   display: grid;
-  grid-template-columns: 180px auto 650px 180px;
+  grid-template-columns: 180px auto 35% 10%;
   grid-template-rows: 100px auto 100px;
   background-color: var(--bg-color);
+  overflow: visible;
 }
 
 #hero-container {
@@ -32,6 +33,7 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 2;
+  display: flex;
 }
 
 #hero-typography {
@@ -42,26 +44,34 @@
   height: 100%;
   position: relative;
   top: -60px;
+  background-color: var(--bg-color);
+}
+
+#spacer {
+  display: none;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 #above {
   position: relative;
-  bottom: -15px;
+  bottom: -10px;
 }
 
 .hero-subtext {
  font-size: 32px;
 }
 
-.hero-text {
- font-family: 'Bebas Neue';
+#hero-text {
  font-size: 128px;
  margin: 0px;
 }
 
 .arrow-container {
   position: relative;
-  top: -250px;
+  top: -400px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -72,6 +82,9 @@
   padding: 10px 10px 10px 10px;
   justify-content: center;
   border-radius: 2px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  z-index: 2;
 }
 
 #scroll-text {
@@ -102,68 +115,128 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1255px) {
-  .hero-text {
-    font-size: 100px;
+@media only screen and (max-width: 1600px) and (min-width: 1500px) {
+  .grid-hero-container {
+    grid-template-columns: 180px auto 28% 10%;
   }
-  .hero-section-container {
-    grid-template-columns: auto 180px;
+
+  #gradient {
+    width: 38%;
   }
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1200px) {
+  #hero-text {
+    font-size: 90px;
+  }
+
+  .hero-subtext {
+    font-size: 28px;
+    max-width: 530px;
+  }
+
+  .grid-hero-container {
+    grid-template-columns: 180px auto 25% 10%;
+  }
+
+  #gradient {
+    width: 35%;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+
+  #hero-text {
+    font-size: 90px;
+  }
+
+  #spacer {
+    display: block;
+    width: 100%;
+  }
+
+  #hero-typography {
+    margin: auto;
+    height: auto;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+
   .hero-section-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
     justify-content: center;
+    align-items: center;
   }
-}
 
-@media only screen and (max-width: 1050px) {
-  .hero-text {
-    font-size: 80px;
-  }
   .hero-subtext {
-    font-size: 24px;
+    font-size: 28px;
+    max-width: 530px;
   }
-}
 
-@media only screen and (max-width: 850px) {
-  .hero-text {
-    font-size: 70px;
+  .grid-hero-container {
+    display: grid;
+    grid-template-columns: 180px auto 30% 10%;
+    grid-template-rows: 100px auto 100px;
+    background-color: var(--bg-color);
   }
-  .hero-subtext {
-    font-size: 24px;
-  }
-}
 
-@media only screen and (max-width: 770px) {
-  .hero-subtext {
-    font-size: 24px;
+  #gradient {
+    width: 40%;
+    bottom: 0px;
   }
-  .hero-text {
-    font-size: 72px;
-  }
-  .hero-section-container {
-    grid-template-columns: auto 60px;
-  }
+
   #above {
-    bottom: -10px;
-  }
-  #hero-typography {
-    max-width: 400px;
+    bottom: 0px;
   }
 }
 
-@media only screen and (max-width: 630px) {
-  #hero-typography {
-    max-width: 400px;
-  }
-  .hero-text {
-    font-size: 65px;
+@media only screen and (max-width: 860px) and (min-width: 700px) {
+  .hero-subtext {
+    font-size: 28px;
+    max-width: 530px;
   }
 }
 
-@media only screen and (max-width: 450px) {
-  #hero-typography {
-    max-width: 400px;
+@media only screen and (max-width: 700px) {
+  #hero-text {
+    font-size: 52px !important;
   }
-  .hero-text {
-    font-size: 60px;
+  #above, #below {
+    font-size: 18px !important;
+    padding-bottom: 15px;
+    padding-top: 2px;
+    max-width: 275px;
+  }
+  #hero-graphic {
+    display: none;
+  }
+  .grid-hero-container {
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: 100px auto 100px;
+    background-color: var(--bg-color);
+  }
+  #scroll-text, #upper-arrow {
+    display: none;
+  }
+  .arrow-container {
+    position: absolute;
+    padding: 20px;
+    bottom: 0px;
+    right: 0px;
+    margin: 0px;
+    top: auto;
+    justify-content: initial;
+  }
+  #lower-arrow {
+    height: 50px;
+  }
+  #hero-typography{
+    top: 0px;
+    margin: auto;
   }
 }
