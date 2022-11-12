@@ -23,6 +23,11 @@
 
 /* You can add global styles to this file, and also import other style files */
 
+/* allows for color switching to look good */
+* {
+  transition: all 1s ease-in;
+}
+
 /* Structure styles used in every section */
 .grid-container {
   display: grid;

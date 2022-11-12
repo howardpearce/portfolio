@@ -1,5 +1,7 @@
- // Cannot start until HTML has been rendered
- document.addEventListener("DOMContentLoaded", function () {
+ var currentColorIsDark = false;
+ var currentColorIsLight = false;
+
+ var animation = function () {
   // container for animation
   const canvas = document.querySelector("#hero-graphic");
   var width = canvas.clientWidth;
@@ -20,30 +22,35 @@
   // linear function derived from points (1126, 0.65), (700, 0.1)
   const getParticleSeparation = (inputHeight) => Math.max(0.04, inputHeight * -0.00008215962441314555 + 0.1575117370892018);
   var PARTICLE_SEPARATION = getParticleSeparation(height);
+
   // FIXME: Multiplying by 1.3 since rounding causes us to come up just a little bit short on the number of particles required.
   var particleCount = Math.round((SCENE_WIDTH / PARTICLE_SEPARATION) * (SCENE_HEIGHT / PARTICLE_SEPARATION) * 1.3);
   var waveCenterX = 0;
   var waveCenterY = 0;
   var radius = 0.1;
+
   // the original position of every particle in the array
   const originalParticlePosition = new Float32Array(particleCount * 3);
   // the current position (after being moved)
   var currentParticlePosition = new Float32Array(particleCount * 3);
+  // color of each particle
+  var particleColors = [];
+  var darkParticleColors = [];
+
   const bufferGeometry = new THREE.BufferGeometry();
 
   // grab CSS variables for color and convert them to usable hex
   var bodyStyle = getComputedStyle(document.body);
   var dotColor = bodyStyle.getPropertyValue("--primary-color");
-  var backgroundColor = bodyStyle.getPropertyValue("--bg-color");
   dotColor = parseInt(dotColor.trim().replace("#", ''), 16);
-  backgroundColor = parseInt(backgroundColor.trim().replace("#", ''), 16);
 
   // set up scene
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(90, width / height, 0.1, 9999 );
-  const renderer = new THREE.WebGLRenderer();
+  const renderer = new THREE.WebGLRenderer( { alpha: true } );
 
   configureScene();
+  createColorArray(dotColor);
   createParticleArray();
   addLighting();
 
@@ -51,30 +58,18 @@
     renderer.render(scene, camera);
   });
 
+  console.log(bufferGeometry);
+  console.log(particleCount);
+
   animate();
 
   /* FUNCTION DECLARATIONS DOWN BELOW ------------------------------------------------------------- */
 
   function createParticleArray() {
     // initialize array of dots
-    const material = new THREE.PointsMaterial( { size: 0.0, color: dotColor } );
+    const material = new THREE.PointsMaterial( { size: 0.01, vertexColors: true } );
 
     // populate array with values (create a rectangular grid)
-    setParticlePositions();
-
-    bufferGeometry.setAttribute('position', new THREE.BufferAttribute(currentParticlePosition, 3));
-    bufferGeometry.dynamic = true;
-    var particlesMesh = new THREE.Points(bufferGeometry, material);
-    scene.add(particlesMesh);
-  }
-
-  function configureScene() {
-    scene.background = new THREE.Color(backgroundColor);
-    renderer.setSize(width, height);
-    canvas.appendChild(renderer.domElement);
-  }
-
-  function setParticlePositions() {
     var x = NEGATIVE_BOUND_X;
     var y = POSITIVE_BOUND_Y;
     var z = -5;
@@ -94,6 +89,37 @@
         x += PARTICLE_SEPARATION;
       }
     }
+
+    bufferGeometry.setAttribute('position', new THREE.BufferAttribute(currentParticlePosition, 3));
+    bufferGeometry.dynamic = true;
+    var particlesMesh = new THREE.Points(bufferGeometry, material);
+    scene.add(particlesMesh);
+  }
+
+  function createColorArray(color) {
+    const particleColor = new THREE.Color(color);
+    for (let i = 0; i < particleCount; i+= 1) {
+      particleColor.setHex(color);
+      particleColors.push(particleColor.r, particleColor.g, particleColor.b)
+    }
+    bufferGeometry.setAttribute('color', new THREE.Float32BufferAttribute(particleColors, 3));
+  }
+
+  function changeColor(color) {
+    console.log("Switching to color " + color);
+    const colorToChangeTo = new THREE.Color(color);
+    var colorArray = bufferGeometry.attributes.color.array;
+    for (let i = 0; i < particleCount * 3; i += 3) {
+      colorArray[i] = colorToChangeTo.r;
+      colorArray[i+1] = colorToChangeTo.g;
+      colorArray[i+2] = colorToChangeTo.b;
+    }
+  }
+
+  function configureScene() {
+    renderer.setClearColor(0x000000, 0);
+    renderer.setSize(width, height);
+    canvas.appendChild(renderer.domElement);
   }
 
   function addLighting() {
@@ -138,7 +164,7 @@
     requestAnimationFrame( animate );
     radius += CIRCLE_SPEED;
     var currentPosition = bufferGeometry.attributes.position.array;
-
+    //bufferGeometry.material.color.setHex(0xff0000);
     for (let i = 0; i < particleCount * 3; i+=3) {
       var distance = distanceFromCenter(currentPosition[i], currentPosition[i+1]);
       var normalizedDistance = radius - distance;
@@ -154,7 +180,22 @@
     }
 
     animateParticles();
+
+    if (currentColorIsLight == true) {
+      changeColor(0x000000);
+      currentColorIsLight = false;
+    }
+
+    if (currentColorIsDark == true) {
+      changeColor(0xD9D9D9);
+      currentColorIsDark = false;
+    }
+
     bufferGeometry.attributes.position.needsUpdate = true;
+    bufferGeometry.attributes.color.needsUpdate = true;
   }
 
-});
+}
+
+ // Cannot start until HTML has been rendered
+ document.addEventListener("DOMContentLoaded", animation);
