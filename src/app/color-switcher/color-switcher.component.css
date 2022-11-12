@@ -27,6 +27,7 @@
   border: 2px solid var(--primary-color);
   height: 12px;
   width: 12px;
+  transition: none !important;
 }
 
 .selected {
@@ -46,7 +47,7 @@
   background-color: var(--bg-card-color);
   border-radius: 0px 4px 4px 0px;
   align-items: center;
-  transition: all 0.25s;
+  transition: left 0.25s, background-color 1s ease-in !important;
   z-index: 100;
 }
 
@@ -56,7 +57,7 @@
   background-color: var(--bg-card-color);
   padding-right: 20px;
   bottom: 55px;
-  transition: all 0.25s;
+  transition: left 0.25s, background-color 1s ease-in !important;
  }
  #touch-tab {
   display: flex;

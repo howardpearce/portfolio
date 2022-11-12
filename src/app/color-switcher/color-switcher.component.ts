@@ -7,7 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorSwitcherComponent implements OnInit {
 
+  isDarkActive = true;
+  isLightActive = false;
+
   constructor() { }
+
+  setDarkActive() {
+    this.isLightActive = false;
+    this.isDarkActive = true;
+  }
+
+  setLightActive() {
+    this.isDarkActive = false;
+    this.isLightActive = true;
+  }
 
   ngOnInit(): void {
   }
