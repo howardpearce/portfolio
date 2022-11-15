@@ -1,15 +1,20 @@
 var currentColorIsDark = false;
 var currentColorIsLight = false;
 
+let grid;
+
 // constants
 const CIRCLE_SPEED = 0.1;
 const DRIFT_SPEED = 0.05;
 const GUARD = 0.05;
 const SCENE_WIDTH = 14;
-const SCENE_HEIGHT = 22;
+const SCENE_HEIGHT = 16;
+
+const LIGHT_COLOR = 0xD9D9D9;
+const DARK_COLOR = 0x1E1E1E;
 
 class DotGrid {
-  constructor(screenWidth, sceneWidth, sceneHeight, screenHeight, particleSeparation) {
+  constructor(screenWidth, sceneWidth, sceneHeight, screenHeight, particleSeparation, bufferGeometry) {
     this.screenWidth = screenWidth;
     this.sceneWidth = sceneWidth;
     this.sceneHeight = sceneHeight;
@@ -19,9 +24,10 @@ class DotGrid {
     this.originalParticlePosition = new Float32Array(this.numberOfParticles * 3);
     this.currentParticlePosition = new Float32Array(this.numberOfParticles * 3);
     this.particleColors = new Float32Array(this.numberOfParticles * 3);
+    this.bufferGeometry = bufferGeometry;
   }
 
-  initializeParticles() {
+  initializePosition() {
     var startX = this.sceneWidth / -2;
     var startY = this.sceneHeight / 2;
     var endX = this.sceneWidth / 2;
@@ -33,7 +39,6 @@ class DotGrid {
     // for every particle, set its position
     for (let i = 0; i < this.numberOfRowsRequired; i+=1) {
       for ( let j = 0; j < this.particlesPerRow; j+=1) {
-        //console.log(x.toFixed(2) + "," + y.toFixed(2));
         this.currentParticlePosition[index] = x;
         this.currentParticlePosition[index+1] = y;
         this.currentParticlePosition[index+2] = z;
@@ -45,6 +50,51 @@ class DotGrid {
       }
       y -= this.particleSeparation;
       x = startX;
+    }
+    this.bufferGeometry.setAttribute('position', new THREE.BufferAttribute(this.currentParticlePosition, 3));
+  }
+
+  initializeColor(color) {
+    const particleColor = new THREE.Color(color);
+    var index = 0;
+    for (let i = 0; i < this.numberOfRowsRequired; i+=1) {
+      for ( let j = 0; j < this.particlesPerRow; j+=1) {
+        this.particleColors[index] = particleColor.r;
+        this.particleColors[index+1] = particleColor.g;
+        this.particleColors[index+2] = particleColor.b;
+        index += 3;
+      }
+      // for the last 30 rows, change the color to make a gradient from light to dark
+      if (i > this.numberOfRowsRequired - 30) {
+        color -= 0x070707;
+        particleColor.setHex(color);
+      }
+    }
+
+    this.bufferGeometry.setAttribute('color', new THREE.BufferAttribute(this.particleColors, 3));
+  }
+
+  changeColor(color) {
+    var originalColor = color;
+    const colorToChangeTo = new THREE.Color(color);
+    var colorArray = this.bufferGeometry.attributes.color.array;
+    var index = 0;
+    for (let i = 0; i < this.numberOfRowsRequired; i+=1) {
+      for ( let j = 0; j < this.particlesPerRow; j+=1) {
+        colorArray[index] = colorToChangeTo.r;
+        colorArray[index+1] = colorToChangeTo.g;
+        colorArray[index+2] = colorToChangeTo.b;
+        index += 3;
+      }
+      // for the last 30 rows, change the color to make a gradient from light to dark
+      if (i > this.numberOfRowsRequired - 30) {
+        if (originalColor > 0xCCCCCC) {
+          color -= 0x070707;
+        } else {
+          color += 0x070707;
+        }
+        colorToChangeTo.setHex(color);
+      }
     }
   }
 
@@ -68,12 +118,6 @@ var animation = function () {
   var width = canvas.clientWidth;
   var height = canvas.clientHeight;
 
-  var grid = new DotGrid(width, SCENE_WIDTH, SCENE_HEIGHT, height, 0.125);
-  grid.initializeParticles();
-
-  console.log(grid);
-  console.log("Particles per row: " + grid.particlesPerRow);
-  console.log("Number of rows required: " + grid.numberOfRowsRequired);
 
   var waveCenterX = 0;
   var waveCenterY = 0;
@@ -85,19 +129,28 @@ var animation = function () {
 
   const bufferGeometry = new THREE.BufferGeometry();
 
-  // grab CSS variables for color and convert them to usable hex
-  var bodyStyle = getComputedStyle(document.body);
-  var dotColor = bodyStyle.getPropertyValue("--primary-color");
-  dotColor = parseInt(dotColor.trim().replace("#", ''), 16);
+  grid = new DotGrid(width, SCENE_WIDTH, SCENE_HEIGHT, height, 0.125, bufferGeometry);
+  grid.initializePosition();
+  grid.initializeColor(LIGHT_COLOR);
+
+  // console.log(grid);
+  // console.log("Particles per row: " + grid.particlesPerRow);
+  // console.log("Number of rows required: " + grid.numberOfRowsRequired);
 
   // set up scene
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(115, width / height, 0.1, 9999 );
+  const camera = new THREE.PerspectiveCamera(115, width / height, 1, 20 );
   const renderer = new THREE.WebGLRenderer( { alpha: true } );
 
-  configureScene();
-  createColorArray(dotColor);
-  createParticleArray();
+  renderer.setClearColor(0x000000, 0);
+  renderer.setSize(width, height);
+  canvas.appendChild(renderer.domElement);
+
+  const material = new THREE.PointsMaterial( { size: 0.01, vertexColors: true } );
+  bufferGeometry.dynamic = true;
+  var particlesMesh = new THREE.Points(bufferGeometry, material);
+  scene.add(particlesMesh);
+
   addLighting();
 
   renderer.setAnimationLoop(() => {
@@ -107,44 +160,6 @@ var animation = function () {
   animate();
 
   /* FUNCTION DECLARATIONS DOWN BELOW ------------------------------------------------------------- */
-
-  function createParticleArray() {
-    // initialize array of dots
-    const material = new THREE.PointsMaterial( { size: 0.01, vertexColors: true } );
-    bufferGeometry.setAttribute('position', new THREE.BufferAttribute(grid.currentParticlePosition, 3));
-    bufferGeometry.dynamic = true;
-    var particlesMesh = new THREE.Points(bufferGeometry, material);
-    scene.add(particlesMesh);
-  }
-
-  function createColorArray(color) {
-    //colors = [0xEC7063, 0x884EA0, 0x5DADE2, 0x76D7C4, 0x58D68D, 0xF7DC6F, 0xF8C471, 0xF0B27A ];
-    //j = 0;
-    const particleColor = new THREE.Color(0xffffff);
-    for (let i = 0; i < grid.numberOfParticles; i+= 1) {
-
-      particleColor.setHex(0xffffff);
-      particleColors.push(particleColor.r, particleColor.g, particleColor.b)
-
-    }
-    bufferGeometry.setAttribute('color', new THREE.Float32BufferAttribute(particleColors, 3));
-  }
-
-  function changeColor(color) {
-    const colorToChangeTo = new THREE.Color(color);
-    var colorArray = bufferGeometry.attributes.color.array;
-    for (let i = 0; i < grid.numberOfParticles * 3; i += 3) {
-      colorArray[i] = colorToChangeTo.r;
-      colorArray[i+1] = colorToChangeTo.g;
-      colorArray[i+2] = colorToChangeTo.b;
-    }
-  }
-
-  function configureScene() {
-    renderer.setClearColor(0x000000, 0);
-    renderer.setSize(width, height);
-    canvas.appendChild(renderer.domElement);
-  }
 
   function addLighting() {
     var light1 = new THREE.PointLight(0xFFFFFF);
@@ -206,12 +221,12 @@ var animation = function () {
     animateParticles();
 
     if (currentColorIsLight == true) {
-      changeColor(0x000000);
+      grid.changeColor(0x000000);
       currentColorIsLight = false;
     }
 
     if (currentColorIsDark == true) {
-      changeColor(0xD9D9D9);
+      grid.changeColor(0xD9D9D9);
       currentColorIsDark = false;
     }
 
