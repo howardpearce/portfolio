@@ -1,10 +1,9 @@
 #hero-graphic {
   grid-column-start: 3;
-  grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 4;
   height: 100vh;
-  width: 100%;
+  max-width: 700px;
 }
 
 #gradient {
@@ -18,7 +17,7 @@
 
 .grid-hero-container {
   display: grid;
-  grid-template-columns: 180px auto 35% 10%;
+  grid-template-columns: 180px auto 700px;
   grid-template-rows: 100px auto 100px;
   background-color: var(--bg-color);
   overflow: visible;
@@ -83,7 +82,7 @@
   justify-content: center;
   border-radius: 2px;
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
   z-index: 2;
 }
 
@@ -117,7 +116,7 @@
 
 @media only screen and (max-width: 1600px) and (min-width: 1500px) {
   .grid-hero-container {
-    grid-template-columns: 180px auto 28% 10%;
+    grid-template-columns: 180px auto 600px;
   }
 
   #gradient {
@@ -136,7 +135,7 @@
   }
 
   .grid-hero-container {
-    grid-template-columns: 180px auto 25% 10%;
+    grid-template-columns: 180px auto 500px;
   }
 
   #gradient {
@@ -179,7 +178,7 @@
 
   .grid-hero-container {
     display: grid;
-    grid-template-columns: 180px auto 30% 10%;
+    grid-template-columns: 180px auto 40%;
     grid-template-rows: 100px auto 100px;
     background-color: var(--bg-color);
   }

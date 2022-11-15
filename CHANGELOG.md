@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/strigiforme/portfolio/compare/v0.4.3...v0.5.2) (2022-11-15)
+
+
+### Features
+
+* **UI:** Add color switching functionality ([914722c](https://github.com/strigiforme/portfolio/commit/914722c1fcebde4e5a945feaff8db16336345709))
+* **UI:** Make buttons for color switcher change color ([6e9b191](https://github.com/strigiforme/portfolio/commit/6e9b19198d280a6fd370612110f6778803c87aaf))
+
 ## [5.1.0](https://github.com/strigiforme/portfolio/compare/v0.5.0...v5.1.0) (2022-11-12)
 
 
