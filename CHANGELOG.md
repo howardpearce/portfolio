@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.4](https://github.com/strigiforme/portfolio/compare/v0.5.3...v0.5.4) (2022-11-18)
+
+
+### Bug Fixes
+
+* Remove website refresh on resize ([fd60cb2](https://github.com/strigiforme/portfolio/commit/fd60cb2e018be1cb697acf0dc3dec90233d688f5))
+
 ### [0.5.3](https://github.com/strigiforme/portfolio/compare/v0.5.2...v0.5.3) (2022-11-15)
 
 
