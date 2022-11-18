@@ -19,9 +19,10 @@
   color: var(--primary-color);
   padding-right: 25px;
   font-weight: bold;
+  transition: none;
 }
 
-.experience p {
+.experience-name {
   width: 200px;
   font-family: "Aileron Semibold";
 }
