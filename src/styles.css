@@ -25,7 +25,7 @@
 
 /* allows for color switching to look good */
 * {
-  transition: all 1s ease-in;
+  transition: color 1s ease-in, background-color 1s ease-in;
 }
 
 /* Structure styles used in every section */

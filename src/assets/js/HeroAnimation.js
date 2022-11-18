@@ -1,7 +1,10 @@
+// variables that need global context for interacting with other parts of the website
 var currentColorIsDark = false;
 var currentColorIsLight = false;
-
 let grid;
+let renderer;
+let camera;
+let canvas;
 
 // constants
 const CIRCLE_SPEED = 0.1;
@@ -9,9 +12,15 @@ const DRIFT_SPEED = 0.05;
 const GUARD = 0.05;
 const SCENE_WIDTH = 14;
 const SCENE_HEIGHT = 16;
-
 const LIGHT_COLOR = 0xD9D9D9;
 const DARK_COLOR = 0x1E1E1E;
+
+window.addEventListener( 'resize', onWindowResize, false );
+function onWindowResize(){
+  camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( canvas.clientWidth, canvas.clientHeight );
+}
 
 class DotGrid {
   constructor(screenWidth, sceneWidth, sceneHeight, screenHeight, particleSeparation, bufferGeometry) {
@@ -114,10 +123,9 @@ class DotGrid {
 
 var animation = function () {
   // container for animation
-  const canvas = document.querySelector("#hero-graphic");
+  canvas = document.querySelector("#hero-graphic");
   var width = canvas.clientWidth;
   var height = canvas.clientHeight;
-
 
   var waveCenterX = 0;
   var waveCenterY = 0;
@@ -133,20 +141,16 @@ var animation = function () {
   grid.initializePosition();
   grid.initializeColor(LIGHT_COLOR);
 
-  // console.log(grid);
-  // console.log("Particles per row: " + grid.particlesPerRow);
-  // console.log("Number of rows required: " + grid.numberOfRowsRequired);
-
   // set up scene
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(115, width / height, 1, 20 );
-  const renderer = new THREE.WebGLRenderer( { alpha: true } );
+  var scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(115, width / height, 1, 20 );
+  renderer = new THREE.WebGLRenderer( { alpha: true } );
 
   renderer.setClearColor(0x000000, 0);
   renderer.setSize(width, height);
   canvas.appendChild(renderer.domElement);
 
-  const material = new THREE.PointsMaterial( { size: 0.01, vertexColors: true } );
+  var material = new THREE.PointsMaterial( { size: 0.01, vertexColors: true } );
   bufferGeometry.dynamic = true;
   var particlesMesh = new THREE.Points(bufferGeometry, material);
   scene.add(particlesMesh);
@@ -168,6 +172,8 @@ var animation = function () {
     light1.position.z = 0;
     scene.add(light1);
   }
+
+
 
   function distanceFromCenter(x, y) {
     return Math.sqrt(Math.pow(x - waveCenterX, 2) + Math.pow(y - waveCenterY, 2));
@@ -232,6 +238,7 @@ var animation = function () {
 
     bufferGeometry.attributes.position.needsUpdate = true;
     bufferGeometry.attributes.color.needsUpdate = true;
+
   }
 
 }
