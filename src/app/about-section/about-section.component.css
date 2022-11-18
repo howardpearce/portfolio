@@ -81,7 +81,7 @@ li img {
 @media only screen and (max-width: 1700px) and (min-width: 1024px) {
   #headshot img, #headshot{
     width: 282px;
-    height: 250px;
+    height: 249px;
   }
 
   #headshot {
@@ -91,8 +91,8 @@ li img {
 
 @media only screen and (max-width: 1200px) and (min-width: 950px) {
   #headshot img, #headshot{
-    width: 290px;
-    height: 256px;
+    width: 250px;
+    height: 221px;
   }
   #headshot {
     margin-left: 40px;
@@ -105,7 +105,7 @@ li img {
   }
   #headshot img, #headshot{
     width: 200px;
-    height: 176px;
+    height: 177px;
   }
   #headshot {
     margin: 0px 0px 0px 20px;
@@ -121,7 +121,7 @@ li img {
   }
   #headshot img, #headshot{
     width: 230px;
-    height: 196px;
+    height: 203px;
   }
   #headshot {
     -webkit-box-shadow: 20px 20px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
