@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.5](https://github.com/strigiforme/portfolio/compare/v0.5.4...v0.5.5) (2022-11-19)
+
+
+### Features
+
+* **Navbar:** Enable website navigation via navbar ([3d3e0a4](https://github.com/strigiforme/portfolio/commit/3d3e0a40eeafa5417c63349bd53e4eedadaec627))
+
+
+### Bug Fixes
+
+* Ensure headshot is properly sized ([cc7fb44](https://github.com/strigiforme/portfolio/commit/cc7fb440097128172265c2a5ce625fcd539182eb))
+* Remove experience switcher color transition ([ff313ca](https://github.com/strigiforme/portfolio/commit/ff313ca2abdcafc25fb452e94312d49728754b33))
+
 ### [0.5.4](https://github.com/strigiforme/portfolio/compare/v0.5.3...v0.5.4) (2022-11-18)
 
 
