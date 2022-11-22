@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactSectionComponent } from './contact-section.component';
+import { PlusSignComponent } from './../../utility-components/plus-sign/plus-sign.component';
 
 describe('ContactSectionComponent', () => {
   let component: ContactSectionComponent;
@@ -8,7 +9,7 @@ describe('ContactSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactSectionComponent ]
+      declarations: [ ContactSectionComponent, PlusSignComponent ]
     })
     .compileComponents();
 

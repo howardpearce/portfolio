@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExperienceSectionComponent } from './experience-section.component';
+import { PlusSignComponent } from './../../utility-components/plus-sign/plus-sign.component';
 
 describe('ExperienceSectionComponent', () => {
   let component: ExperienceSectionComponent;
@@ -8,7 +9,7 @@ describe('ExperienceSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExperienceSectionComponent ]
+      declarations: [ ExperienceSectionComponent, PlusSignComponent ]
     })
     .compileComponents();
 

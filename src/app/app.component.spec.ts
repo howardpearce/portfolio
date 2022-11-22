@@ -1,12 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AboutSectionComponent } from './structural-components/about-section/about-section.component';
 import { AppComponent } from './app.component';
-import { ColorSwitcherComponent } from './utility-components/color-switcher/color-switcher.component';
+
+import { AboutSectionComponent } from './structural-components/about-section/about-section.component';
 import { ContactSectionComponent } from './structural-components/contact-section/contact-section.component';
 import { ExperienceSectionComponent } from './structural-components/experience-section/experience-section.component';
 import { HeroSectionComponent } from './structural-components/hero-section/hero-section.component';
 import { NavbarComponent } from './structural-components/navbar/navbar.component';
+import { FooterComponent } from './structural-components/footer/footer.component';
+
+import { ColorSwitcherComponent } from './utility-components/color-switcher/color-switcher.component';
+import { PlusSignComponent } from './utility-components/plus-sign/plus-sign.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -21,7 +26,9 @@ describe('AppComponent', () => {
         HeroSectionComponent,
         ContactSectionComponent,
         AboutSectionComponent,
-        ExperienceSectionComponent
+        ExperienceSectionComponent,
+        PlusSignComponent,
+        FooterComponent
       ],
     }).compileComponents();
   });
