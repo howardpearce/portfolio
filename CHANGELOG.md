@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://github.com/strigiforme/portfolio/compare/v0.5.5...v0.5.6) (2022-11-22)
+
+
+### Features
+
+* **UI:** Implement buttons for contact section ([e1ccf2c](https://github.com/strigiforme/portfolio/commit/e1ccf2c11caf8ca70713f19008161eb41629a9a2))
+
 ### [0.5.5](https://github.com/strigiforme/portfolio/compare/v0.5.4...v0.5.5) (2022-11-19)
 
 
