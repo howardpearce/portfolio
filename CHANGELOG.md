@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.7](https://github.com/strigiforme/portfolio/compare/v0.5.6...v0.5.7) (2022-11-22)
+
+
+### Bug Fixes
+
+* Adjust element used for detecing hero scroll ([e570b08](https://github.com/strigiforme/portfolio/commit/e570b08df2c8384f2571ab8ae988fd5bd6a5f135))
+* **navbar:** Navbar works on mobile screens ([d1b3ffb](https://github.com/strigiforme/portfolio/commit/d1b3ffbd98fa871d0ce4717ef0198b67c5fdb278))
+
 ### [0.5.6](https://github.com/strigiforme/portfolio/compare/v0.5.5...v0.5.6) (2022-11-22)
 
 
