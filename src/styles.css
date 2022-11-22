@@ -61,15 +61,6 @@
   width: 100%;
 }
 
-.plus-container {
-  display: flex;
-  align-items: center;
-  font-size: 100px;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  color: var(--primary-color);
-}
-
 .title-container {
   display: flex;
   align-items: center;
@@ -131,9 +122,6 @@ body {
   }
   .grid-container, .content-container, .content {
     margin: auto;
-  }
-  .plus-container {
-    display: none;
   }
   .content-container {
     grid-template-columns: 0px 400px 0px;

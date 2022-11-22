@@ -10,6 +10,7 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { ColorSwitcherComponent } from './color-switcher/color-switcher.component';
 import { FooterComponent } from './footer/footer.component';
+import { PlusSignComponent } from './plus-sign/plus-sign.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactSectionComponent,
     NavbarComponent,
     ColorSwitcherComponent,
-    FooterComponent
+    FooterComponent,
+    PlusSignComponent
   ],
   imports: [
     BrowserModule,
