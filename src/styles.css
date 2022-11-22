@@ -113,13 +113,13 @@ body {
 @media only screen and (max-width: 1024px) and (min-width: 700px) {
   .grid-container {
     display: grid;
-    grid-template-columns: auto 650px auto;
+    grid-template-columns: auto 700px auto;
     overflow: hidden;
     grid-template-rows: 100px auto 100px;
   }
 
   .content-container {
-    grid-template-columns: 100px 500px 50px;
+    grid-template-columns: 100px 550px 50px;
   }
 }
 
