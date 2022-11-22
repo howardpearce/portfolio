@@ -66,12 +66,56 @@ svg circle {
 
 .mobile-link-arrow {
   display: none;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
 }
+
+.contact-resource {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#email-text {
+  width: 0px;
+  overflow: hidden;
+  padding: 0px 0px 3px 25px !important;
+  transition: width 0.75s ease-out;
+}
+
+.wide {
+  width: 350px !important;
+}
+
+/* UI / UX CSS */
+
+.heading {
+  background-image: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--accent-color) 50%,
+    var(--primary-color) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.heading:hover::before{
+  width: 100%;
+}
+
+.heading:hover {
+  background-position: 0;
+ }
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1200px) and (min-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 750px) {
   #decorator {
     display: none;
   }
@@ -81,9 +125,12 @@ svg circle {
   #time-text {
     font-size: 52px;
   }
+  .wide {
+    width: 260px !important;
+  }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   #decorator {
     display: none;
   }
@@ -98,6 +145,15 @@ svg circle {
   }
   #left p {
     max-width: 80%;
+  }
+  .wide {
+    width: 260px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #left p {
+    max-width: 100%;
   }
 }
 
