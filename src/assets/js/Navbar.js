@@ -4,10 +4,7 @@ function isInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
       rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
   );
 }
 
@@ -31,7 +28,7 @@ let homeMobileLink, aboutMobileLink, experienceMobileLink, contactMobileLink, mo
 // gather references to all the HTML elements we will be looking at after the website loads.
 document.addEventListener("DOMContentLoaded", (event) => {
   // sections to view
-  homeSection = document.querySelector("#hero-container");
+  homeSection = document.querySelector("#hero-typography");
   aboutSection = document.querySelector("#about-container");
   experienceSection = document.querySelector("#experience-container");
   contactSection = document.querySelector("#contact-container");
