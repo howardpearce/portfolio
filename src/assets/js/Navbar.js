@@ -28,7 +28,7 @@ let homeMobileLink, aboutMobileLink, experienceMobileLink, contactMobileLink, mo
 // gather references to all the HTML elements we will be looking at after the website loads.
 document.addEventListener("DOMContentLoaded", (event) => {
   // sections to view
-  homeSection = document.querySelector("#hero-typography");
+  homeSection = document.querySelector("#above");
   aboutSection = document.querySelector("#about-container");
   experienceSection = document.querySelector("#experience-container");
   contactSection = document.querySelector("#contact-container");
