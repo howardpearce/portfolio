@@ -155,5 +155,8 @@ svg circle {
   #left p {
     max-width: 100%;
   }
+  .wide {
+    width: 210px !important;
+  }
 }
 
