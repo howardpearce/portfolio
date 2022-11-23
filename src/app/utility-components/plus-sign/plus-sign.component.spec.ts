@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactSectionComponent } from './contact-section.component';
+import { PlusSignComponent } from './plus-sign.component';
 
-describe('ContactSectionComponent', () => {
-  let component: ContactSectionComponent;
-  let fixture: ComponentFixture<ContactSectionComponent>;
+describe('PlusSignComponent', () => {
+  let component: PlusSignComponent;
+  let fixture: ComponentFixture<PlusSignComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactSectionComponent ]
+      declarations: [ PlusSignComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContactSectionComponent);
+    fixture = TestBed.createComponent(PlusSignComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
