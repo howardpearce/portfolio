@@ -1,0 +1,31 @@
+#preloader-body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--bg-card-color);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+#rect{
+  animation: draw 30s linear infinite;
+  stroke-width: 7;
+}
+
+@keyframes draw{
+  from{
+    stroke-dashoffset: 3000;
+    stroke: var(--primary-color);
+  }
+  to{
+    stroke: var(--primary-color);
+    stroke-dashoffset: 0;
+  }
+}
