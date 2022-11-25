@@ -11,7 +11,7 @@ import { FooterComponent } from './structural-components/footer/footer.component
 
 import { ColorSwitcherComponent } from './utility-components/color-switcher/color-switcher.component';
 import { PlusSignComponent } from './utility-components/plus-sign/plus-sign.component';
-
+import { PreloaderComponent } from './utility-components/preloader/preloader.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -28,7 +28,8 @@ describe('AppComponent', () => {
         AboutSectionComponent,
         ExperienceSectionComponent,
         PlusSignComponent,
-        FooterComponent
+        FooterComponent,
+        PreloaderComponent
       ],
     }).compileComponents();
   });
