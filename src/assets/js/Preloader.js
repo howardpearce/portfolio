@@ -1,8 +1,15 @@
 window.addEventListener("load", (event) => {
   // fade away preloader
-  var preloader = document.querySelector("#preloader-body");
-  setTimeout( () => {fadeTo(preloader, 0, 200)}, 2000 );
+  setTimeout(removePreloader, 2000 );
+
 });
+
+function removePreloader() {
+  var preloader = document.querySelector("#preloader-body");
+  fadeTo(preloader, 0, 200);
+  setTimeout( () => { preloader.remove(); }, 250 );
+
+}
 
 // copied the following stackoverflow link since there's not an easy way to fade out an element without Jquery
 // https://stackoverflow.com/questions/68365106/fade-in-and-fade-out-using-pure-javascript-in-a-simple-way
