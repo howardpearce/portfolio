@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.8](https://github.com/strigiforme/portfolio/compare/v0.5.7...v0.5.8) (2022-11-25)
+
+
+### Features
+
+* Add animation for preloader ([cdfa02a](https://github.com/strigiforme/portfolio/commit/cdfa02a667d271e6e9ca66250af28fc8d43e199e))
+* Add empty preloader component ([b8a6a7a](https://github.com/strigiforme/portfolio/commit/b8a6a7a8f450f467627076e3bd2085925544fd07))
+* Remove preloader after page loads ([004b0e3](https://github.com/strigiforme/portfolio/commit/004b0e345dbd4ac4e0ca6d8c719bed574b5f8097))
+
+
+### Bug Fixes
+
+* **test:** Fix test warnings due to new components ([0a654ff](https://github.com/strigiforme/portfolio/commit/0a654ffba448acc7dfbbb7b2814cfb882c7b0f13))
+
+## [0.5.0](https://github.com/strigiforme/portfolio/compare/v0.4.3...v0.5.0) (2022-11-08)
+
 ### [0.5.7](https://github.com/strigiforme/portfolio/compare/v0.5.6...v0.5.7) (2022-11-22)
 
 
