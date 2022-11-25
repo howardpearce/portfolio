@@ -28,7 +28,8 @@ describe('AppComponent', () => {
         AboutSectionComponent,
         ExperienceSectionComponent,
         PlusSignComponent,
-        FooterComponent
+        FooterComponent,
+        PreloaderComponent
       ],
     }).compileComponents();
   });
