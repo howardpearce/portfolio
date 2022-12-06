@@ -4,6 +4,7 @@
   font-size: 100px;
   grid-column-start: 1;
   grid-column-end: 1;
+  height: 100%;
 }
 
 .plus-container rect {
