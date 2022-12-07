@@ -11,4 +11,4 @@
     let second = date.getSeconds().toString().padStart(2, "0");
     timeText.innerHTML = (hour + ":" + minute + ":" + second);
   }, 1000);
- });
+});
