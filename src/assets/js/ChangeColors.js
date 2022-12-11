@@ -7,6 +7,7 @@ function switchColorsToLight() {
   root.style.setProperty("--navbar-color", "rgba(217,217,217,0.85)");
   root.style.setProperty("--bg-color-translucent", "rgba(217,217,217,0.85)");
   root.style.setProperty("--bg-card-color", "#C9C9C9");
+  root.style.setProperty("--bg-card-color-highlight", "#B9B9B9");
   root.style.setProperty("--primary-color", "#1E1E1E");
   root.style.setProperty("--hero-text-color", "#000000");
   root.style.setProperty("--accent-color", "#CB450C");
@@ -21,6 +22,7 @@ function switchColorsToDark() {
   root.style.setProperty("--navbar-color", "rgba(30,30,30,0.85)");
   root.style.setProperty("--bg-color-translucent", "rgba(30,30,30,0.85)");
   root.style.setProperty("--bg-card-color", "#252525");
+  root.style.setProperty("--bg-card-color-highlight", "#2D2D2D");
   root.style.setProperty("--primary-color", "#D9D9D9");
   root.style.setProperty("--hero-text-color", "#FFFFFF");
   root.style.setProperty("--accent-color", "#CB450C");

@@ -52,9 +52,9 @@ export class ExperienceSectionComponent implements OnInit {
         break;
       }
       case 3: {
-        this.experience.title = "Computer Science Student @ Dalhousie University";
+        this.experience.title = "Student @ Dalhousie University";
         this.experience.date = "September 2016 - December 2020";
-        this.experience.description = "I many useful theoretical Computer Science concepts at Dalhousie. I acquired a Bachelors Degree in Computer Science with a specialization in Artificial Intelligence. I also was able to gain invaluable practical experience by participating in their co-op program as well.";
+        this.experience.description = "I learned many useful theoretical Computer Science concepts at Dalhousie. I acquired a Bachelors Degree in Computer Science with a specialization in Artificial Intelligence. I also was able to gain invaluable practical experience by participating in their co-op program as well.";
         this.experience.bullets = [
           "Vice President of Ethical Hacking Student Society.",
           "Collaborated on several group projects and strengthened my communication skills.",
