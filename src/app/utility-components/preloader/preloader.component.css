@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: var(--bg-card-color);
+  background-color: var(--bg-color);
   z-index: 1000;
   display: flex;
   justify-content: center;
