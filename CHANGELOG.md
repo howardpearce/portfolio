@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.9](https://github.com/strigiforme/portfolio/compare/v0.5.8...v0.5.9) (2022-12-11)
+
+
+### Features
+
+* Add javascript package for detecting scroll ([ead0973](https://github.com/strigiforme/portfolio/commit/ead097305596865501c92c1133c3f3618d068580))
+* **UI:** Add scroll animation for about section ([07df946](https://github.com/strigiforme/portfolio/commit/07df946f2e9eed99e5be7b4c751964854cad3299))
+* **UI:** Update preloader background color ([a06f485](https://github.com/strigiforme/portfolio/commit/a06f485b855d179501df220bea7284156c711cbb))
+
+
+### Bug Fixes
+
+* Plus sign slightly misaligned vertically ([0fc0823](https://github.com/strigiforme/portfolio/commit/0fc08233f0b1de97a8d8dd6426749bb42f1bc037))
+* **test:** Add import to testing framework ([463fd35](https://github.com/strigiforme/portfolio/commit/463fd35cce7d40267f9282ac64f61be8e16cc0a0))
+* **UI:** make experience switcher smaller ([10c5585](https://github.com/strigiforme/portfolio/commit/10c55852a52f0bc3fe3ffe7b7af3b3d99016aef2))
+
 ### [0.5.8](https://github.com/strigiforme/portfolio/compare/v0.5.7...v0.5.8) (2022-11-25)
 
 

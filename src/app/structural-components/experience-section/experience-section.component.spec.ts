@@ -50,7 +50,7 @@ describe('ExperienceSectionComponent', () => {
     expect(component.experience.date).toBe("April 2020 - August 2020");
     expect(component.experience.description).toBe("I developed multiple web applications while working at Pratt & Whitney to do analytics on user data for required training courses. This was in order to increase training compliance and provide a user interface for their human resources team.");
     component.switchActiveExperience(3);
-    expect(component.experience.title).toBe("Computer Science Student @ Dalhousie University");
+    expect(component.experience.title).toBe("Student @ Dalhousie University");
     expect(component.experience.date).toBe("September 2016 - December 2020");
-    expect(component.experience.description).toBe("I many useful theoretical Computer Science concepts at Dalhousie. I acquired a Bachelors Degree in Computer Science with a specialization in Artificial Intelligence. I also was able to gain invaluable practical experience by participating in their co-op program as well.");  });
+    expect(component.experience.description).toBe("I learned many useful theoretical Computer Science concepts at Dalhousie. I acquired a Bachelors Degree in Computer Science with a specialization in Artificial Intelligence. I also was able to gain invaluable practical experience by participating in their co-op program as well.");  });
 });
