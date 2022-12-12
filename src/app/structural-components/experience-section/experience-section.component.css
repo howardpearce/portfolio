@@ -15,10 +15,10 @@
 }
 
 .experience span {
-  font-size: 32px;
+  font-size: 40px;
   font-family: 'Bebas Neue';
   color: var(--primary-color);
-  padding-right: 25px;
+  padding-right: 10px;
   font-weight: bold;
   transition: none;
 }
@@ -132,7 +132,7 @@ i {
     margin-top: 5px;
   }
   .experience span {
-    font-size: 36px;
+    font-size: 30px;
     padding-right: 10px;
   }
   .experience p {
