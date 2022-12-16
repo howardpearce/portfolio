@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.10](https://github.com/strigiforme/portfolio/compare/v0.5.9...v0.5.10) (2022-12-16)
+
+
+### Features
+
+* Add animations for experience section ([5ece93a](https://github.com/strigiforme/portfolio/commit/5ece93a9e691f8450c06ed62e77adbe5f75c63da))
+* Make years display responsive ([62c93ce](https://github.com/strigiforme/portfolio/commit/62c93ce2c2550c028ecfce33905950e3c3b9c425))
+* Update NPM packages ([c5d4873](https://github.com/strigiforme/portfolio/commit/c5d4873fa0e64641e71e84e60285289a8671cb90))
+
+
+### Bug Fixes
+
+* Fix alignment on experience scroller by making font smaller ([0fd6104](https://github.com/strigiforme/portfolio/commit/0fd6104c9bc7e7f03b03b3e55c8abd3593789b99))
+
 ### [0.5.9](https://github.com/strigiforme/portfolio/compare/v0.5.8...v0.5.9) (2022-12-11)
 
 
