@@ -30,6 +30,7 @@
 
 /* Structure styles used in every section */
 .grid-container {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1220px auto;
   grid-template-rows: 100px auto 100px;

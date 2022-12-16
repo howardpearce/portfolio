@@ -12,6 +12,7 @@ import { ColorSwitcherComponent } from './utility-components/color-switcher/colo
 import { FooterComponent } from './structural-components/footer/footer.component';
 import { PlusSignComponent } from './utility-components/plus-sign/plus-sign.component';
 import { PreloaderComponent } from './utility-components/preloader/preloader.component';
+import { YearsDisplayComponent } from './structural-components/experience-section/years-display/years-display.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PreloaderComponent } from './utility-components/preloader/preloader.com
     ColorSwitcherComponent,
     FooterComponent,
     PlusSignComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    YearsDisplayComponent
   ],
   imports: [
     BrowserModule,
