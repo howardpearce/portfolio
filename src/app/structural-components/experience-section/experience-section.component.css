@@ -1,3 +1,7 @@
+#experience-container {
+  z-index: 1;
+}
+
 .experience {
   display: flex;
   flex-direction: row;
@@ -17,6 +21,8 @@ app-years-display {
   grid-row-start: 2;
   grid-row-end: 3;
   height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .experience:hover {

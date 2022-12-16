@@ -1,34 +1,46 @@
 .years {
-    position: absolute;
-    bottom: 0px;
-    translate: -50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-width: 1px;
-    border-style: solid;
-    padding: 10px 30px;
-    border-radius: 10px;
-    transition: translate 0.5s ease-out, border-color 0.5s ease-out;
-    transition-delay: 1000ms;
-    border-color: rgba(0, 0, 0, 0);
-  }
+  position: absolute;
+  bottom: 0px;
+  translate: -50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: translate 0.5s ease-out, border-color 0.5s ease-out;
+  transition-delay: 1000ms;
+  border-color: rgba(0, 0, 0, 0);
+}
 
-  .years p {
-    transition: opacity 0.5s ease-out;
-    transition-delay: 1000ms;
-    opacity: 0;
-  }
+.years p {
+  transition: opacity 0.5s ease-out;
+  transition-delay: 1000ms;
+  opacity: 0;
+}
 
-  .show-years {
-    translate: 0px;
-    border-color: var(--primary-color);
-  }
+.show-years {
+  translate: 0px !important;
+  border-color: var(--primary-color);
+}
 
-  .show-years p {
-    opacity: 1;
-  }
+.show-years p {
+  opacity: 1;
+}
 
-  .years p {
-    text-align: left;
+.years p {
+  text-align: left;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1024px) {
+  .years {
+    bottom: 50px;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+  .years {
+    display: none;
+  }
+}
