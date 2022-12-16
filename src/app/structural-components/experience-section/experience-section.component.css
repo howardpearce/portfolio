@@ -9,6 +9,16 @@
   transition: background-color 0.5s ease-out !important;
 }
 
+app-years-display {
+  position: absolute;
+  bottom: 0px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 100%;
+}
+
 .experience:hover {
   cursor: pointer;
   background-color: var(--bg-card-color-highlight);
@@ -33,6 +43,7 @@
   margin-left: 45px;
   display: flex;
   flex-direction: column;
+  min-height: 500px;
 }
 
 .experience-subtitle {
