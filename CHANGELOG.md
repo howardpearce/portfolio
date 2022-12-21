@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/strigiforme/portfolio/compare/v0.5.10...v6.0.0) (2022-12-21)
+
+
+### Features
+
+* Add scroll animation for contact section ([242c8c6](https://github.com/strigiforme/portfolio/commit/242c8c697692d25c014a0f2d1334f93df06f12b8))
+
 ### [0.5.10](https://github.com/strigiforme/portfolio/compare/v0.5.9...v0.5.10) (2022-12-16)
 
 
