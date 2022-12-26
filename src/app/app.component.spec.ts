@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AboutSectionComponent } from './structural-components/about-section/about-section.component';
 import { ContactSectionComponent } from './structural-components/contact-section/contact-section.component';
 import { ExperienceSectionComponent } from './structural-components/experience-section/experience-section.component';
+import { YearsDisplayComponent } from './structural-components/experience-section/years-display/years-display.component';
 import { HeroSectionComponent } from './structural-components/hero-section/hero-section.component';
 import { NavbarComponent } from './structural-components/navbar/navbar.component';
 import { FooterComponent } from './structural-components/footer/footer.component';
@@ -29,7 +30,8 @@ describe('AppComponent', () => {
         ExperienceSectionComponent,
         PlusSignComponent,
         FooterComponent,
-        PreloaderComponent
+        PreloaderComponent,
+        YearsDisplayComponent
       ],
     }).compileComponents();
   });
