@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.1](https://github.com/strigiforme/portfolio/compare/v0.6.0...v0.6.1) (2022-12-29)
+
+
+### Bug Fixes
+
+* Improve wording in about section ([ab5236f](https://github.com/strigiforme/portfolio/commit/ab5236f7b0bf2967ee9238ef7e168f588171cc2a))
+* Improve wording in experience section ([d5b4915](https://github.com/strigiforme/portfolio/commit/d5b4915b0c6f2fb302e34af6554a013967388823))
+* Reword contact section ([ee64901](https://github.com/strigiforme/portfolio/commit/ee6490153f3b099b6de7e39e8ca4ed82095cfd0d))
+* Reword hero section ([5bd22fe](https://github.com/strigiforme/portfolio/commit/5bd22fef2ee325a0813c1f54ab04c5068139330b))
+
 ## [0.6.0](https://github.com/strigiforme/portfolio/compare/v6.0.0...v0.6.0) (2022-12-21)
 
 ### [0.5.10](https://github.com/strigiforme/portfolio/compare/v0.5.9...v0.5.10) (2022-12-16)
