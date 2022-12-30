@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: auto 1220px auto;
   grid-template-rows: 100px auto 100px;
-  background-color: var(--bg-color);
+  z-index: 2;
 }
 
 .content-container {
@@ -109,7 +109,6 @@ body {
     display: grid;
     grid-template-columns: auto 1000px auto;
     grid-template-rows: 100px 800px 100px;
-    background-color: var(--bg-color);
   }
 
   .content-container {
