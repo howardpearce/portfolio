@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.2](https://github.com/strigiforme/portfolio/compare/v0.6.1...v0.6.2) (2022-12-30)
+
+
+### Features
+
+* Add background image ([b979dff](https://github.com/strigiforme/portfolio/commit/b979dff98932cefb3622fa6385ecbb8d71479ba2))
+
 ### [0.6.1](https://github.com/strigiforme/portfolio/compare/v0.6.0...v0.6.1) (2022-12-29)
 
 
