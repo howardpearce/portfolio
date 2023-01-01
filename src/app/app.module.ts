@@ -14,6 +14,7 @@ import { PlusSignComponent } from './utility-components/plus-sign/plus-sign.comp
 import { PreloaderComponent } from './utility-components/preloader/preloader.component';
 import { YearsDisplayComponent } from './structural-components/experience-section/years-display/years-display.component';
 import { BackgroundImageComponent } from './utility-components/background-image/background-image.component';
+import { VersionNumberComponent } from './utility-components/version-number/version-number.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BackgroundImageComponent } from './utility-components/background-image/
     PlusSignComponent,
     PreloaderComponent,
     YearsDisplayComponent,
-    BackgroundImageComponent
+    BackgroundImageComponent,
+    VersionNumberComponent
   ],
   imports: [
     BrowserModule,
