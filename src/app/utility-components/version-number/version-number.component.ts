@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import packageInfo from "../../../../package.json";
 
 @Component({
   selector: 'app-version-number',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VersionNumberComponent implements OnInit {
 
+  version: string = packageInfo.version;
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
