@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.3](https://github.com/strigiforme/portfolio/compare/v0.6.2...v0.6.3) (2023-01-02)
+
+
+### Features
+
+* Add empty version number component ([1a7b667](https://github.com/strigiforme/portfolio/commit/1a7b6674a9d384899938600f0409a8c69eda4a5b))
+* Import version from package.json ([b13bb65](https://github.com/strigiforme/portfolio/commit/b13bb65da491e3c4f711ff08c4a695ab3b7f9df7))
+* Layout for version number complete ([05af9ce](https://github.com/strigiforme/portfolio/commit/05af9ced7ac0b16ed4124de84641c514e4d16138))
+
 ### [0.6.2](https://github.com/strigiforme/portfolio/compare/v0.6.1...v0.6.2) (2022-12-30)
 
 
