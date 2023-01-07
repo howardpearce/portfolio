@@ -1,15 +1,6 @@
 /* Special fonts go here */
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue"), url("./assets/fonts/Bebas-Neue/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: normal;
-}
 
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue"), url("./assets/fonts/Bebas-Neue/BebasNeue-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
+
 
 @font-face {
   font-family: "Aileron";
@@ -70,6 +61,7 @@
 
 .title {
   border-bottom: 5px solid var(--primary-color);
+  font-weight: 100;
 }
 
 @media not (prefers-reduced-motion) {
@@ -182,7 +174,6 @@ body {
 
 h1 {
   font-size: 64px;
-  font-weight: bold;
 }
 
 .highlight-text {
