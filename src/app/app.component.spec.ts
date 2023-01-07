@@ -10,6 +10,8 @@ import { HeroSectionComponent } from './structural-components/hero-section/hero-
 import { NavbarComponent } from './structural-components/navbar/navbar.component';
 import { FooterComponent } from './structural-components/footer/footer.component';
 
+import { VersionNumberComponent } from './utility-components/version-number/version-number.component';
+import { BackgroundImageComponent } from './utility-components/background-image/background-image.component';
 import { ColorSwitcherComponent } from './utility-components/color-switcher/color-switcher.component';
 import { PlusSignComponent } from './utility-components/plus-sign/plus-sign.component';
 import { PreloaderComponent } from './utility-components/preloader/preloader.component';
@@ -31,7 +33,9 @@ describe('AppComponent', () => {
         PlusSignComponent,
         FooterComponent,
         PreloaderComponent,
-        YearsDisplayComponent
+        YearsDisplayComponent,
+        BackgroundImageComponent,
+        VersionNumberComponent
       ],
     }).compileComponents();
   });
