@@ -1,0 +1,162 @@
+#experience-container {
+  z-index: 1;
+}
+
+.experience {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  background-color: var(--bg-card-color);
+  margin-bottom: 20px;
+  max-width: 300px;
+  align-items: center;
+  transition: background-color 0.5s ease-out !important;
+}
+
+app-years-display {
+  position: absolute;
+  bottom: 0px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.experience:hover {
+  cursor: pointer;
+  background-color: var(--bg-card-color-highlight);
+}
+
+.experience span {
+  font-size: 40px;
+  font-weight: 100;
+  font-family: 'Bebas Neue';
+  color: var(--primary-color);
+  padding-right: 10px;
+  transition: none;
+}
+
+.experience-name {
+  min-width: 140px;
+  font-size: 16px;
+  font-family: "Aileron Semibold";
+}
+
+.experience-detail {
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.experience-subtitle {
+  color: var(--neutral-grey);
+}
+
+.experience-description {
+  margin-top: 15px;
+}
+
+.technology-tag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 5px;
+  padding: 7px 10px;
+  background-color: var(--bg-card-color);
+  border-radius: 3px;
+}
+
+.tag p {
+  color: var(--accent-color);
+}
+
+.end {
+  margin-right: 0px;
+}
+
+i {
+  display: none;
+  position: absolute;
+  color: var(--neutral-grey);
+  font-size: 20px;
+}
+
+#right-arrow {
+  right: -20px;
+}
+
+#left-arrow {
+  left: -20px;
+}
+
+#experience-list-container {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+}
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
+  .experience {
+    max-width: 180px;
+  }
+  .experience p {
+    font-size: 16px;
+  }
+  .experience span {
+    font-size: 40px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .experience-list {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    overflow: scroll;
+  }
+  #experience-list-container {
+    align-items: center;
+  }
+  .content {
+    margin: 0px;
+  }
+  i {
+    display: block;
+  }
+  .experience {
+    padding: 5px 10px;
+    width: fit-content;
+    margin: 0px 10px 0px 0px;
+  }
+  .experience-detail {
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+  .experience span {
+    font-size: 30px;
+    padding-right: 10px;
+  }
+  .experience p {
+    font-size: 14px;
+    max-width: 130px;
+  }
+  .experience-name {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,161 @@
+#left {
+  width: 100%;
+}
+
+#left p {
+  padding-bottom: 20px;
+  max-width: 600px;
+}
+
+#time-text {
+  font-family: 'Bebas Neue';
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.time, #right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.time {
+  margin-bottom: 30px;
+}
+
+svg circle {
+  fill: var(--primary-color);
+}
+
+.content {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-resource {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-resource a {
+  margin: 10px 10px 10px 0px;
+  text-decoration: none;
+}
+
+.contact-resource svg path {
+  stroke: var(--primary-color);
+}
+
+.contact-resource svg line {
+  stroke: var(--primary-color);
+}
+
+.contact-resource svg {
+  padding-top: 2px;
+}
+
+.highlight a {
+  color: var(--accent-color);
+}
+
+.highlight svg path, .highlight svg line {
+  stroke: var(--accent-color) !important;
+}
+
+.mobile-link-arrow {
+  display: none;
+  padding-bottom: 2px;
+}
+
+.contact-resource {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#email-text {
+  width: 0px;
+  overflow: hidden;
+  padding: 0px 0px 3px 25px !important;
+  transition: width 0.75s ease-out;
+}
+
+.wide {
+  width: 350px !important;
+}
+
+/* UI / UX CSS */
+
+.heading {
+  background-image: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--accent-color) 50%,
+    var(--primary-color) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.heading:hover::before{
+  width: 100%;
+}
+
+.heading:hover {
+  background-position: 0;
+ }
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1200px) and (min-width: 750px) {
+  #decorator {
+    display: none;
+  }
+  #left {
+    max-width: 400px;
+  }
+  #time-text {
+    font-size: 52px;
+  }
+  .wide {
+    width: 260px !important;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #decorator {
+    display: none;
+  }
+  .time {
+    display: none;
+  }
+  .mobile-link-arrow {
+    display: block
+  }
+  .link-arrow {
+    display: none;
+  }
+  #left p {
+    max-width: 80%;
+  }
+  .wide {
+    width: 260px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #left p {
+    max-width: 100%;
+  }
+  .wide {
+    width: 210px !important;
+  }
+}
+

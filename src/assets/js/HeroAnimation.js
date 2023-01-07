@@ -1,50 +1,160 @@
- // Cannot start until HTML has been rendered
- document.addEventListener("DOMContentLoaded", function () {
+// variables that need global context for interacting with other parts of the website
+var currentColorIsDark = false;
+var currentColorIsLight = false;
+let grid;
+let renderer;
+let camera;
+let canvas;
+
+// constants
+const CIRCLE_SPEED = 0.1;
+const DRIFT_SPEED = 0.05;
+const GUARD = 0.05;
+const SCENE_WIDTH = 14;
+const SCENE_HEIGHT = 16;
+const LIGHT_COLOR = 0xD9D9D9;
+const DARK_COLOR = 0x1E1E1E;
+
+window.addEventListener( 'resize', onWindowResize, false );
+function onWindowResize(){
+  camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( canvas.clientWidth, canvas.clientHeight );
+}
+
+class DotGrid {
+  constructor(screenWidth, sceneWidth, sceneHeight, screenHeight, particleSeparation, bufferGeometry) {
+    this.screenWidth = screenWidth;
+    this.sceneWidth = sceneWidth;
+    this.sceneHeight = sceneHeight;
+    this.screenHeight = screenHeight;
+    this.particleSeparation = particleSeparation;
+    this.particleCount = Math.round((this.sceneWidth / this.particleSeparation) * (this.sceneHeight / this.particleSeparation));
+    this.originalParticlePosition = new Float32Array(this.numberOfParticles * 3);
+    this.currentParticlePosition = new Float32Array(this.numberOfParticles * 3);
+    this.particleColors = new Float32Array(this.numberOfParticles * 3);
+    this.bufferGeometry = bufferGeometry;
+  }
+
+  initializePosition() {
+    var startX = this.sceneWidth / -2;
+    var startY = this.sceneHeight / 2;
+    var endX = this.sceneWidth / 2;
+    var endY = this.sceneWidth / -2;
+    var x = startX;
+    var y = startY;
+    var z = -5;
+    var index = 0;
+    // for every particle, set its position
+    for (let i = 0; i < this.numberOfRowsRequired; i+=1) {
+      for ( let j = 0; j < this.particlesPerRow; j+=1) {
+        this.currentParticlePosition[index] = x;
+        this.currentParticlePosition[index+1] = y;
+        this.currentParticlePosition[index+2] = z;
+        this.originalParticlePosition[index] = x;
+        this.originalParticlePosition[index+1] = y;
+        this.originalParticlePosition[index+2] = z;
+        x += this.particleSeparation;
+        index += 3;
+      }
+      y -= this.particleSeparation;
+      x = startX;
+    }
+    this.bufferGeometry.setAttribute('position', new THREE.BufferAttribute(this.currentParticlePosition, 3));
+  }
+
+  initializeColor(color) {
+    const particleColor = new THREE.Color(color);
+    var index = 0;
+    for (let i = 0; i < this.numberOfRowsRequired; i+=1) {
+      for ( let j = 0; j < this.particlesPerRow; j+=1) {
+        this.particleColors[index] = particleColor.r;
+        this.particleColors[index+1] = particleColor.g;
+        this.particleColors[index+2] = particleColor.b;
+        index += 3;
+      }
+      // for the last 30 rows, change the color to make a gradient from light to dark
+      if (i > this.numberOfRowsRequired - 30) {
+        color -= 0x070707;
+        particleColor.setHex(color);
+      }
+    }
+
+    this.bufferGeometry.setAttribute('color', new THREE.BufferAttribute(this.particleColors, 3));
+  }
+
+  changeColor(color) {
+    var originalColor = color;
+    const colorToChangeTo = new THREE.Color(color);
+    var colorArray = this.bufferGeometry.attributes.color.array;
+    var index = 0;
+    for (let i = 0; i < this.numberOfRowsRequired; i+=1) {
+      for ( let j = 0; j < this.particlesPerRow; j+=1) {
+        colorArray[index] = colorToChangeTo.r;
+        colorArray[index+1] = colorToChangeTo.g;
+        colorArray[index+2] = colorToChangeTo.b;
+        index += 3;
+      }
+      // for the last 30 rows, change the color to make a gradient from light to dark
+      if (i > this.numberOfRowsRequired - 30) {
+        if (originalColor > 0xCCCCCC) {
+          color -= 0x070707;
+        } else {
+          color += 0x070707;
+        }
+        colorToChangeTo.setHex(color);
+      }
+    }
+  }
+
+  get particlesPerRow() {
+    return Math.round(this.sceneWidth / this.particleSeparation);
+  }
+
+  get numberOfRowsRequired() {
+    return Math.round(this.sceneHeight / this.particleSeparation);
+  }
+
+  get numberOfParticles() {
+    return this.particlesPerRow * this.numberOfRowsRequired;
+  }
+
+}
+
+var animation = function () {
   // container for animation
-  const canvas = document.querySelector("#hero-graphic");
+  canvas = document.querySelector("#hero-graphic");
   var width = canvas.clientWidth;
   var height = canvas.clientHeight;
 
-  // constants
-  const CIRCLE_SPEED = 0.1;
-  const DRIFT_SPEED = 0.05;
-  const GUARD = 0.05;
-  const SCENE_WIDTH = 50;
-  const SCENE_HEIGHT = 10;
-  const NEGATIVE_BOUND_Y = -5;
-  const POSITIVE_BOUND_Y = NEGATIVE_BOUND_Y + SCENE_HEIGHT;
-  const NEGATIVE_BOUND_X = -25;
-  const POSITIVE_BOUND_X = NEGATIVE_BOUND_X + SCENE_WIDTH;
-
-  // look at screen height. Change distance between each particle depending on screen size.
-  // linear function derived from points (1126, 0.65), (700, 0.1)
-  const getParticleSeparation = (inputHeight) => Math.max(0.04, inputHeight * -0.00008215962441314555 + 0.1575117370892018);
-  var PARTICLE_SEPARATION = getParticleSeparation(height);
-  // FIXME: Multiplying by 1.3 since rounding causes us to come up just a little bit short on the number of particles required.
-  var particleCount = Math.round((SCENE_WIDTH / PARTICLE_SEPARATION) * (SCENE_HEIGHT / PARTICLE_SEPARATION) * 1.3);
   var waveCenterX = 0;
   var waveCenterY = 0;
   var radius = 0.1;
-  // the original position of every particle in the array
-  const originalParticlePosition = new Float32Array(particleCount * 3);
-  // the current position (after being moved)
-  var currentParticlePosition = new Float32Array(particleCount * 3);
+
+  // color of each particle
+  var particleColors = [];
+  var darkParticleColors = [];
+
   const bufferGeometry = new THREE.BufferGeometry();
 
-  // grab CSS variables for color and convert them to usable hex
-  var bodyStyle = getComputedStyle(document.body);
-  var dotColor = bodyStyle.getPropertyValue("--primary-color");
-  var backgroundColor = bodyStyle.getPropertyValue("--bg-color");
-  dotColor = parseInt(dotColor.trim().replace("#", ''), 16);
-  backgroundColor = parseInt(backgroundColor.trim().replace("#", ''), 16);
+  grid = new DotGrid(width, SCENE_WIDTH, SCENE_HEIGHT, height, 0.125, bufferGeometry);
+  grid.initializePosition();
+  grid.initializeColor(LIGHT_COLOR);
 
   // set up scene
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(90, width / height, 0.1, 9999 );
-  const renderer = new THREE.WebGLRenderer();
+  var scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(115, width / height, 1, 20 );
+  renderer = new THREE.WebGLRenderer( { alpha: true } );
 
-  configureScene();
-  createParticleArray();
+  renderer.setClearColor(0x000000, 0);
+  renderer.setSize(width, height);
+  canvas.appendChild(renderer.domElement);
+
+  var material = new THREE.PointsMaterial( { size: 0.01, vertexColors: true } );
+  bufferGeometry.dynamic = true;
+  var particlesMesh = new THREE.Points(bufferGeometry, material);
+  scene.add(particlesMesh);
+
   addLighting();
 
   renderer.setAnimationLoop(() => {
@@ -55,47 +165,6 @@
 
   /* FUNCTION DECLARATIONS DOWN BELOW ------------------------------------------------------------- */
 
-  function createParticleArray() {
-    // initialize array of dots
-    const material = new THREE.PointsMaterial( { size: 0.0, color: dotColor } );
-
-    // populate array with values (create a rectangular grid)
-    setParticlePositions();
-
-    bufferGeometry.setAttribute('position', new THREE.BufferAttribute(currentParticlePosition, 3));
-    bufferGeometry.dynamic = true;
-    var particlesMesh = new THREE.Points(bufferGeometry, material);
-    scene.add(particlesMesh);
-  }
-
-  function configureScene() {
-    scene.background = new THREE.Color(backgroundColor);
-    renderer.setSize(width, height);
-    canvas.appendChild(renderer.domElement);
-  }
-
-  function setParticlePositions() {
-    var x = NEGATIVE_BOUND_X;
-    var y = POSITIVE_BOUND_Y;
-    var z = -5;
-    // for every particle, set its position
-    for (let i = 0; i < particleCount * 3; i+=3) {
-      currentParticlePosition[i] = x;
-      currentParticlePosition[i+1] = y;
-      currentParticlePosition[i+2] = z;
-      originalParticlePosition[i] = x;
-      originalParticlePosition[i+1] = y;
-      originalParticlePosition[i+2] = z;
-      // wrap around at end of line
-      if (x > POSITIVE_BOUND_X) {
-        x = NEGATIVE_BOUND_X;
-        y -= PARTICLE_SEPARATION;
-      } else {
-        x += PARTICLE_SEPARATION;
-      }
-    }
-  }
-
   function addLighting() {
     var light1 = new THREE.PointLight(0xFFFFFF);
     light1.position.x = 0;
@@ -103,6 +172,8 @@
     light1.position.z = 0;
     scene.add(light1);
   }
+
+
 
   function distanceFromCenter(x, y) {
     return Math.sqrt(Math.pow(x - waveCenterX, 2) + Math.pow(y - waveCenterY, 2));
@@ -116,17 +187,17 @@
         position[index] += DRIFT_SPEED;
       }
     } else {
-      position[index] = originalParticlePosition[index];
+      position[index] = grid.originalParticlePosition[index];
     }
   }
 
   function animateParticles() {
-    for (let i = 0; i < particleCount * 3; i+=3) {
+    for (let i = 0; i < grid.numberOfParticles * 3; i+=3) {
       var currentPosition = bufferGeometry.attributes.position.array;
       // calculate the difference between its origin and current location in all 3 dimensions
-      var diffX = originalParticlePosition[i] - currentPosition[i];
-      var diffY = originalParticlePosition[i+1] - currentPosition[i+1];
-      var diffZ = originalParticlePosition[i+2] - currentPosition[i+2];
+      var diffX = grid.originalParticlePosition[i] - currentPosition[i];
+      var diffY = grid.originalParticlePosition[i+1] - currentPosition[i+1];
+      var diffZ = grid.originalParticlePosition[i+2] - currentPosition[i+2];
       driftToOrigin(diffX, i, currentPosition);
       driftToOrigin(diffY, i+1, currentPosition);
       driftToOrigin(diffZ, i+2, currentPosition);
@@ -138,12 +209,12 @@
     requestAnimationFrame( animate );
     radius += CIRCLE_SPEED;
     var currentPosition = bufferGeometry.attributes.position.array;
-
-    for (let i = 0; i < particleCount * 3; i+=3) {
+    //bufferGeometry.material.color.setHex(0xff0000);
+    for (let i = 0; i < grid.numberOfParticles * 3; i+=3) {
       var distance = distanceFromCenter(currentPosition[i], currentPosition[i+1]);
       var normalizedDistance = radius - distance;
       if ( Math.abs(normalizedDistance) < 0.8 ) {
-        currentPosition[i+2] = originalParticlePosition[i+2] + (Math.cos(normalizedDistance * 2) / 2);
+        currentPosition[i+2] = grid.originalParticlePosition[i+2] + (Math.cos(normalizedDistance * 2) / 2);
       }
     }
 
@@ -154,7 +225,23 @@
     }
 
     animateParticles();
+
+    if (currentColorIsLight == true) {
+      grid.changeColor(0x000000);
+      currentColorIsLight = false;
+    }
+
+    if (currentColorIsDark == true) {
+      grid.changeColor(0xD9D9D9);
+      currentColorIsDark = false;
+    }
+
     bufferGeometry.attributes.position.needsUpdate = true;
+    bufferGeometry.attributes.color.needsUpdate = true;
+
   }
 
-});
+}
+
+ // Cannot start until HTML has been rendered
+ document.addEventListener("DOMContentLoaded", animation);

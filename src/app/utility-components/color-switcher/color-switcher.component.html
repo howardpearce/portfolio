@@ -1,0 +1,13 @@
+<div id = "switcher-container">
+  <div class = "switch-item-container" onclick="switchColorsToDark()" (click)="setDarkActive()">
+    <p>DARK</p>
+    <div id="dark-switch" [ngClass]="isDarkActive == true ? 'selected':''" class="switch-square"></div>
+  </div>
+  <div class = "switch-item-container" onclick="switchColorsToLight()" style="margin-bottom: 0px;" (click)="setLightActive()">
+    <p>LIGHT</p>
+    <div id="light-switch" [ngClass]="isLightActive == true ? 'selected':''" class="switch-square"></div>
+  </div>
+</div>
+<div id = "touch-tab" onclick="revealColorChanger()">
+  <i style="color: var(--primary-color)" class="fa-solid fa-chevron-right"></i>
+</div>

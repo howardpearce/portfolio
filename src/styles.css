@@ -1,15 +1,6 @@
 /* Special fonts go here */
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue"), url("./assets/fonts/Bebas-Neue/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: normal;
-}
 
-@font-face {
-  font-family: "Bebas Neue";
-  src: local("Bebas Neue"), url("./assets/fonts/Bebas-Neue/BebasNeue-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
+
 
 @font-face {
   font-family: "Aileron";
@@ -23,12 +14,18 @@
 
 /* You can add global styles to this file, and also import other style files */
 
+/* allows for color switching to look good */
+* {
+  transition: color 1s ease-in, background-color 1s ease-in;
+}
+
 /* Structure styles used in every section */
 .grid-container {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1220px auto;
   grid-template-rows: 100px auto 100px;
-  background-color: var(--bg-color);
+  z-index: 2;
 }
 
 .content-container {
@@ -56,15 +53,6 @@
   width: 100%;
 }
 
-.plus-container {
-  display: flex;
-  align-items: center;
-  font-size: 100px;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  color: var(--primary-color);
-}
-
 .title-container {
   display: flex;
   align-items: center;
@@ -73,6 +61,21 @@
 
 .title {
   border-bottom: 5px solid var(--primary-color);
+  font-weight: 100;
+}
+
+@media not (prefers-reduced-motion) {
+  .scroll-animated {
+    position: relative;
+    left: -50px;
+    transition: left 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+  }
+
+  .show {
+    left: 0px;
+    opacity: 1;
+  }
 }
 
 body {
@@ -84,14 +87,12 @@ body {
   --bg-color-translucent: rgba(30,30,30,0.85);
   --navbar-color: rgba(26,26,26,0.95);
   --bg-card-color: #252525;
+  --bg-card-color-highlight: #2D2D2D;
   --primary-color: #D9D9D9;
   --hero-text-color: #FFFFFF;
   --accent-color: #CB450C;
   --neutral-grey: #666666;
 }
-
-/* General Text Styles */
-
 
 /* Responsive styling */
 
@@ -100,7 +101,6 @@ body {
     display: grid;
     grid-template-columns: auto 1000px auto;
     grid-template-rows: 100px 800px 100px;
-    background-color: var(--bg-color);
   }
 
   .content-container {
@@ -111,13 +111,13 @@ body {
 @media only screen and (max-width: 1024px) and (min-width: 700px) {
   .grid-container {
     display: grid;
-    grid-template-columns: auto 650px auto;
+    grid-template-columns: auto 700px auto;
     overflow: hidden;
     grid-template-rows: 100px auto 100px;
   }
 
   .content-container {
-    grid-template-columns: 100px 500px 50px;
+    grid-template-columns: 100px 550px 50px;
   }
 }
 
@@ -129,9 +129,6 @@ body {
   }
   .grid-container, .content-container, .content {
     margin: auto;
-  }
-  .plus-container {
-    display: none;
   }
   .content-container {
     grid-template-columns: 0px 400px 0px;
@@ -177,7 +174,6 @@ body {
 
 h1 {
   font-size: 64px;
-  font-weight: bold;
 }
 
 .highlight-text {

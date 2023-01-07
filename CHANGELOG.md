@@ -2,6 +2,152 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/strigiforme/portfolio/compare/v0.6.4...v0.7.0) (2023-01-07)
+
+### [0.6.4](https://github.com/strigiforme/portfolio/compare/v0.6.3...v0.6.4) (2023-01-07)
+
+
+### Features
+
+* Indefinitely disable background image ([163e248](https://github.com/strigiforme/portfolio/commit/163e248654bc58797cdb155cddaca0d669743a70))
+
+
+### Bug Fixes
+
+* Font rendering bugs between chrome and other browsers ([9fc08aa](https://github.com/strigiforme/portfolio/commit/9fc08aa086a2ba11899a9a8db5fc982519047bac))
+
+### [0.6.3](https://github.com/strigiforme/portfolio/compare/v0.6.2...v0.6.3) (2023-01-02)
+
+
+### Features
+
+* Add empty version number component ([1a7b667](https://github.com/strigiforme/portfolio/commit/1a7b6674a9d384899938600f0409a8c69eda4a5b))
+* Import version from package.json ([b13bb65](https://github.com/strigiforme/portfolio/commit/b13bb65da491e3c4f711ff08c4a695ab3b7f9df7))
+* Layout for version number complete ([05af9ce](https://github.com/strigiforme/portfolio/commit/05af9ced7ac0b16ed4124de84641c514e4d16138))
+
+### [0.6.2](https://github.com/strigiforme/portfolio/compare/v0.6.1...v0.6.2) (2022-12-30)
+
+
+### Features
+
+* Add background image ([b979dff](https://github.com/strigiforme/portfolio/commit/b979dff98932cefb3622fa6385ecbb8d71479ba2))
+
+### [0.6.1](https://github.com/strigiforme/portfolio/compare/v0.6.0...v0.6.1) (2022-12-29)
+
+
+### Bug Fixes
+
+* Improve wording in about section ([ab5236f](https://github.com/strigiforme/portfolio/commit/ab5236f7b0bf2967ee9238ef7e168f588171cc2a))
+* Improve wording in experience section ([d5b4915](https://github.com/strigiforme/portfolio/commit/d5b4915b0c6f2fb302e34af6554a013967388823))
+* Reword contact section ([ee64901](https://github.com/strigiforme/portfolio/commit/ee6490153f3b099b6de7e39e8ca4ed82095cfd0d))
+* Reword hero section ([5bd22fe](https://github.com/strigiforme/portfolio/commit/5bd22fef2ee325a0813c1f54ab04c5068139330b))
+
+## [0.6.0](https://github.com/strigiforme/portfolio/compare/v6.0.0...v0.6.0) (2022-12-21)
+
+### [0.5.10](https://github.com/strigiforme/portfolio/compare/v0.5.9...v0.5.10) (2022-12-16)
+
+
+### Features
+
+* Add animations for experience section ([5ece93a](https://github.com/strigiforme/portfolio/commit/5ece93a9e691f8450c06ed62e77adbe5f75c63da))
+* Make years display responsive ([62c93ce](https://github.com/strigiforme/portfolio/commit/62c93ce2c2550c028ecfce33905950e3c3b9c425))
+* Update NPM packages ([c5d4873](https://github.com/strigiforme/portfolio/commit/c5d4873fa0e64641e71e84e60285289a8671cb90))
+
+
+### Bug Fixes
+
+* Fix alignment on experience scroller by making font smaller ([0fd6104](https://github.com/strigiforme/portfolio/commit/0fd6104c9bc7e7f03b03b3e55c8abd3593789b99))
+
+### [0.5.9](https://github.com/strigiforme/portfolio/compare/v0.5.8...v0.5.9) (2022-12-11)
+
+
+### Features
+
+* Add javascript package for detecting scroll ([ead0973](https://github.com/strigiforme/portfolio/commit/ead097305596865501c92c1133c3f3618d068580))
+* **UI:** Add scroll animation for about section ([07df946](https://github.com/strigiforme/portfolio/commit/07df946f2e9eed99e5be7b4c751964854cad3299))
+* **UI:** Update preloader background color ([a06f485](https://github.com/strigiforme/portfolio/commit/a06f485b855d179501df220bea7284156c711cbb))
+
+
+### Bug Fixes
+
+* Plus sign slightly misaligned vertically ([0fc0823](https://github.com/strigiforme/portfolio/commit/0fc08233f0b1de97a8d8dd6426749bb42f1bc037))
+* **test:** Add import to testing framework ([463fd35](https://github.com/strigiforme/portfolio/commit/463fd35cce7d40267f9282ac64f61be8e16cc0a0))
+* **UI:** make experience switcher smaller ([10c5585](https://github.com/strigiforme/portfolio/commit/10c55852a52f0bc3fe3ffe7b7af3b3d99016aef2))
+
+### [0.5.8](https://github.com/strigiforme/portfolio/compare/v0.5.7...v0.5.8) (2022-11-25)
+
+
+### Features
+
+* Add animation for preloader ([cdfa02a](https://github.com/strigiforme/portfolio/commit/cdfa02a667d271e6e9ca66250af28fc8d43e199e))
+* Add empty preloader component ([b8a6a7a](https://github.com/strigiforme/portfolio/commit/b8a6a7a8f450f467627076e3bd2085925544fd07))
+* Remove preloader after page loads ([004b0e3](https://github.com/strigiforme/portfolio/commit/004b0e345dbd4ac4e0ca6d8c719bed574b5f8097))
+
+
+### Bug Fixes
+
+* **test:** Fix test warnings due to new components ([0a654ff](https://github.com/strigiforme/portfolio/commit/0a654ffba448acc7dfbbb7b2814cfb882c7b0f13))
+
+## [0.5.0](https://github.com/strigiforme/portfolio/compare/v0.4.3...v0.5.0) (2022-11-08)
+
+### [0.5.7](https://github.com/strigiforme/portfolio/compare/v0.5.6...v0.5.7) (2022-11-22)
+
+
+### Bug Fixes
+
+* Adjust element used for detecing hero scroll ([e570b08](https://github.com/strigiforme/portfolio/commit/e570b08df2c8384f2571ab8ae988fd5bd6a5f135))
+* **navbar:** Navbar works on mobile screens ([d1b3ffb](https://github.com/strigiforme/portfolio/commit/d1b3ffbd98fa871d0ce4717ef0198b67c5fdb278))
+
+### [0.5.6](https://github.com/strigiforme/portfolio/compare/v0.5.5...v0.5.6) (2022-11-22)
+
+
+### Features
+
+* **UI:** Implement buttons for contact section ([e1ccf2c](https://github.com/strigiforme/portfolio/commit/e1ccf2c11caf8ca70713f19008161eb41629a9a2))
+
+### [0.5.5](https://github.com/strigiforme/portfolio/compare/v0.5.4...v0.5.5) (2022-11-19)
+
+
+### Features
+
+* **Navbar:** Enable website navigation via navbar ([3d3e0a4](https://github.com/strigiforme/portfolio/commit/3d3e0a40eeafa5417c63349bd53e4eedadaec627))
+
+
+### Bug Fixes
+
+* Ensure headshot is properly sized ([cc7fb44](https://github.com/strigiforme/portfolio/commit/cc7fb440097128172265c2a5ce625fcd539182eb))
+* Remove experience switcher color transition ([ff313ca](https://github.com/strigiforme/portfolio/commit/ff313ca2abdcafc25fb452e94312d49728754b33))
+
+### [0.5.4](https://github.com/strigiforme/portfolio/compare/v0.5.3...v0.5.4) (2022-11-18)
+
+
+### Bug Fixes
+
+* Remove website refresh on resize ([fd60cb2](https://github.com/strigiforme/portfolio/commit/fd60cb2e018be1cb697acf0dc3dec90233d688f5))
+
+### [0.5.3](https://github.com/strigiforme/portfolio/compare/v0.5.2...v0.5.3) (2022-11-15)
+
+
+### Bug Fixes
+
+* Make scroll indicator shorter ([8c2d3d4](https://github.com/strigiforme/portfolio/commit/8c2d3d486e7c74b7653adb744ca551dfee0ebd69))
+
+### [0.5.2](https://github.com/strigiforme/portfolio/compare/v0.4.3...v0.5.2) (2022-11-15)
+
+
+### Features
+
+* **UI:** Add color switching functionality ([914722c](https://github.com/strigiforme/portfolio/commit/914722c1fcebde4e5a945feaff8db16336345709))
+* **UI:** Make buttons for color switcher change color ([6e9b191](https://github.com/strigiforme/portfolio/commit/6e9b19198d280a6fd370612110f6778803c87aaf))
+
+## [5.1.0](https://github.com/strigiforme/portfolio/compare/v0.5.0...v5.1.0) (2022-11-12)
+
+
+### Features
+
+* **UI:** Add color switching functionality ([97dd31b](https://github.com/strigiforme/portfolio/commit/97dd31b792c8a96c848a2625eedca2cc68247918))
+* **UI:** Make buttons for color switcher change color ([d195d8d](https://github.com/strigiforme/portfolio/commit/d195d8d4f3899c8769a56239ccc55392d46b95f7))
+
 ## [5.0.0](https://github.com/strigiforme/portfolio/compare/v0.4.3...v5.0.0) (2022-11-08)
 
 ### [0.4.3](https://github.com/strigiforme/portfolio/compare/v0.4.2...v0.4.3) (2022-11-08)

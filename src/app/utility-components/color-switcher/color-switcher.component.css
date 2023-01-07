@@ -1,0 +1,65 @@
+#switcher-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  max-height: 75px;
+  background-color: var(--bg-color-translucent);
+  z-index: 100;
+}
+
+.switch-item-container {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.switch-item-container p {
+  font-weight: 400;
+  margin: 0px 10px 0px;
+  font-size: 16px;
+}
+
+.switch-square {
+  border: 2px solid var(--primary-color);
+  height: 12px;
+  width: 12px;
+  transition: none !important;
+}
+
+.selected {
+  background-color: var(--primary-color);
+}
+
+#touch-tab {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  left: 0px;
+  padding: 10px;
+  padding-left: 3px;
+  width: 12px;
+  height: 65px;
+  margin-bottom: 15px;
+  background-color: var(--bg-card-color);
+  border-radius: 0px 4px 4px 0px;
+  align-items: center;
+  transition: left 0.25s, background-color 1s ease-in !important;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 700px) {
+ #switcher-container {
+  left: -100px;
+  background-color: var(--bg-card-color);
+  padding-right: 20px;
+  bottom: 55px;
+  transition: left 0.25s, background-color 1s ease-in !important;
+ }
+ #touch-tab {
+  display: flex;
+ }
+}

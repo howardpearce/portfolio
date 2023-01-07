@@ -1,0 +1,244 @@
+#hero-graphic {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  height: 100vh;
+  max-width: 700px;
+}
+
+#gradient {
+  background: linear-gradient(rgba(255,255,255,0) 0%, var(--bg-color) 100%);
+  position: absolute;
+  bottom: 0px;
+  /* Reference grid-hero-container for this width (it is the addition of the last two columns) */
+  width: 45%;
+  height: 200px;
+}
+
+.grid-hero-container {
+  display: grid;
+  grid-template-columns: 180px auto 700px;
+  grid-template-rows: 100px auto 100px;
+  background-color: var(--bg-color);
+  overflow: visible;
+}
+
+#hero-container {
+  height: 100vh;
+}
+
+.hero-section-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex;
+}
+
+#hero-typography {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 700px;
+  height: 100%;
+  position: relative;
+  top: -60px;
+  background-color: var(--bg-color);
+}
+
+#spacer {
+  display: none;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+#above {
+  position: relative;
+  bottom: -10px;
+}
+
+.hero-subtext {
+ font-size: 32px;
+}
+
+#hero-text {
+ font-size: 128px;
+ font-weight: 100;
+ margin: 0px;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background-color: var(--bg-color-translucent);
+  padding: 10px 10px 10px 10px;
+  border-radius: 2px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  z-index: 2;
+}
+
+#scroll-text {
+  font-size: 20px;
+}
+
+#upper-arrow {
+  height: 75px;
+  width: 0px;
+  border: 2px solid var(--primary-color);
+  margin-bottom: 15px;
+}
+
+#lower-arrow {
+  height: 75px;
+  width: 0px;
+  border: 2px solid var(--primary-color);
+  margin-top: 15px;
+}
+
+#arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid var(--primary-color);
+}
+
+/* MEDIA QUERIES AND RESPONSIVE STYLING */
+
+@media only screen and (max-width: 1600px) and (min-width: 1500px) {
+  .grid-hero-container {
+    grid-template-columns: 180px auto 600px;
+  }
+
+  #gradient {
+    width: 38%;
+  }
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1200px) {
+  #hero-text {
+    font-size: 90px;
+  }
+
+  .hero-subtext {
+    font-size: 28px;
+    max-width: 530px;
+  }
+
+  .grid-hero-container {
+    grid-template-columns: 180px auto 500px;
+  }
+
+  #gradient {
+    width: 35%;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+
+  #hero-text {
+    font-size: 90px;
+  }
+
+  #spacer {
+    display: block;
+    width: 100%;
+  }
+
+  #hero-typography {
+    margin: auto;
+    height: auto;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+
+  .hero-section-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-subtext {
+    font-size: 28px;
+    max-width: 530px;
+  }
+
+  .grid-hero-container {
+    display: grid;
+    grid-template-columns: 180px auto 40%;
+    grid-template-rows: 100px auto 100px;
+    background-color: var(--bg-color);
+  }
+
+  #gradient {
+    width: 40%;
+    bottom: 0px;
+  }
+
+  #above {
+    bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 860px) and (min-width: 700px) {
+  .hero-subtext {
+    font-size: 28px;
+    max-width: 530px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #hero-text {
+    font-size: 52px !important;
+  }
+  #above, #below {
+    font-size: 18px !important;
+    padding-bottom: 15px;
+    padding-top: 2px;
+    max-width: 275px;
+  }
+  #hero-graphic {
+    display: none;
+  }
+  .grid-hero-container {
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: 100px auto 100px;
+    background-color: var(--bg-color);
+  }
+  #scroll-text, #upper-arrow {
+    display: none;
+  }
+  .arrow-container {
+    position: absolute;
+    padding: 20px;
+    bottom: 0px;
+    right: 0px;
+    margin: 0px;
+    top: auto;
+    justify-content: initial;
+  }
+  #lower-arrow {
+    height: 50px;
+  }
+  #hero-typography{
+    top: 0px;
+    margin: auto;
+  }
+}
