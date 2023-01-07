@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.4](https://github.com/strigiforme/portfolio/compare/v0.6.3...v0.6.4) (2023-01-07)
+
+
+### Features
+
+* Indefinitely disable background image ([163e248](https://github.com/strigiforme/portfolio/commit/163e248654bc58797cdb155cddaca0d669743a70))
+
+
+### Bug Fixes
+
+* Font rendering bugs between chrome and other browsers ([9fc08aa](https://github.com/strigiforme/portfolio/commit/9fc08aa086a2ba11899a9a8db5fc982519047bac))
+
 ### [0.6.3](https://github.com/strigiforme/portfolio/compare/v0.6.2...v0.6.3) (2023-01-02)
 
 

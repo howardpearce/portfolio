@@ -32,10 +32,10 @@ app-years-display {
 
 .experience span {
   font-size: 40px;
+  font-weight: 100;
   font-family: 'Bebas Neue';
   color: var(--primary-color);
   padding-right: 10px;
-  font-weight: bold;
   transition: none;
 }
 
