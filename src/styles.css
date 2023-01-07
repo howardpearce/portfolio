@@ -1,7 +1,5 @@
 /* Special fonts go here */
 
-
-
 @font-face {
   font-family: "Aileron";
   src: local("Aileron"), url("./assets/fonts/Aileron/Aileron-Regular.otf") format("opentype");
@@ -15,6 +13,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* allows for color switching to look good */
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   transition: color 1s ease-in, background-color 1s ease-in;
 }
