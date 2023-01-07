@@ -5,7 +5,7 @@
       <h1 id = "experience-title" class = "title scroll-animated"> PROFESSIONAL EXPERIENCE </h1>
     </div>
     <div class = "content" id="experience-container">
-      <div id="experience-list-container">
+      <div id="experience-list-container" class="scroll-animated">
         <i id="left-arrow" class="fa-solid fa-chevron-left"></i>
         <div class = "experience-list">
           <div class = "experience" (click)="switchActiveExperience(1)"><span [ngClass]="ultraActive == true ? 'highlight-text':''">01:</span><p class = "experience-name">Ultra Electronics <br/> Maritime Systems</p></div>
@@ -14,7 +14,7 @@
         </div>
         <i id="right-arrow" class="fa-solid fa-chevron-right"></i>
       </div>
-      <div class = "experience-detail">
+      <div class = "experience-detail scroll-animated">
         <p id = "experience-content-title" class = "heading"> {{experience.title}} </p>
         <p class = "experience-subtitle subtext"> {{experience.date}} </p>
         <div class = "experience-description">
