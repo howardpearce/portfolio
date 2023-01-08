@@ -4,7 +4,7 @@ import { ExperienceSectionComponent } from './experience-section.component';
 import { YearsDisplayComponent } from './years-display/years-display.component';
 import { PlusSignComponent } from './../../utility-components/plus-sign/plus-sign.component';
 
-import { ultraExperience, prattExperience, dalhousieExperience } from 'src/app/structural-components/experience-section/experience';
+import { arcticWolfExperience, ultraExperience, prattExperience, dalhousieExperience } from 'src/app/structural-components/experience-section/experience';
 
 describe('ExperienceSectionComponent', () => {
 
