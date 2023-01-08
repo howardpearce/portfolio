@@ -25,6 +25,19 @@ class Experience {
   }
 }
 
+const arcticWolfExperience = new Experience(
+  "Software Developer @ Arctic Wolf",
+  "January 2023 - Present",
+  "I recently started working at Arctic Wolf on their Managed Risk Engines team. I'm excited to be a part of their team!",
+  [
+    "Highly technical Java development in a cybersecurity context.",
+    "Analyze and aggregate network data to generate reports.",
+    "More to come."
+  ],
+  [ "Java", "Python", "Cybersecurity" ]
+);
+
+
 const ultraExperience = new Experience(
   "Software Developer @ Ultra Maritime",
   "January 2021 - January 2023",
@@ -32,9 +45,9 @@ const ultraExperience = new Experience(
   [
     "Designed and developed micro-service for RS-485 Communication.",
     "Collaborated with team members in an Agile workflow.",
-    "Participated in entire software project lifecycle.",
     "Wrote technical documentation and performed requirements derivation.",
-    "Performed software architectural design for project PDR and CDR."
+    "Performed software architectural design for project PDR and CDR.",
+    "One additional year of experience as a co-op student."
   ],
   [ "C++","Java","Python","Docker","Jenkins" ]
 );
@@ -64,4 +77,4 @@ const dalhousieExperience = new Experience(
   [ "Machine Learning", "C++", "Java", "Data Structures", "Algorithms" ]
 );
 
-export { ultraExperience, prattExperience, dalhousieExperience } ;
+export { arcticWolfExperience, ultraExperience, prattExperience, dalhousieExperience } ;
