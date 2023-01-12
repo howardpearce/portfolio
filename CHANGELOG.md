@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.4](https://github.com/strigiforme/portfolio/compare/v0.7.3...v0.7.4) (2023-01-12)
+
+
+### Features
+
+* add link to scrum master certification ([0aba6c9](https://github.com/strigiforme/portfolio/commit/0aba6c90611905fd0f295ef4676dfa75400b0d02))
+* add transition delay to experience desc ([0a9baae](https://github.com/strigiforme/portfolio/commit/0a9baaed97c79f4ab819e47ebec22364a0038651))
+
+
+### Bug Fixes
+
+* Make time text not bold ([a9721c0](https://github.com/strigiforme/portfolio/commit/a9721c0f771faf4b1b956aa30eecbaab7e37ed0e))
+
 ### [0.7.3](https://github.com/strigiforme/portfolio/compare/v0.7.2...v0.7.3) (2023-01-07)
 
 ### [0.7.2](https://github.com/strigiforme/portfolio/compare/v0.7.1...v0.7.2) (2023-01-07)
