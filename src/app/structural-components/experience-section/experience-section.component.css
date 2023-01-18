@@ -133,6 +133,7 @@ i {
   }
   #experience-list-container {
     align-items: center;
+    margin-top: 10px;
   }
   .content {
     margin: 0px;
@@ -147,7 +148,7 @@ i {
   }
   .experience-detail {
     margin-left: 0px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
   .experience span {
     font-size: 30px;
