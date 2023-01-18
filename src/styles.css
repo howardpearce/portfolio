@@ -163,39 +163,6 @@ body {
 }
 
 
-/* Styling to manage the size of text throughout the portfolio */
-
-.heading {
-  font-family: "Aileron Semibold";
-  font-size: 32px;
-}
-
-.subtext {
-  font-size: 16px;
-}
-
-h1 {
-  font-size: 64px;
-}
-
-.highlight-text {
-  color: var(--accent-color) !important;
-}
-
-p, a, li, h1, h2, h3{
-  color: var(--primary-color);
-  margin: 0px;
-}
-
-h1, h2, h3 {
-  font-family: 'Bebas Neue';
-}
-
-p, a, li {
-  font-family: "Aileron", sans-serif;
-  font-size: 24px;
-}
-
 @media only screen and (max-width: 1200px) and (min-width: 700px ){
   .title {
     font-size: 50px;
@@ -230,4 +197,65 @@ p, a, li {
   .title {
     font-size: 38px;
   }
+}
+
+
+/* Styling to manage the size of text throughout the portfolio */
+
+.heading {
+  font-family: "Aileron Semibold";
+  font-size: 32px;
+}
+
+.subtext {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+.highlight-text {
+  color: var(--accent-color) !important;
+}
+
+p, a, li, h1, h2, h3{
+  color: var(--primary-color);
+  margin: 0px;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue';
+}
+
+p, a, li {
+  font-family: "Aileron", sans-serif;
+  font-size: 24px;
+}
+
+@media (hover: hover) {
+  .highlight-on-hover {
+    background-image: linear-gradient(
+      to right,
+      var(--accent-color),
+      var(--accent-color) 50%,
+      var(--primary-color) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.25s ease-in-out;
+  }
+}
+
+.highlight-on-hover:hover::before{
+  width: 100%;
+}
+
+.highlight-on-hover:hover {
+  background-position: 0;
 }
