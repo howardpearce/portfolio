@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.5](https://github.com/strigiforme/portfolio/compare/v0.7.4...v0.7.5) (2023-01-18)
+
+
+### Features
+
+* Add highlight effect to navbar links ([5d6c0d8](https://github.com/strigiforme/portfolio/commit/5d6c0d887be5c268b9d09066be0d07dc0a96ff77))
+
+
+### Bug Fixes
+
+* Some styling bugs ([ab6c176](https://github.com/strigiforme/portfolio/commit/ab6c176c37a27ea916f59773e5ba7b2c6db74ba7))
+
 ### [0.7.4](https://github.com/strigiforme/portfolio/compare/v0.7.3...v0.7.4) (2023-01-12)
 
 
