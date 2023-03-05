@@ -1,6 +1,6 @@
 #headshot {
   margin-left: 80px;
-  width: 320px;
+  width: 327px;
   height: 283px;
   -webkit-box-shadow: 40px 40px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
   box-shadow: 40px 40px 0px 0px var(--bg-card-color), 5px 5px 15px 5px rgba(0,0,0,0);
@@ -10,7 +10,7 @@
 }
 
 #headshot img {
-  width: 320px;
+  width: 327px;
   height: 283px;
 }
 

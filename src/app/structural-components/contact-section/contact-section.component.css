@@ -10,7 +10,6 @@
 #time-text {
   font-family: 'Bebas Neue';
   font-size: 64px;
-  font-weight: bold;
 }
 
 .time, #right {
@@ -87,30 +86,7 @@ svg circle {
 
 /* UI / UX CSS */
 
-.heading {
-  background-image: linear-gradient(
-    to right,
-    var(--accent-color),
-    var(--accent-color) 50%,
-    var(--primary-color) 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 5px 0;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
 
-.heading:hover::before{
-  width: 100%;
-}
-
-.heading:hover {
-  background-position: 0;
- }
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
