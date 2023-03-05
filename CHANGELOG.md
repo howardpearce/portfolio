@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/strigiforme/portfolio/compare/v0.7.3...v1.0.1) (2023-03-05)
+
+
+### Features
+
+* Add arctic wolf experience section ([71ed519](https://github.com/strigiforme/portfolio/commit/71ed519b2343416be4798ce95ce0c45299f2ad1b))
+* Add arctic wolf experience section ([cef2b9d](https://github.com/strigiforme/portfolio/commit/cef2b9d560046f65443ef661ade378e75a3510a7))
+
 ### [0.7.3](https://github.com/strigiforme/portfolio/compare/v0.7.2...v0.7.3) (2023-01-07)
 
 ### [0.7.2](https://github.com/strigiforme/portfolio/compare/v0.7.1...v0.7.2) (2023-01-07)
