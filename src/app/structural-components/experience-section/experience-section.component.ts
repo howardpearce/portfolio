@@ -14,7 +14,6 @@ export class ExperienceSectionComponent implements OnInit {
   arcticWolfActive = true;
   ultraActive = false;
   prattActive = false;
-  dalActive = false;
 
   constructor() { }
 
@@ -26,7 +25,6 @@ export class ExperienceSectionComponent implements OnInit {
     // reset all experiences to be off
     this.ultraActive = false;
     this.prattActive = false;
-    this.dalActive = false;
     this.arcticWolfActive = false;
     switch (num) {
       // Ultra Maritime experience

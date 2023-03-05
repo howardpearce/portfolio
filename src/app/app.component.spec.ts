@@ -68,7 +68,7 @@ describe('AppComponent', () => {
     const experienceTitle = compiled.querySelector('#experience-title')
     const experienceContentTitle = compiled.querySelector('#experience-content-title')
     expect(experienceTitle?.textContent).toContain('PROFESSIONAL EXPERIENCE');
-    expect(experienceContentTitle?.textContent).toContain('Software Developer @ Ultra Maritime');
+    expect(experienceContentTitle?.textContent).toContain('Software Developer @ Arctic Wolf');
   });
 
   function getCompiledDOM() {
