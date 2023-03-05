@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ultraExperience, prattExperience, dalhousieExperience } from 'src/app/structural-components/experience-section/experience';
+import { arcticWolfExperience, ultraExperience, prattExperience, dalhousieExperience } from 'src/app/structural-components/experience-section/experience';
 
 @Component({
   selector: 'app-experience-section',
@@ -9,11 +9,11 @@ import { ultraExperience, prattExperience, dalhousieExperience } from 'src/app/s
 
 export class ExperienceSectionComponent implements OnInit {
 
-  activeExperience = ultraExperience;
+  activeExperience = arcticWolfExperience;
 
-  ultraActive = true;
+  arcticWolfActive = true;
+  ultraActive = false;
   prattActive = false;
-  dalActive = false;
 
   constructor() { }
 
@@ -25,24 +25,30 @@ export class ExperienceSectionComponent implements OnInit {
     // reset all experiences to be off
     this.ultraActive = false;
     this.prattActive = false;
-    this.dalActive = false;
+    this.arcticWolfActive = false;
     switch (num) {
-      // Pratt & Whitney experience
+      // Ultra Maritime experience
       case 2: {
+        this.activeExperience = ultraExperience;
+        this.ultraActive = true;
+        break;
+      }
+      // Pratt & Whitney experience
+      case 3: {
         this.activeExperience = prattExperience;
         this.prattActive = true;
         break;
       }
       // Dalhousie Experience
-      case 3: {
-        this.activeExperience = dalhousieExperience;
-        this.dalActive = true;
-        break;
-      }
-      // Ultra Experience (Where I'm currently working)
+      // case 4: {
+      //   this.activeExperience = dalhousieExperience;
+      //   this.dalActive = true;
+      //   break;
+      // }
+      // Arctic Wolf Experience (Where I'm currently working)
       default: {
-        this.activeExperience = ultraExperience;
-        this.ultraActive = true;
+        this.activeExperience = arcticWolfExperience;
+        this.arcticWolfActive = true;
         break;
       }
     }

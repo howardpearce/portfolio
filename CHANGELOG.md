@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/strigiforme/portfolio/compare/v0.7.3...v1.0.1) (2023-03-05)
 ## [1.0.0](https://github.com/strigiforme/portfolio/compare/v0.7.5...v1.0.0) (2023-01-21)
 
 ### [0.7.5](https://github.com/strigiforme/portfolio/compare/v0.7.4...v0.7.5) (2023-01-18)
