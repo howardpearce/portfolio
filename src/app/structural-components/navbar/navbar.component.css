@@ -22,11 +22,15 @@
   padding-left: 30px;
   padding-right: 30px;
   text-decoration: none;
-  transition: all 0.4s ease-in;
-  font-family: "Aileron Semibold";
+  transition: color 0.25s ease-in;
+  font-family: "Aileron";
   /* These styles are required for integration with the highlight on hover class */
   position: relative;
   display: inline-block;
+}
+
+a:hover {
+  color: var(--accent-color);
 }
 
 .right i {

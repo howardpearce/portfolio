@@ -57,10 +57,7 @@ document.addEventListener('scroll', (event) => {
       // apply the active link tag to the currently visible one
       links[index].classList.add("highlight-text");
       // highlight on hover disrupts the active text, remove it
-      links[index].classList.remove("highlight-on-hover");
       mobileLinks[index].classList.add("highlight-text");
-    } else {
-      links[index].classList.add("highlight-on-hover");
     }
   });
 });
