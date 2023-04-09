@@ -10,7 +10,8 @@
   margin-bottom: 20px;
   max-width: 300px;
   align-items: center;
-  transition: background-color 0.5s ease-out !important;
+  transition: background-color 0.25s ease-out !important;
+  border-radius: 4px;
 }
 
 app-years-display {
@@ -43,6 +44,7 @@ app-years-display {
   min-width: 120px;
   font-size: 16px;
   font-family: "Aileron Semibold";
+  transition: color 0.25s ease-out !important;
 }
 
 .experience-detail {
