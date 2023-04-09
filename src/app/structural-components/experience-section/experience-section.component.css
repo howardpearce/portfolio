@@ -31,15 +31,6 @@ app-years-display {
   background-color: var(--bg-card-color-highlight);
 }
 
-.experience span {
-  font-size: 40px;
-  font-weight: 100;
-  font-family: 'Bebas Neue';
-  color: var(--primary-color);
-  padding-right: 10px;
-  transition: none;
-}
-
 .experience-name {
   min-width: 120px;
   font-size: 16px;
