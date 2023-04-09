@@ -9,6 +9,18 @@
   z-index: 5;
 }
 
+.expanded div span {
+  font-size: 26px;
+  font-weight: 100;
+  font-family: 'Aileron Semibold';
+  color: var(--primary-color);
+  padding-right: 10px;
+  transition: none;
+  padding-left: 30px;
+  padding-right: 5px;
+  transition: color 0.25s ease-in;
+}
+
 .left {
   margin-left: 80px;
 }
@@ -19,18 +31,10 @@
 }
 
 .navbar-text {
-  padding-left: 30px;
+  padding-left: 0px;
   padding-right: 30px;
   text-decoration: none;
-  transition: color 0.25s ease-in;
-  font-family: "Aileron";
-  /* These styles are required for integration with the highlight on hover class */
-  position: relative;
-  display: inline-block;
-}
-
-a:hover {
-  color: var(--accent-color);
+  font-family: "Aileron Semibold";
 }
 
 .right i {
@@ -39,8 +43,13 @@ a:hover {
   color: var(--primary-color);
 }
 
+.expanded {
+  display: flex;
+  flex-direction: row;
+}
+
 .navbar-text {
-  font-size: 28px;
+  font-size: 26px;
   margin: 0px;
 }
 

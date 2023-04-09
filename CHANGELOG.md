@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/strigiforme/portfolio/compare/v1.0.1...v1.0.2) (2023-04-09)
+
+## [1.0.0](https://github.com/strigiforme/portfolio/compare/v0.7.5...v1.0.0) (2023-01-21)
+
+
+### Features
+
+* Update headshot ([5ae62d3](https://github.com/strigiforme/portfolio/commit/5ae62d36effe2e909c4fad0a7cd0a27383a0347e))
+
+### [0.7.5](https://github.com/strigiforme/portfolio/compare/v0.7.4...v0.7.5) (2023-01-18)
+
+
+### Features
+
+* Add highlight effect to navbar links ([5d6c0d8](https://github.com/strigiforme/portfolio/commit/5d6c0d887be5c268b9d09066be0d07dc0a96ff77))
+
+
+### Bug Fixes
+
+* Some styling bugs ([ab6c176](https://github.com/strigiforme/portfolio/commit/ab6c176c37a27ea916f59773e5ba7b2c6db74ba7))
+
+### [0.7.4](https://github.com/strigiforme/portfolio/compare/v0.7.3...v0.7.4) (2023-01-12)
+
+
+### Features
+
+* add link to scrum master certification ([0aba6c9](https://github.com/strigiforme/portfolio/commit/0aba6c90611905fd0f295ef4676dfa75400b0d02))
+* add transition delay to experience desc ([0a9baae](https://github.com/strigiforme/portfolio/commit/0a9baaed97c79f4ab819e47ebec22364a0038651))
+
+
+### Bug Fixes
+
+* Make time text not bold ([a9721c0](https://github.com/strigiforme/portfolio/commit/a9721c0f771faf4b1b956aa30eecbaab7e37ed0e))
+
 ### [1.0.1](https://github.com/strigiforme/portfolio/compare/v0.7.3...v1.0.1) (2023-03-05)
 ## [1.0.0](https://github.com/strigiforme/portfolio/compare/v0.7.5...v1.0.0) (2023-01-21)
 

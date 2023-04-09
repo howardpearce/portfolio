@@ -10,7 +10,8 @@
   margin-bottom: 20px;
   max-width: 300px;
   align-items: center;
-  transition: background-color 0.5s ease-out !important;
+  transition: background-color 0.25s ease-out !important;
+  border-radius: 4px;
 }
 
 app-years-display {
@@ -30,19 +31,11 @@ app-years-display {
   background-color: var(--bg-card-color-highlight);
 }
 
-.experience span {
-  font-size: 40px;
-  font-weight: 100;
-  font-family: 'Bebas Neue';
-  color: var(--primary-color);
-  padding-right: 10px;
-  transition: none;
-}
-
 .experience-name {
   min-width: 120px;
   font-size: 16px;
   font-family: "Aileron Semibold";
+  transition: color 0.25s ease-out !important;
 }
 
 .experience-detail {
