@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/strigiforme/portfolio/compare/v1.0.2...v1.0.3) (2023-04-14)
+
+
+### Bug Fixes
+
+* add semibold to navar ([bdae268](https://github.com/strigiforme/portfolio/commit/bdae26884949300d0915c3cb1fb3ce8afd9c1bc1))
+
 ### [1.0.2](https://github.com/strigiforme/portfolio/compare/v1.0.1...v1.0.2) (2023-04-09)
 
 ## [1.0.0](https://github.com/strigiforme/portfolio/compare/v0.7.5...v1.0.0) (2023-01-21)
