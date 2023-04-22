@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/strigiforme/portfolio/compare/v1.0.3...v1.0.4) (2023-04-22)
+
+
+### Features
+
+* More rewording ([ab2ee2f](https://github.com/strigiforme/portfolio/commit/ab2ee2f3a8955229cdd48e74a9962ebecf8bc502))
+
+
+### Bug Fixes
+
+* Experience Title on mobile devices smaller ([c59344c](https://github.com/strigiforme/portfolio/commit/c59344c871d5cab0b1557e58e65d78f3c1aa814a))
+
+### [1.0.3](https://github.com/strigiforme/portfolio/compare/v1.0.2...v1.0.3) (2023-04-14)
+
+
+### Bug Fixes
+
+* add semibold to navar ([bdae268](https://github.com/strigiforme/portfolio/commit/bdae26884949300d0915c3cb1fb3ce8afd9c1bc1))
+
 ### [1.0.2](https://github.com/strigiforme/portfolio/compare/v1.0.1...v1.0.2) (2023-04-09)
 
 ## [1.0.0](https://github.com/strigiforme/portfolio/compare/v0.7.5...v1.0.0) (2023-01-21)
