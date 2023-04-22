@@ -155,3 +155,9 @@ i {
     font-size: 14px;
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .heading {
+    font-size: 20px;
+  }
+}
