@@ -65,17 +65,22 @@
 
 @media only screen and (max-width: 1400px) and (min-width: 1224px) {
   .navbar-text {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: 0px !important;
+    padding-right: 10px !important;
   }
 }
 
 @media only screen and (max-width: 1224px) and (min-width: 900px) {
+  .expanded div span {
+    padding-right: 0px;
+    padding-left: 10px;
+  }
   #logotype {
     font-size: 24px;
   }
   .navbar-text {
     font-size: 24px;
+    padding-left: 5px !important;
   }
   .navbar-text {
     padding: 0px 10px;
@@ -85,6 +90,12 @@
   }
   .right {
     margin-right: 45px;
+  }
+}
+
+@media only screen and (max-width: 1224px) {
+  .expanded div span {
+    display: none;
   }
 }
 
