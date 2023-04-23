@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/strigiforme/portfolio/compare/v1.0.3...v1.0.6) (2023-04-23)
+
+
+### Features
+
+* Change triangles to squares in about section ([53d5a34](https://github.com/strigiforme/portfolio/commit/53d5a34a0f9d2d2a0f04fb7ac82445002a54b329))
+* More rewording ([3eff27c](https://github.com/strigiforme/portfolio/commit/3eff27cd36a99fa234ec6dd5683de9f3d93a4cb8))
+
+
+### Bug Fixes
+
+* Experience Title on mobile devices smaller ([9eccde1](https://github.com/strigiforme/portfolio/commit/9eccde1409ee756854b2773ca7619d8d98815529))
+
 ### [1.0.5](https://github.com/strigiforme/portfolio/compare/v1.0.3...v1.0.5) (2023-04-23)
 
 
