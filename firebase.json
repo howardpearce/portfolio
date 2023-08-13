@@ -27,8 +27,15 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/*",
         "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/sitemap",
+        "destination": "/sitemap.xml",
+        "type": 302
       }
     ]
   }
