@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.7](https://github.com/strigiforme/portfolio/compare/v1.0.6...v1.0.7) (2023-08-13)
+
+
+### Features
+
+* Add sitemap and robots file ([10ea297](https://github.com/strigiforme/portfolio/commit/10ea2979a994f7b1d81ca420934e4e949ed8e872))
+* Improve SEO through multiple methods ([251f1d9](https://github.com/strigiforme/portfolio/commit/251f1d990695405d88298889fd1051fd0031d74f))
+
 ### [1.0.6](https://github.com/strigiforme/portfolio/compare/v1.0.3...v1.0.6) (2023-04-23)
 
 
