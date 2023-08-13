@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.8](https://github.com/strigiforme/portfolio/compare/v1.0.7...v1.0.8) (2023-08-13)
+
+
+### Features
+
+* Add alt tag to image to improve SEO ([7819586](https://github.com/strigiforme/portfolio/commit/78195867accd41e5cf51ce9b1178cd258f16f294))
+
 ### [1.0.7](https://github.com/strigiforme/portfolio/compare/v1.0.6...v1.0.7) (2023-08-13)
 
 
