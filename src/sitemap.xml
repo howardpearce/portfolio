@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://howardpearce.ca/</loc>
+    <lastmod>2023-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://howardpearce.ca/headshot.jpg</image:loc>
+    </image:image>
+  </url>
+</urlset>
