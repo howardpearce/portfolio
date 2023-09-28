@@ -173,8 +173,6 @@ var animation = function () {
     scene.add(light1);
   }
 
-
-
   function distanceFromCenter(x, y) {
     return Math.sqrt(Math.pow(x - waveCenterX, 2) + Math.pow(y - waveCenterY, 2));
   }
@@ -243,5 +241,7 @@ var animation = function () {
 
 }
 
- // Cannot start until HTML has been rendered
- document.addEventListener("DOMContentLoaded", animation);
+// Cannot start until HTML has been rendered
+isElementLoaded('app-hero-section').then((heroGraphic) => {
+  animation()
+});
