@@ -5,7 +5,7 @@ let homeSpan, aboutSpan, experienceSpan, contactSpan, spans;
 let homeMobileLink, aboutMobileLink, experienceMobileLink, contactMobileLink, mobilelinks;
 
 // gather references to all the HTML elements we will be looking at after the website loads.
-document.addEventListener("DOMContentLoaded", (event) => {
+isElementLoaded('app-navbar').then((navbar) => {
   // Reference these sections so that we can scroll the user to them when they click on a link
   homeSection = document.querySelector("#above");
   aboutSection = document.querySelector("#about-container");
