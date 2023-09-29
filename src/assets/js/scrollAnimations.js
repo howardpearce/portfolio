@@ -9,13 +9,10 @@ isElementLoaded('.scroll-animated').then((animatedElements) => {
   }
 
   // IntersectionObserver that reveals textual elements as user scrolls
-  // TODO: Once text is shown, make it stay.
   var textObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show');
       }
     });
   });
