@@ -68,7 +68,7 @@ html {
 }
 
 @media not (prefers-reduced-motion) {
-  .scroll-animated {
+  .hide {
     position: relative;
     translate: -50px;
     transition: translate 0.5s ease-out, opacity 0.5s ease-out;

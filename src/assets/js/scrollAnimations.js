@@ -1,6 +1,15 @@
 
-isElementLoaded('app-about-section').then((root) => {
+isElementLoaded('.scroll-animated').then((animatedElements) => {
+
+  var hiddenElements = document.querySelectorAll('.scroll-animated');
+
+  // Hide all scroll animated elements
+  for (el of hiddenElements) {
+    el.classList.add('hide');
+  }
+
   // IntersectionObserver that reveals textual elements as user scrolls
+  // TODO: Once text is shown, make it stay.
   var textObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -11,7 +20,6 @@ isElementLoaded('app-about-section').then((root) => {
     });
   });
 
-  var hiddenElements = document.querySelectorAll('.scroll-animated');
   hiddenElements.forEach((el) => textObserver.observe(el));
 
   // IntersectionObserver specifically for the 'years' indicator in the about section
