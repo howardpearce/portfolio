@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://github.com/strigiforme/portfolio/compare/v1.0.8...v1.0.9) (2023-09-29)
+
+
+### Features
+
+* **UI:** Make scroll animation more failure resilient ([82c8ba6](https://github.com/strigiforme/portfolio/commit/82c8ba61e2d342e447db39cb1fb6060cc2d21520))
+
+
+### Bug Fixes
+
+* **UI:** Fix critical bug on IOS ([c765a67](https://github.com/strigiforme/portfolio/commit/c765a674cacd69ae84b8f2dd30de2d9615892229))
+
 ### [1.0.8](https://github.com/strigiforme/portfolio/compare/v1.0.7...v1.0.8) (2023-08-13)
 
 
