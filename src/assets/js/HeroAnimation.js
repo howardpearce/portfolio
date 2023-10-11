@@ -7,20 +7,14 @@ let camera;
 let canvas;
 
 // constants
-const CIRCLE_SPEED = 0.1;
+const CIRCLE_SPEED = 0.075;
 const DRIFT_SPEED = 0.05;
 const GUARD = 0.05;
 const SCENE_WIDTH = 14;
 const SCENE_HEIGHT = 16;
 const LIGHT_COLOR = 0xD9D9D9;
 const DARK_COLOR = 0x1E1E1E;
-
-window.addEventListener( 'resize', onWindowResize, false );
-function onWindowResize(){
-  camera.aspect = canvas.clientWidth / canvas.clientHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize( canvas.clientWidth, canvas.clientHeight );
-}
+const MOBILE_SCREEN_SIZE = 860;
 
 class DotGrid {
   constructor(screenWidth, sceneWidth, sceneHeight, screenHeight, particleSeparation, bufferGeometry) {
@@ -205,43 +199,56 @@ var animation = function () {
 
   function animate() {
     requestAnimationFrame( animate );
-    radius += CIRCLE_SPEED;
-    var currentPosition = bufferGeometry.attributes.position.array;
-    //bufferGeometry.material.color.setHex(0xff0000);
-    for (let i = 0; i < grid.numberOfParticles * 3; i+=3) {
-      var distance = distanceFromCenter(currentPosition[i], currentPosition[i+1]);
-      var normalizedDistance = radius - distance;
-      if ( Math.abs(normalizedDistance) < 0.8 ) {
-        currentPosition[i+2] = grid.originalParticlePosition[i+2] + (Math.cos(normalizedDistance * 2) / 2);
+    // don't bother doing expensive math if the user can't see it!
+    if (window.innerWidth >= MOBILE_SCREEN_SIZE) {
+      radius += CIRCLE_SPEED;
+      var currentPosition = bufferGeometry.attributes.position.array;
+      //bufferGeometry.material.color.setHex(0xff0000);
+      for (let i = 0; i < grid.numberOfParticles * 3; i+=3) {
+        var distance = distanceFromCenter(currentPosition[i], currentPosition[i+1]);
+        var normalizedDistance = radius - distance;
+        if ( Math.abs(normalizedDistance) < 0.8 ) {
+          currentPosition[i+2] = grid.originalParticlePosition[i+2] + (Math.cos(normalizedDistance * 2) / 2);
+        }
       }
+
+      if (radius > 40) {
+        radius = 0.1;
+        waveCenterX = (Math.random() - 0.5) * 40;
+        waveCenterY = (Math.random() - 0.5) * 15;
+      }
+
+      animateParticles();
+
+      if (currentColorIsLight == true) {
+        grid.changeColor(0x000000);
+        currentColorIsLight = false;
+      }
+
+      if (currentColorIsDark == true) {
+        grid.changeColor(0xD9D9D9);
+        currentColorIsDark = false;
+      }
+
+      bufferGeometry.attributes.position.needsUpdate = true;
+      bufferGeometry.attributes.color.needsUpdate = true;
     }
-
-    if (radius > 40) {
-      radius = 0.1;
-      waveCenterX = (Math.random() - 0.5) * 40;
-      waveCenterY = (Math.random() - 0.5) * 15;
-    }
-
-    animateParticles();
-
-    if (currentColorIsLight == true) {
-      grid.changeColor(0x000000);
-      currentColorIsLight = false;
-    }
-
-    if (currentColorIsDark == true) {
-      grid.changeColor(0xD9D9D9);
-      currentColorIsDark = false;
-    }
-
-    bufferGeometry.attributes.position.needsUpdate = true;
-    bufferGeometry.attributes.color.needsUpdate = true;
-
   }
 
 }
 
 // Cannot start until HTML has been rendered
 isElementLoaded('app-hero-section').then((heroGraphic) => {
+
   animation()
+  window.addEventListener( 'resize', onWindowResize, false );
+
 });
+
+function onWindowResize(){
+  if (window.innerWidth > MOBILE_SCREEN_SIZE) {
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize( canvas.clientWidth, canvas.clientHeight );
+  }
+}
