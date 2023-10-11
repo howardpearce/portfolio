@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/strigiforme/portfolio/compare/v1.0.10...v1.1.0) (2023-10-11)
+
+
+### Features
+
+* npm update ([2964218](https://github.com/strigiforme/portfolio/commit/29642182f5cc56776f6999cd0a08c47a3867f387))
+* Update to angular 14 ([32d10c8](https://github.com/strigiforme/portfolio/commit/32d10c8005e015775bbcae71c92166f9ae750d34))
+* Update to angular 15 ([c70a09e](https://github.com/strigiforme/portfolio/commit/c70a09e4fcc8a9b14bc4bdc6488c4a8099f85e43))
+* Update to angular 16 ([128e4ce](https://github.com/strigiforme/portfolio/commit/128e4ce993df9efa56ffa3b6b394898386efd3f3))
+
 ### [1.0.10](https://github.com/strigiforme/portfolio/compare/v1.0.9...v1.0.10) (2023-10-11)
 
 ### [1.0.9](https://github.com/strigiforme/portfolio/compare/v1.0.8...v1.0.9) (2023-09-29)
