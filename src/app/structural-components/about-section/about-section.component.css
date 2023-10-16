@@ -12,6 +12,7 @@
 #headshot img {
   width: 327px;
   height: 283px;
+  background-color: var(--about-image-background);
 }
 
 #technology-list {

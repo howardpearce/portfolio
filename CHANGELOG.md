@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/strigiforme/portfolio/compare/v1.1.0...v1.1.1) (2023-10-16)
+
+
+### Features
+
+* **UI:** Headshot background color changes ([6130e85](https://github.com/strigiforme/portfolio/commit/6130e857b353a7b72e0ce25cdccfc336eaab6967))
+
+
+### Bug Fixes
+
+* Update CI to remove node 14 test ([4aa334f](https://github.com/strigiforme/portfolio/commit/4aa334f33d193113f89980408f8323438e08a22c))
+
 ## [1.1.0](https://github.com/strigiforme/portfolio/compare/v1.0.10...v1.1.0) (2023-10-11)
 
 
