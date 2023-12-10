@@ -1,66 +1,58 @@
-// Constant global values
+// INTEGRATION TODO:
+// 4. ADD ALL THE CODE COMMENTS!!!
+// 6. Make the highlight around my headshot not so bright
+// 7. Support for multiple resolutions
+
+// Constant values
 const CAMERA_FOV = 30
 const CAMERA_Z = 80
 const PLANE_Z = 0
 const PARTICLE_SIZE = 0.05;
 const PARTICLE_SEPARATION = 0.5;
+const DOT_SIZE = { SMALL: 1, BIG: 2, DEBUG: 3 }
+const COLOR_MODE = { DARK: 0xffffff, LIGHT: 0x000000, DEBUG: 0xFF0000 }
 
 // feature flags
 const COLOR_WAVE = false
+
+// Global variables
+var ani;
 
 /**
  * One-off utility functions
  */
 class Utils {
+    /**
+     *
+     * @param {float} degrees
+     * @returns degrees converted to radians
+     */
     static degreesToRadians(degrees) {
         return (degrees * Math.PI )/ 180
     }
 
+    /**
+     *
+     * @param {float} min
+     * @param {float} max
+     * @returns A random number between provided min and max
+     */
     static getRandomNumber(min, max) {
         return Math.random() * (max - min) + min;
     }
 
+    /**
+     *
+     * @param {float} min minimum range
+     * @param {float} max maximum range
+     * @param {float} value value to be 'clamped'
+     * @returns The same value, bounded by the provided max and min
+     */
     static clampRange(min, max, value) {
         if (value < min) return min;
         if (value > max) return max;
         return value
     }
-}
-
-/**
- * Example of a Three JS element implemented as on Object
- */
-class Torus {
-    constructor() {
-        this.geometry = new THREE.TorusGeometry( 10, 3, 16, 100)
-        this.material = new THREE.MeshBasicMaterial ({ color: 0xFF2222, wireframe: true });
-        this.torus = new THREE.Mesh( this.geometry, this.material );
-    }
-
-    getObject() {
-        return this.torus;
-    }
-
-    animate() {
-        this.torus.rotation.y += 0.005
-        this.torus.rotation.z += 0.005
-    }
-}
-
-/**
- * Basic cube used for debugging purposes
- */
-class DebugCube {
-    constructor(x, y, z) {
-        this.geometry = new THREE.BoxGeometry(x, y, z);
-        this.material = new THREE.MeshBasicMaterial( { color: 0xFF2222, wireframe: true })
-        this.cube = new THREE.Mesh( this.geometry, this.material );
-    }
-
-    getObject() {
-        return this.cube;
-    }
-
 }
 
 /**
@@ -77,10 +69,18 @@ class Camera {
     setX(x) { this.cam.position.setY(y); }
     setY(y) { this.cam.position.setX(x); }
 
+    /**
+     *
+     * @returns An internal reference to the THREE JS Camera object
+     */
     getCamera() {
         return this.cam;
     }
 
+    /**
+     *
+     * @param {float} aspect new aspect ratio
+     */
     updateAspect(aspect) {
         this.cam.aspect
         this.cam.updateProjectionMatrix();
@@ -101,10 +101,19 @@ class Renderer {
         this.rend.setClearColor(0x000000, 0);
     }
 
+    /**
+     *
+     * @returns An internal reference to the THREE JS Renderer object
+     */
     getRenderer() {
         return this.rend;
     }
 
+    /**
+     *
+     * @param {float} width new width for the renderer
+     * @param {float} height new height for the renderer
+     */
     setSize(width, height) {
         this.rend.setSize(width, height)
     }
@@ -126,6 +135,10 @@ class Plane {
         this.left = this.right * -1;
     }
 
+    /**
+     *
+     * @returns A string representation of the plane
+     */
     toString() {
         return `Plane {
             pixelHeight: ${this.pixelHeight},
@@ -211,6 +224,16 @@ class ProjectedObject {
      * Every ProjectedObject should have some kind of animation defined. Even if it does nothing.
      */
     animate() {}
+
+    /**
+     *
+     * @param {float} xPos new x position
+     * @param {float} yPos new y position
+     */
+    setPosition(xPos, yPos) {
+      this.x = xPos;
+      this.y = yPos;
+    }
 }
 
 /**
@@ -300,10 +323,10 @@ class Wave extends ProjectedObject {
     /**
      * Implementation of the Gaussian function (a nice hump shape).
      * @param {float} x input to gaussian function
-     * @returns output of gaussian function (bounded between 2 and 0)
+     * @returns output of gaussian function (bounded between 3 and 0)
      */
     gaussian(x) {
-        return 2*Math.exp(-1*(0.5*Math.pow((this.gaussianCoefficient*x), 2)))
+        return 4*Math.exp(-1*(0.5*Math.pow((this.gaussianCoefficient*x), 2)))
     }
 
     /**
@@ -334,30 +357,40 @@ class DotGrid {
     //   - A wave
     //   - ???
     //   - Add controls to switch the object on it (also represented by dots)
-    //   - All objects have base class
     // Shapes should be inserted by some kind of manager class rather than internally
 
     constructor(width, height) {
         this.plane = new Plane(height, width);
+
         this.particleSize = PARTICLE_SIZE;
         this.particleSeparation = PARTICLE_SEPARATION;
         this.particleCount = Math.round(this.particlesPerRow * this.numberOfRowsRequired);
         this.currentParticlePosition = new Float32Array(this.numberOfParticles * 3);
         this.particleColors = new Float32Array(this.numberOfParticles * 3);
+        this.particleScale = new Float32Array(this.numberOfParticles);
+
+        // generate dark color
+        this.lightColor = this.generateColorArray(COLOR_MODE.DARK)
+        // generate light color
+        this.darkColor = this.generateColorArray(COLOR_MODE.LIGHT)
+
+        // Create the THREE JS objects for the dot grid
         this.bufferGeometry = new THREE.BufferGeometry();
-        this.material = new THREE.PointsMaterial( { size: this.particleSize, vertexColors: true } );
+        // removing size attentuation changed my life
+        this.material = new THREE.PointsMaterial( { size: this.particleSize, sizeAttenuation: false, vertexColors: true } );
         this.bufferGeometry.dynamic = true;
         this.particlesMesh = new THREE.Points(this.bufferGeometry, this.material);
 
         // Shapes to be used in the dot grid
-        this.wave = new Wave(0, 0, 4, 0.05);
+        this.wave = new Wave(0, 0, 4, 0.075);
         this.shapes = [];
         this.shapes.push(this.wave)
     }
 
+    /**
+     * Animate the dot grid and any shapes within it
+     */
     animate() {
-        //this.randomWalk();
-        this.initializeColor();
         this.wave.animate();
         var index = 0;
         for(var i = 0; i <= this.numberOfRowsRequired - 1 ; i++) {
@@ -372,8 +405,12 @@ class DotGrid {
         }
 
         // If the radius is slightly bigger than the dot grid, reset it.
-        if (this.wave.radius > (Math.max(this.plane.getWidth(), this.plane.getHeight()) / 2 * 1.5)) {
+        if (this.wave.radius > this.plane.getWidth() * 1.25 && this.wave.radius > this.plane.getHeight() * 1.25) {
             this.wave.reset();
+            // select a new center for the wave
+            var newX = (Math.random() - 0.5) * this.plane.getWidth();
+            var newY = (Math.random() - 0.5) * this.plane.getHeight();
+            this.wave.setPosition(newX, newY);
         }
         this.bufferGeometry.attributes.position.needsUpdate = true;
     }
@@ -425,7 +462,7 @@ class DotGrid {
         var index = 0;
         // for every particle, set its position
         for(var i = 0; i <= this.numberOfRowsRequired - 1 ; i++) {
-            var x = this.plane.getMinX() + (this.particleSize / 2);
+            var x = this.plane.getMinX() + (this.particleSize / 2) + 2; // +2 is for extra space on the left. Prevents dots from disappearing if they move too much in Z axis
             for (var j = 0; j <= this.particlesPerRow - 1; j++) {
                 this.currentParticlePosition[index] = x;
                 this.currentParticlePosition[index+1] = y;
@@ -439,35 +476,69 @@ class DotGrid {
     }
 
     /**
-     * Applies a color for each dot in the grid.
-     * @param {*} color color to use (uses THREE.Color)
+     * Generates an array of colors used for the DotGrid's PointMaterial mesh.
      */
-    initializeColor(color) {
-        const particleColor = new THREE.Color(color);
-        const red = new THREE.Color(0xFE5000);
+    generateColorArray(color) {
+        var colorArray = new Float32Array(this.numberOfRowsRequired * this.particlesPerRow * 3);
+        var particleColor = new THREE.Color(color);
+        var tempColor = color;
+        var gradient;
+
+        switch(color) {
+            case COLOR_MODE.DARK:
+                gradient = 0x070707
+                break;
+            case COLOR_MODE.LIGHT:
+                gradient = -0x080808
+                // When in light mode, dots need to be bigger to stand out.
+                break;
+            default:
+                gradient = 0x000000
+        }
+
         var index = 0;
         for (let i = 0; i < this.numberOfRowsRequired; i++) {
             for ( let j = 0; j < this.particlesPerRow; j++) {
-                if (COLOR_WAVE && this.wave.colliding(this.currentParticlePosition[index], this.currentParticlePosition[index+1])) {
-                    this.particleColors[index] = red.r;
-                    this.particleColors[index+1] = red.g;
-                    this.particleColors[index+2] = red.b;
-                } else {
-                    this.particleColors[index] = particleColor.r;
-                    this.particleColors[index+1] = particleColor.g;
-                    this.particleColors[index+2] = particleColor.b;
-                }
-                index += 3;
+              colorArray[index] = particleColor.r;
+              colorArray[index+1] = particleColor.g;
+              colorArray[index+2] = particleColor.b;
+              index += 3;
+            }
+            // for the last 30 rows, change the color to make a gradient from light to dark
+            // TODO: Lots is hardcoded here. Consider making this more stable.
+            if (i > this.numberOfRowsRequired - 30) {
+              tempColor -= gradient;
+              particleColor.setHex(tempColor);
             }
         }
+        return colorArray
+    }
 
-        this.bufferGeometry.setAttribute('color', new THREE.BufferAttribute(this.particleColors, 3));
+    /**
+     * Applies a color for each dot in the grid. TODO: UPDATE THIS DOC
+     * @param {*} color color to use (uses THREE.Color)
+     */
+    setColor(color) {
+        switch(color) {
+            case COLOR_MODE.DARK:
+              this.bufferGeometry.setAttribute('color', new THREE.BufferAttribute(this.lightColor, 3));
+              this.material.size = DOT_SIZE.SMALL
+              break;
+            case COLOR_MODE.LIGHT:
+              this.bufferGeometry.setAttribute('color', new THREE.BufferAttribute(this.darkColor, 3));
+              this.material.size = DOT_SIZE.BIG
+              break;
+        }
     }
 
     getGrid() {
         return this.particlesMesh;
     }
 
+    /**
+     *
+     * @returns A string representation of the object
+     */
     toString() {
         return `Grid {
             particlesPerRow: ${this.particlesPerRow},
@@ -493,24 +564,6 @@ class DotGrid {
 }
 
 /**
- * Tracks FPS count and other statistics
- */
-class StatsTracker {
-    constructor() {
-        this.stats = new Stats();
-        this.stats.setMode(0);
-
-        this.stats.domElement.style.position = 'absolute';
-        this.stats.domElement.style.left = '0';
-        this.stats.domElement.style.top = '0';
-    }
-
-    getObject() {
-        return this.stats;
-    }
-}
-
-/**
  * Manages initialization of resources and lifecycle of ThreeJS animation.
  */
 class Animation {
@@ -522,7 +575,7 @@ class Animation {
 
         this.grid = new DotGrid(this.container.clientHeight, this.container.clientWidth)
         this.grid.initializeSquareGrid();
-        this.grid.initializeColor();
+        this.grid.setColor(COLOR_MODE.DARK);
 
         this.scene.add(this.grid.getGrid())
     }
@@ -536,25 +589,11 @@ function animate() {
     ani.frame = requestAnimationFrame(animate);
     ani.renderer.getRenderer().render(ani.scene, ani.camera.getCamera());
     ani.grid.animate();
-    //statsTracker.getObject().update()
 }
-
-//var statsTracker = new StatsTracker();
-var ani;
-
-function main() {
-    // var stats = statsTracker.getObject()
-    //document.body.appendChild(stats.domElement);
-    animate();
-}
-
-
-
-// TODO: Support for multiple resolutions
 
 var HERO_GRAPHIC_ID = '#hero-graphic';
 // Cannot start until HTML has been rendered
 isElementLoaded(HERO_GRAPHIC_ID).then((heroGraphic) => {
   ani = new Animation(heroGraphic);
-  main()
+  animate();
 })

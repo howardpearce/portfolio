@@ -12,7 +12,7 @@ function switchColorsToLight() {
   root.style.setProperty("--primary-color", "#1E1E1E");
   root.style.setProperty("--hero-text-color", "#000000");
   root.style.setProperty("--accent-color", "#CB450C");
-  currentColorIsLight = true;
+  ani.grid.setColor(COLOR_MODE.LIGHT)
 }
 
 function switchColorsToDark() {
@@ -29,5 +29,5 @@ function switchColorsToDark() {
   root.style.setProperty("--primary-color", "#D9D9D9");
   root.style.setProperty("--hero-text-color", "#FFFFFF");
   root.style.setProperty("--accent-color", "#CB450C");
-  currentColorIsDark = true;
+  ani.grid.setColor(COLOR_MODE.DARK)
 }
