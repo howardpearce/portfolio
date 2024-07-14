@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/strigiforme/portfolio/compare/v1.1.3...v1.1.4) (2024-07-14)
+
+
+### Features
+
+* Reword arctic wolf experience ([35553ee](https://github.com/strigiforme/portfolio/commit/35553eefc9a81dd91f1e5b8143ac06679bc9c4bf))
+
 ### [1.1.3](https://github.com/strigiforme/portfolio/compare/v1.1.2...v1.1.3) (2024-02-22)
 
 
