@@ -45,7 +45,7 @@ export class ExperienceSectionComponent implements OnInit {
       //   this.dalActive = true;
       //   break;
       // }
-      // Arctic Wolf Experience (Where I'm currently working)
+      // Arctic Wolf Experience
       default: {
         this.activeExperience = arcticWolfExperience;
         this.arcticWolfActive = true;

@@ -28,14 +28,14 @@ class Experience {
 const arcticWolfExperience = new Experience(
   "Software Developer @ Arctic Wolf Networks",
   "January 2023 - Present",
-  "I recently started working at Arctic Wolf on their Managed Risk Engines team. I am currently working on development of vulnerability scanners that are deployed by Arctic Wolf. I have gained insightful experience in cloud-based software development during my time here.",
+  "I'm currently working on development and maintenance of several vulnerability scanners that are deployed by Arctic Wolf. I'm constantly solving interesting problems due to unique interactions our scanners have with a wide variety of Operating systems.",
   [
     "Technical Java development in a cybersecurity context.",
     "Develop software for AWS Cloud infrastructure using services such as ECR, EKS, and S3.",
     "Work with a large variety of Operating Systems to ensure scanner compatibility.",
     "Containerize and deploy applications using Docker and Kubernetes."
   ],
-  [ "Java", "Python", "Docker", "AWS", "Kubernetes" ]
+  [ "Golang", "Java", "Python", "Docker", "AWS", "Kubernetes" ]
 );
 
 const ultraExperience = new Experience(
