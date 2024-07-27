@@ -306,7 +306,7 @@ class DotGrid {
                 var n = 0.065 * Noise2D(this.currentParticlePosition[index], this.currentParticlePosition[index + 1])
                 var a = Math.PI * 2 * n
                 this.currentParticlePosition[index] -= Math.cos(a) * 0.005
-                this.currentParticlePosition[index+1] += Math.sin(a-0.15) * 0.005
+                this.currentParticlePosition[index+1] += Math.sin(a-0.2) * 0.005
 
                 // reset if out of screen
                 if (this.currentParticlePosition[index] <= this.plane.left) {
