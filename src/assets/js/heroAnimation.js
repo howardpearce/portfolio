@@ -484,18 +484,6 @@ class DotGrid {
         var tempColor = color;
         var gradient;
 
-        switch(color) {
-            case COLOR_MODE.DARK:
-                gradient = 0x070707
-                break;
-            case COLOR_MODE.LIGHT:
-                gradient = -0x080808
-                // When in light mode, dots need to be bigger to stand out.
-                break;
-            default:
-                gradient = 0x000000
-        }
-
         var index = 0;
         for (let i = 0; i < this.numberOfRowsRequired; i++) {
             for ( let j = 0; j < this.particlesPerRow; j++) {

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/strigiforme/portfolio/compare/v1.1.4...v1.1.5) (2024-07-27)
+
+
+### Features
+
+* Add new flowfield animation ([a26d9e6](https://github.com/strigiforme/portfolio/commit/a26d9e6e61be74a1660d0d0de576295b4b50eb8e))
+* Save font awesome to project instead of using cdn ([ec6c3cc](https://github.com/strigiforme/portfolio/commit/ec6c3cc5de442a3cafb98f18fcbe6ca4781d04bc))
+* Save three.min.js to project instead of using cdn ([e4d5a68](https://github.com/strigiforme/portfolio/commit/e4d5a6825abe438ad8803244ad9ef77937e69958))
+* Slight adjustments ([bb277de](https://github.com/strigiforme/portfolio/commit/bb277dec5f69d4e37292e25e77af623a777fa801))
+
+
+### Bug Fixes
+
+* Mobile view was broken ([4c407c8](https://github.com/strigiforme/portfolio/commit/4c407c81c7d09ab7354f9f09cae6cb7134ea116b))
+
 ### [1.1.4](https://github.com/strigiforme/portfolio/compare/v1.1.3...v1.1.4) (2024-07-14)
 
 
