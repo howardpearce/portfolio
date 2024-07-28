@@ -85,6 +85,12 @@ svg circle {
 
 #emailToggle {
   padding-left: 5px;
+  transition: color 0.25s ease-in-out;
+}
+
+#emailToggle:hover {
+  color: var(--accent-color);
+  cursor: pointer;
 }
 
 #copyText {
