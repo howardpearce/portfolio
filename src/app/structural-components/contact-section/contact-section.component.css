@@ -37,9 +37,13 @@ svg circle {
   align-items: center;
 }
 
+.contact-resource {
+  margin-bottom: 20px;
+}
+
 .contact-resource a {
-  margin: 10px 10px 10px 0px;
   text-decoration: none;
+  padding-right: 10px;
 }
 
 .contact-resource svg path {
@@ -74,14 +78,27 @@ svg circle {
 }
 
 #email-text {
-  width: 0px;
   overflow: hidden;
-  padding: 0px 0px 3px 25px !important;
+  padding: 6px 0px 0px 0px !important;
   transition: width 0.75s ease-out;
 }
 
-.wide {
-  width: 350px !important;
+#emailToggle {
+  padding-left: 5px;
+}
+
+#copyText {
+  position: absolute;
+  transform: translate(-75%, 200%);
+  font-family: 'Aileron';
+  content: "copied";
+  font-size: 14px;
+  transition: color .5s;
+  color: var(--primary-color)
+}
+
+.transparent {
+  color: transparent !important;
 }
 
 /* UI / UX CSS */
@@ -99,9 +116,6 @@ svg circle {
   }
   #time-text {
     font-size: 52px;
-  }
-  .wide {
-    width: 260px !important;
   }
 }
 
@@ -121,8 +135,8 @@ svg circle {
   #left p {
     max-width: 80%;
   }
-  .wide {
-    width: 260px !important;
+  #email-text {
+    padding: 1px 0px 0px 0px !important;
   }
 }
 
