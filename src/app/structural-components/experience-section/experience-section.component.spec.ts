@@ -4,7 +4,10 @@ import { ExperienceSectionComponent } from './experience-section.component';
 import { YearsDisplayComponent } from './years-display/years-display.component';
 import { PlusSignComponent } from './../../utility-components/plus-sign/plus-sign.component';
 
+import { arcticWolfExperience, ultraExperience, prattExperience, dalhousieExperience } from 'src/app/structural-components/experience-section/experience';
+
 describe('ExperienceSectionComponent', () => {
+
   let component: ExperienceSectionComponent;
   let fixture: ComponentFixture<ExperienceSectionComponent>;
 
@@ -24,34 +27,47 @@ describe('ExperienceSectionComponent', () => {
   });
 
   it('has correct default data', () => {
-    // check all the default data is corrected
-    expect(component.experience.title).toBe("Software Developer @ Ultra Maritime");
-    expect(component.experience.date).toBe("January 2021 - January 2023");
-    expect(component.experience.description).toBe("I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consisted of application software development and software architecture design within an Agile Methodology.");
-    expect(component.experience.bullets[0]).toBe("Designed and developed micro-service for RS-485 Communication.");
-    expect(component.experience.bullets[1]).toBe("Collaborated with team members in an Agile workflow.");
-    expect(component.experience.bullets[2]).toBe("Participated in entire software project lifecycle.");
-    expect(component.experience.bullets[3]).toBe("Wrote technical documentation and performed requirements derivation.");
-    expect(component.experience.bullets[4]).toBe("Performed software architectural design for project PDR and CDR.");
-    expect(component.experience.tags[0]).toBe("C++");
-    expect(component.experience.tags[1]).toBe("Java");
-    expect(component.experience.tags[2]).toBe("Python");
-    expect(component.experience.tags[3]).toBe("Docker");
-    expect(component.experience.tags[4]).toBe("Jenkins");
-  });
+      // check all the default data is corrected
+      expect(component.activeExperience.title).toBe(arcticWolfExperience.title);
+      expect(component.activeExperience.date).toBe(arcticWolfExperience.date);
+      expect(component.activeExperience.description).toBe(arcticWolfExperience.description);
+      expect(component.activeExperience.bullets[0]).toBe(arcticWolfExperience.bullets[0]);
+      expect(component.activeExperience.bullets[1]).toBe(arcticWolfExperience.bullets[1]);
+      expect(component.activeExperience.bullets[2]).toBe(arcticWolfExperience.bullets[2]);
+      expect(component.activeExperience.bullets[3]).toBe(arcticWolfExperience.bullets[3]);
+      expect(component.activeExperience.tags[0]).toBe(arcticWolfExperience.tags[0]);
+      expect(component.activeExperience.tags[1]).toBe(arcticWolfExperience.tags[1]);
+      expect(component.activeExperience.tags[2]).toBe(arcticWolfExperience.tags[2]);
+      expect(component.activeExperience.tags[3]).toBe(arcticWolfExperience.tags[3]);
+      expect(component.arcticWolfActive).toBe(true);
+      expect(component.prattActive).toBe(false);
+      expect(component.ultraActive).toBe(false);
+    }
+  );
 
   it('can switch data', () => {
-    // Just need to test that switching causes a change in the elements, do not need to look at the contents too hard.
-    component.switchActiveExperience(1);
-    expect(component.experience.title).toBe("Software Developer @ Ultra Maritime");
-    expect(component.experience.date).toBe("January 2021 - January 2023");
-    expect(component.experience.description).toBe("I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consisted of application software development and software architecture design within an Agile Methodology.");
-    component.switchActiveExperience(2);
-    expect(component.experience.title).toBe("Co-op Student @ Pratt & Whitney Canada");
-    expect(component.experience.date).toBe("April 2020 - August 2020");
-    expect(component.experience.description).toBe("I developed multiple web applications while working at Pratt & Whitney to do analytics on user data for required training courses. This facilitated an increase in training compliance and provided a user interface for their human resources team.");
-    component.switchActiveExperience(3);
-    expect(component.experience.title).toBe("Student @ Dalhousie University");
-    expect(component.experience.date).toBe("September 2016 - December 2020");
-    expect(component.experience.description).toBe("I learned many useful theoretical Computer Science concepts at Dalhousie. I graduated with a Bachelors Degree in Computer Science with a specialization in Artificial Intelligence and co-op program designation.");  });
+      // Just need to test that switching causes a change in the elements, do not need to look at the contents too hard.
+      component.switchActiveExperience(2);
+      expect(component.activeExperience.title).toBe(ultraExperience.title);
+      expect(component.activeExperience.date).toBe(ultraExperience.date);
+      expect(component.activeExperience.description).toBe(ultraExperience.description);
+      expect(component.ultraActive).toBe(true);
+      expect(component.prattActive).toBe(false);
+      expect(component.arcticWolfActive).toBe(false);
+      component.switchActiveExperience(3);
+      expect(component.activeExperience.title).toBe(prattExperience.title);
+      expect(component.activeExperience.date).toBe(prattExperience.date);
+      expect(component.activeExperience.description).toBe(prattExperience.description);
+      expect(component.ultraActive).toBe(false);
+      expect(component.prattActive).toBe(true);
+      expect(component.arcticWolfActive).toBe(false);
+      component.switchActiveExperience(1);
+      expect(component.activeExperience.title).toBe(arcticWolfExperience.title);
+      expect(component.activeExperience.date).toBe(arcticWolfExperience.date);
+      expect(component.activeExperience.description).toBe(arcticWolfExperience.description);
+      expect(component.ultraActive).toBe(false);
+      expect(component.prattActive).toBe(false);
+      expect(component.arcticWolfActive).toBe(true);
+    }
+  );
 });

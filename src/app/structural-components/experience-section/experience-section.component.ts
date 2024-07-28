@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { arcticWolfExperience, ultraExperience, prattExperience, dalhousieExperience } from 'src/app/structural-components/experience-section/experience';
 
 @Component({
   selector: 'app-experience-section',
@@ -8,86 +9,51 @@ import { Component, OnInit } from '@angular/core';
 
 export class ExperienceSectionComponent implements OnInit {
 
-  experience = {
-    title: "Software Developer @ Ultra Maritime",
-    date: "January 2021 - January 2023",
-    description: "I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consisted of application software development and software architecture design within an Agile Methodology.",
-    bullets: [
-      "Designed and developed micro-service for RS-485 Communication.",
-      "Collaborated with team members in an Agile workflow.",
-      "Participated in entire software project lifecycle.",
-      "Wrote technical documentation and performed requirements derivation.",
-      "Performed software architectural design for project PDR and CDR."
-    ],
-    tags: [
-      "C++",
-      "Java",
-      "Python",
-      "Docker",
-      "Jenkins"
-    ]
-  };
+  activeExperience = arcticWolfExperience;
 
-  ultraActive = true;
+  arcticWolfActive = true;
+  ultraActive = false;
   prattActive = false;
-  dalActive = false;
 
   constructor() { }
 
+  /**
+   * Sets the currently visible experience on screen to be a different one.
+   * @param num number corresponding to the experience to switch to (ultra = 1, pratt = 2, dal = 3)
+   */
   switchActiveExperience( num: number) {
+    // reset all experiences to be off
+    this.ultraActive = false;
+    this.prattActive = false;
+    this.arcticWolfActive = false;
     switch (num) {
+      // Ultra Maritime experience
       case 2: {
-        this.experience.title = "Co-op Student @ Pratt & Whitney Canada";
-        this.experience.date = "April 2020 - August 2020";
-        this.experience.description = "I developed multiple web applications while working at Pratt & Whitney to do analytics on user data for required training courses. This facilitated an increase in training compliance and provided a user interface for their human resources team.";
-        this.experience.bullets = [
-          "Created multiple Data Analytics applications using PHP and C#.",
-          "Wrote supporting documentation for applications I created.",
-          "Employed UX and design principles to create data visualizations for non-technical users."
-        ];
-        this.experience.tags = ["PHP", "ASP", "C#", "JavaScript"];
-        this.prattActive = true;
-        this.dalActive = false;
-        this.ultraActive = false;
-        break;
-      }
-      case 3: {
-        this.experience.title = "Student @ Dalhousie University";
-        this.experience.date = "September 2016 - December 2020";
-        this.experience.description = "I learned many useful theoretical Computer Science concepts at Dalhousie. I graduated with a Bachelors Degree in Computer Science with a specialization in Artificial Intelligence and co-op program designation.";
-        this.experience.bullets = [
-          "Vice President of Ethical Hacking Student Society (D.E.H.S).",
-          "Implemented and learned about foundational Algorithms and Data Structures.",
-          "Gained experience and knowledge in Data Science and Machine Learning",
-          "1 year and 4 months of work experience gained in co-op program."
-        ];
-        this.experience.tags = ["Machine Learning", "C++", "Java", "Data Structures", "Algorithms"];
-        this.prattActive = false;
-        this.dalActive = true;
-        this.ultraActive = false;
-        break;
-      }
-      default: {
-        this.experience.title = "Software Developer @ Ultra Maritime";
-        this.experience.date = "January 2021 - January 2023";
-        this.experience.description = "I have cultivated valuable software development and software design experience during my work at Ultra. My work primarily consisted of application software development and software architecture design within an Agile Methodology.";
-        this.experience.bullets = [
-          "Designed and developed micro-service for RS-485 Communication.",
-          "Collaborated with team members in an Agile workflow.",
-          "Participated in entire software project lifecycle.",
-          "Wrote technical documentation and performed requirements derivation.",
-          "Performed software architectural design for project PDR and CDR."
-        ],
-        this.experience.tags = ["C++", "Java", "Python", "Docker", "Jenkins"]
-        this.prattActive = false;
-        this.dalActive = false;
+        this.activeExperience = ultraExperience;
         this.ultraActive = true;
+        break;
+      }
+      // Pratt & Whitney experience
+      case 3: {
+        this.activeExperience = prattExperience;
+        this.prattActive = true;
+        break;
+      }
+      // Dalhousie Experience
+      // case 4: {
+      //   this.activeExperience = dalhousieExperience;
+      //   this.dalActive = true;
+      //   break;
+      // }
+      // Arctic Wolf Experience
+      default: {
+        this.activeExperience = arcticWolfExperience;
+        this.arcticWolfActive = true;
         break;
       }
     }
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

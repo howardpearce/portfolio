@@ -4,10 +4,22 @@
   </div>
   <div class = "right">
     <div class = "expanded">
-      <a id="home-link" class="navbar-text highlight-text" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> HOME </a>
-      <a id="about-link" class="navbar-text" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> ABOUT </a>
-      <a id="experience-link" class="navbar-text" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> EXPERIENCE </a>
-      <a id="contact-link" class="navbar-text" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> CONTACT </a>
+      <div>
+        <span id="home-id" class="highlight-text">01:</span>
+        <a id="home-link" class="navbar-text highlight-on-hover" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> HOME </a>
+      </div>
+      <div>
+        <span id="about-id">02:</span>
+        <a id="about-link" class="navbar-text highlight-on-hover" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> ABOUT </a>
+      </div>
+      <div>
+        <span id="experience-id">03:</span>
+        <a id="experience-link" class="navbar-text highlight-on-hover" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> EXPERIENCE </a>
+      </div>
+      <div>
+        <span id="contact-id">04:</span>
+        <a id="contact-link" class="navbar-text highlight-on-hover" href="#" onclick="scrollUserTo(this); event.returnValue = false; return false;"> CONTACT </a>
+      </div>
     </div>
     <div class = "hamburger">
       <i id="home-mobile-link" class="fa-regular fa-circle highlight-text" onclick="scrollUserTo(this);"></i>

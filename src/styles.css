@@ -1,6 +1,5 @@
+
 /* Special fonts go here */
-
-
 
 @font-face {
   font-family: "Aileron";
@@ -15,6 +14,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* allows for color switching to look good */
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   transition: color 1s ease-in, background-color 1s ease-in;
 }
@@ -65,15 +68,15 @@
 }
 
 @media not (prefers-reduced-motion) {
-  .scroll-animated {
+  .hide {
     position: relative;
-    left: -50px;
-    transition: left 0.5s ease-out, opacity 0.5s ease-out;
+    translate: -50px;
+    transition: translate 0.5s ease-out, opacity 0.5s ease-out;
     opacity: 0;
   }
 
   .show {
-    left: 0px;
+    translate: 0px;
     opacity: 1;
   }
 }
@@ -88,10 +91,71 @@ body {
   --navbar-color: rgba(26,26,26,0.95);
   --bg-card-color: #252525;
   --bg-card-color-highlight: #2D2D2D;
+  --about-image-background: #999999;
   --primary-color: #D9D9D9;
   --hero-text-color: #FFFFFF;
   --accent-color: #CB450C;
   --neutral-grey: #666666;
+}
+
+/* Styling to manage the size of text throughout the portfolio */
+
+.heading {
+  font-family: "Aileron Semibold";
+  font-size: 32px;
+}
+
+.subtext {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+.highlight-text {
+  color: var(--accent-color) !important;
+}
+
+p, a, li, h1, h2, h3{
+  color: var(--primary-color);
+  margin: 0px;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue';
+}
+
+p, a, li {
+  font-family: "Aileron", sans-serif;
+  font-size: 24px;
+}
+
+@media (hover: hover) {
+  .highlight-on-hover {
+    background-image: linear-gradient(
+      to right,
+      var(--accent-color),
+      var(--accent-color) 50%,
+      var(--primary-color) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.35s ease-in-out;
+  }
+}
+
+.highlight-on-hover:hover::before{
+  width: 100%;
+}
+
+.highlight-on-hover:hover {
+  background-position: 0;
 }
 
 /* Responsive styling */
@@ -160,39 +224,7 @@ body {
   }
 }
 
-
-/* Styling to manage the size of text throughout the portfolio */
-
-.heading {
-  font-family: "Aileron Semibold";
-  font-size: 32px;
-}
-
-.subtext {
-  font-size: 16px;
-}
-
-h1 {
-  font-size: 64px;
-}
-
-.highlight-text {
-  color: var(--accent-color) !important;
-}
-
-p, a, li, h1, h2, h3{
-  color: var(--primary-color);
-  margin: 0px;
-}
-
-h1, h2, h3 {
-  font-family: 'Bebas Neue';
-}
-
-p, a, li {
-  font-family: "Aileron", sans-serif;
-  font-size: 24px;
-}
+/** Responsive styling for text **/
 
 @media only screen and (max-width: 1200px) and (min-width: 700px ){
   .title {

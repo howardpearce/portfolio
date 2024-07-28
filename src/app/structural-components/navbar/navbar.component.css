@@ -9,6 +9,18 @@
   z-index: 5;
 }
 
+.expanded div span {
+  font-size: 26px;
+  font-weight: 100;
+  font-family: 'Aileron';
+  color: var(--primary-color);
+  padding-right: 10px;
+  transition: none;
+  padding-left: 30px;
+  padding-right: 5px;
+  transition: color 0.25s ease-in;
+}
+
 .left {
   margin-left: 80px;
 }
@@ -19,11 +31,10 @@
 }
 
 .navbar-text {
-  padding-left: 30px;
+  padding-left: 0px;
   padding-right: 30px;
   text-decoration: none;
-  font-weight: 500;
-  transition: none;
+  font-family: "Aileron Semibold";
 }
 
 .right i {
@@ -32,8 +43,13 @@
   color: var(--primary-color);
 }
 
+.expanded {
+  display: flex;
+  flex-direction: row;
+}
+
 .navbar-text {
-  font-size: 28px;
+  font-size: 26px;
   margin: 0px;
 }
 
@@ -49,17 +65,22 @@
 
 @media only screen and (max-width: 1400px) and (min-width: 1224px) {
   .navbar-text {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: 0px !important;
+    padding-right: 10px !important;
   }
 }
 
 @media only screen and (max-width: 1224px) and (min-width: 900px) {
+  .expanded div span {
+    padding-right: 0px;
+    padding-left: 10px;
+  }
   #logotype {
     font-size: 24px;
   }
   .navbar-text {
     font-size: 24px;
+    padding-left: 5px !important;
   }
   .navbar-text {
     padding: 0px 10px;
@@ -69,6 +90,12 @@
   }
   .right {
     margin-right: 45px;
+  }
+}
+
+@media only screen and (max-width: 1224px) {
+  .expanded div span {
+    display: none;
   }
 }
 

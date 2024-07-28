@@ -1,9 +1,12 @@
 #hero-graphic {
-  grid-column-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 4;
   height: 100vh;
-  max-width: 700px;
+  width: 100%;
+  display:grid;
+  overflow-x: hidden;
 }
 
 #gradient {
@@ -17,7 +20,7 @@
 
 .grid-hero-container {
   display: grid;
-  grid-template-columns: 180px auto 700px;
+  grid-template-columns: 180px auto 900px;
   grid-template-rows: 100px auto 100px;
   background-color: var(--bg-color);
   overflow: visible;
@@ -28,11 +31,12 @@
 }
 
 .hero-section-container {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2;
   display: flex;
+  margin: auto;
 }
 
 #hero-typography {
@@ -42,8 +46,11 @@
   max-width: 700px;
   height: 100%;
   position: relative;
-  top: -60px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-top: 30px;
   background-color: var(--bg-color);
+  border-radius: 40px;
 }
 
 #spacer {
@@ -79,7 +86,7 @@
   align-items: center;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  background-color: var(--bg-color-translucent);
+  background-color: var(--bg-color);
   padding: 10px 10px 10px 10px;
   border-radius: 2px;
   grid-column-start: 1;
@@ -117,17 +124,8 @@
 
 /* MEDIA QUERIES AND RESPONSIVE STYLING */
 
-@media only screen and (max-width: 1600px) and (min-width: 1500px) {
-  .grid-hero-container {
-    grid-template-columns: 180px auto 600px;
-  }
 
-  #gradient {
-    width: 38%;
-  }
-}
-
-@media only screen and (max-width: 1500px) and (min-width: 1200px) {
+@media only screen and (max-width: 1550px) and (min-width: 1200px) {
   #hero-text {
     font-size: 90px;
   }
@@ -136,15 +134,6 @@
     font-size: 28px;
     max-width: 530px;
   }
-
-  .grid-hero-container {
-    grid-template-columns: 180px auto 500px;
-  }
-
-  #gradient {
-    width: 35%;
-  }
-
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 700px) {
@@ -161,8 +150,6 @@
   #hero-typography {
     margin: auto;
     height: auto;
-    padding-bottom: 30px;
-    padding-left: 30px;
   }
 
   .hero-section-container {
@@ -196,13 +183,6 @@
   }
 }
 
-@media only screen and (max-width: 860px) and (min-width: 700px) {
-  .hero-subtext {
-    font-size: 28px;
-    max-width: 530px;
-  }
-}
-
 @media only screen and (max-width: 700px) {
   #hero-text {
     font-size: 52px !important;
@@ -212,9 +192,6 @@
     padding-bottom: 15px;
     padding-top: 2px;
     max-width: 275px;
-  }
-  #hero-graphic {
-    display: none;
   }
   .grid-hero-container {
     display: grid;
@@ -227,12 +204,10 @@
   }
   .arrow-container {
     position: absolute;
-    padding: 20px;
+    padding: 10px;
     bottom: 0px;
-    right: 0px;
     margin: 0px;
-    top: auto;
-    justify-content: initial;
+    transform: translateX(-50%);
   }
   #lower-arrow {
     height: 50px;
@@ -240,5 +215,7 @@
   #hero-typography{
     top: 0px;
     margin: auto;
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
   }
 }

@@ -5,26 +5,26 @@
       <h1 id = "experience-title" class = "title scroll-animated"> PROFESSIONAL EXPERIENCE </h1>
     </div>
     <div class = "content" id="experience-container">
-      <div id="experience-list-container">
+      <div id="experience-list-container" class="scroll-animated">
         <i id="left-arrow" class="fa-solid fa-chevron-left"></i>
         <div class = "experience-list">
-          <div class = "experience" (click)="switchActiveExperience(1)"><span [ngClass]="ultraActive == true ? 'highlight-text':''">01:</span><p class = "experience-name">Ultra Electronics <br/> Maritime Systems</p></div>
-          <div class = "experience" (click)="switchActiveExperience(2)"><span [ngClass]="prattActive == true ? 'highlight-text':''" >02:</span><p class = "experience-name">Pratt & Whitney <br/> Canada</p></div>
-          <div class = "experience end" (click)="switchActiveExperience(3)"><span [ngClass]="dalActive == true ? 'highlight-text':''">03:</span><p class = "experience-name">Dalhousie <br/>University</p></div>
+          <div class = "experience" (click)="switchActiveExperience(1)"><p [ngClass]="arcticWolfActive == true ? 'highlight-text experience-name':'experience-name'" >Arctic Wolf Networks</div>
+          <div class = "experience" (click)="switchActiveExperience(2)"><p [ngClass]="ultraActive == true ? 'highlight-text experience-name':'experience-name'">Ultra Maritime</p></div>
+          <div class = "experience" (click)="switchActiveExperience(3)"><p [ngClass]="prattActive == true ? 'highlight-text experience-name':'experience-name'">Pratt & Whitney</div>
         </div>
         <i id="right-arrow" class="fa-solid fa-chevron-right"></i>
       </div>
-      <div class = "experience-detail">
-        <p id = "experience-content-title" class = "heading"> {{experience.title}} </p>
-        <p class = "experience-subtitle subtext"> {{experience.date}} </p>
+      <div class = "experience-detail scroll-animated">
+        <p id = "experience-content-title" class = "heading"> {{activeExperience.title}} </p>
+        <p class = "experience-subtitle subtext"> {{activeExperience.date}} </p>
         <div class = "experience-description">
-          <p> {{experience.description}} </p>
+          <p> {{activeExperience.description}} </p>
           <ul>
-            <li *ngFor="let bullet of experience.bullets">{{bullet}}</li>
+            <li *ngFor="let bullet of activeExperience.bullets">{{bullet}}</li>
           </ul>
         </div>
         <div class = "technology-tag-list">
-          <div class = "tag" *ngFor="let tag of experience.tags;">
+          <div class = "tag" *ngFor="let tag of activeExperience.tags;">
             <p class = "subtext">{{tag}}</p>
           </div>
         </div>

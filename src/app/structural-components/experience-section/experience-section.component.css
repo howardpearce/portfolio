@@ -10,7 +10,8 @@
   margin-bottom: 20px;
   max-width: 300px;
   align-items: center;
-  transition: background-color 0.5s ease-out !important;
+  transition: background-color 0.25s ease-out !important;
+  border-radius: 4px;
 }
 
 app-years-display {
@@ -30,19 +31,11 @@ app-years-display {
   background-color: var(--bg-card-color-highlight);
 }
 
-.experience span {
-  font-size: 40px;
-  font-weight: 100;
-  font-family: 'Bebas Neue';
-  color: var(--primary-color);
-  padding-right: 10px;
-  transition: none;
-}
-
 .experience-name {
-  min-width: 140px;
+  min-width: 120px;
   font-size: 16px;
   font-family: "Aileron Semibold";
+  transition: color 0.25s ease-out !important;
 }
 
 .experience-detail {
@@ -50,6 +43,7 @@ app-years-display {
   display: flex;
   flex-direction: column;
   min-height: 500px;
+  transition-delay: 100ms;
 }
 
 .experience-subtitle {
@@ -119,6 +113,9 @@ i {
 }
 
 @media only screen and (max-width: 1024px) {
+  .heading {
+    font-size: 26px;
+  }
   .content {
     flex-direction: column;
     margin-top: 10px;
@@ -132,6 +129,7 @@ i {
   }
   #experience-list-container {
     align-items: center;
+    margin-top: 10px;
   }
   .content {
     margin: 0px;
@@ -140,23 +138,28 @@ i {
     display: block;
   }
   .experience {
-    padding: 5px 10px;
+    padding: 10px 10px;
     width: fit-content;
     margin: 0px 10px 0px 0px;
+    max-width: none !important;
   }
   .experience-detail {
     margin-left: 0px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
   .experience span {
     font-size: 30px;
     padding-right: 10px;
   }
-  .experience p {
-    font-size: 14px;
-    max-width: 130px;
-  }
   .experience-name {
     font-size: 14px;
+    white-space: nowrap;
+    max-width: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .heading {
+    font-size: 20px;
   }
 }
