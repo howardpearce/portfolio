@@ -1,7 +1,7 @@
 #switcher-container {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 40px;
+  left: 40px;
   padding: 10px 20px 10px 10px;
   max-height: 75px;
   background-color: var(--bg-card-color);

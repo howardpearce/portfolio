@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.7](https://github.com/strigiforme/portfolio/compare/v1.1.6...v1.1.7) (2024-08-06)
+
+
+### Features
+
+* General improvements ([91d8a2b](https://github.com/strigiforme/portfolio/commit/91d8a2bee52e14ed2601021efbeb88e80ee315b0))
+
+
+### Bug Fixes
+
+* change copy button color on hover ([b6313a9](https://github.com/strigiforme/portfolio/commit/b6313a9044f5094496a4cff5463046c6ec469e1a))
+
 ### [1.1.6](https://github.com/strigiforme/portfolio/compare/v1.1.5...v1.1.6) (2024-07-28)
 
 
