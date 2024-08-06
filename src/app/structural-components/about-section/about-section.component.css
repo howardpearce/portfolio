@@ -90,7 +90,7 @@ li img {
   }
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 950px) {
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
   #headshot img, #headshot{
     width: 250px;
     height: 221px;
@@ -98,15 +98,18 @@ li img {
   #headshot {
     margin-left: 40px;
   }
+  #technology-list ul {
+    padding-right: 40px;
+  }
 }
 
-@media only screen and (max-width: 950px) and (min-width: 700px) {
+@media only screen and (max-width: 1025px) and (min-width: 700px) {
   #technology-list ul {
-    padding-right: 30px;
+    padding-right: 20px;
   }
   #headshot img, #headshot{
-    width: 200px;
-    height: 177px;
+    width: 180px;
+    height: 160px;
   }
   #headshot {
     margin: 0px 0px 0px 20px;
@@ -130,7 +133,7 @@ li img {
     margin: 30px 20px 20px 0px;
   }
   #technology-list ul {
-    padding-right: 40px;
+    padding-right: 20px;
   }
 }
 
