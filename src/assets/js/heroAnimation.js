@@ -9,7 +9,7 @@ const CAMERA_Z = 80
 const PLANE_Z = 0
 const PARTICLE_SIZE = 0.05;
 const PARTICLE_SEPARATION = 0.5;
-const DOT_SIZE = { SMALL: 1, BIG: 2, DEBUG: 3 }
+const DOT_SIZE = { SMALL: 1, BIG: 4, DEBUG: 3 }
 const COLOR_MODE = { DARK: 0xffffff, LIGHT: 0x000000, DEBUG: 0xFF0000 }
 
 // feature flags
