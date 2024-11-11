@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.8](https://github.com/strigiforme/portfolio/compare/v1.1.7...v1.1.8) (2024-11-11)
+
+
+### Features
+
+* Update title after promotion ([7fe7a69](https://github.com/strigiforme/portfolio/commit/7fe7a69ef27e7ba19fb434ff8269376b78cdf4ca))
+
 ### [1.1.7](https://github.com/strigiforme/portfolio/compare/v1.1.6...v1.1.7) (2024-08-06)
 
 
