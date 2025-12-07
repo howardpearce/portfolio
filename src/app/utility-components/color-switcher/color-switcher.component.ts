@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-color-switcher',
+  standalone: false,
   templateUrl: './color-switcher.component.html',
   styleUrls: ['./color-switcher.component.css']
 })
