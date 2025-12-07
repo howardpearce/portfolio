@@ -3,6 +3,7 @@ import packageInfo from "../../../../package.json";
 
 @Component({
   selector: 'app-version-number',
+  standalone: false,
   templateUrl: './version-number.component.html',
   styleUrls: ['./version-number.component.css']
 })

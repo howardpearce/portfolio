@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about-section',
+  standalone: false,
   templateUrl: './about-section.component.html',
   styleUrls: ['./about-section.component.css']
 })

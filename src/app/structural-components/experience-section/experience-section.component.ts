@@ -3,6 +3,7 @@ import { arcticWolfExperience, ultraExperience, prattExperience, dalhousieExperi
 
 @Component({
   selector: 'app-experience-section',
+  standalone: false,
   templateUrl: './experience-section.component.html',
   styleUrls: ['./experience-section.component.css']
 })
